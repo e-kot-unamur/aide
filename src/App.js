@@ -4,7 +4,7 @@ import './static/css/App.scss'
 import logo from './static/images/logo.png'
 import Diagram from './Diagram'
 
-import data from "./diagram.json"
+import data from "./data.json"
 
 
 function App() {
