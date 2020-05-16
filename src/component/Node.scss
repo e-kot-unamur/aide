@@ -1,0 +1,15 @@
+.answers {
+    justify-content: center;
+}
+
+.node {
+    background: red;
+    position: relative;
+    animation-name: appear;
+    animation-duration: 2s;  
+}
+
+@keyframes appear {
+    from {top: -100px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}

@@ -1,26 +1,31 @@
 import React from 'react'
 
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Col, Row } from 'react-bootstrap';
+import './Node.scss'
 
 function Node({ 
     data,
     handleAnswer
  }) {
     return (
-        <Card className="text-center">
+        <Card className="node text-center">
         <Card.Body>
             <Card.Text>{data.text}</Card.Text>
         </Card.Body>
-        <Card.Footer>
+        <Card.Footer className="answers">
+            <Row>
                 {
                     data.answers.map(answer => {
                         return (
-                            <Card.Text key={answer.id}>
-                                <Button onClick={() => handleAnswer(answer.ref)}>{answer.text}</Button>
-                            </Card.Text>
-                        )
+                                <Col key={answer.id}>
+                                <Button variant='secondary' onClick={() => handleAnswer(answer.ref)}>
+                                    {answer.text}
+                                </Button>
+                                </Col>
+                            )
                     })
                 }
+            </Row>
         </Card.Footer>
         </Card>
     )
