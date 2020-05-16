@@ -1,0 +1,36 @@
+{
+    "0" : {
+        "text" : "Je n'ai plus internet",
+        "answer" : {"Trouver de l'aide"}
+    },
+    "1" : {
+        "text" : "Avez-vous demandez de l'aide au service technique",
+        "answer" : [
+            {
+                "text" : "Oui",
+                "ref" : 2 
+            },
+            {
+                "text" : "Non",
+                "ref" : 3
+            }
+        ]
+    },
+    "2" : {
+        "text" : "Prendre contact avec le service logement",
+        "answer" : []
+    },
+    "3" : {
+        "text" : "Avez-vous essayé un autre cable ethernet",
+        "answer" : [ 
+            {
+                "text" : "Oui",
+                "ref" : 4
+            },
+            {
+                "text" : "Non",
+                "ref" : 5
+            }
+        ]
+    }
+}
