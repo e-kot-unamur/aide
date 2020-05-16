@@ -7,8 +7,7 @@ function Diagram({nodes}) {
     const [node, setNode] = useState(nodes[0])
 
     const handleAnswer = (id) => {
-        console.log(id)
-        setNode(nodes[id])
+        nodes[id] ? setNode(nodes[id]) : console.error('There is no node specified for this answer')
     }
 
     return (
