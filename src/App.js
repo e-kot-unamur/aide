@@ -1,8 +1,8 @@
 import React from 'react'
-import './static/css/App.css'
+import './static/css/App.scss'
 
 import logo from './static/images/logo.png'
-import Noeud from './component/Noeud'
+import Diagram from './Diagram'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         
         <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
-        <Noeud />
+        <Diagram />
 
       </header>
     </div>
