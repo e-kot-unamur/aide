@@ -1,16 +1,27 @@
 import React from 'react'
 
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
-function Node(props) {
-
+function Node({ 
+    data,
+    handleAnswer
+ }) {
     return (
         <Card className="text-center">
-        <Card.Header>Problématique</Card.Header>
         <Card.Body>
-            <Card.Text>Chose à faire</Card.Text>
+            <Card.Text>{data.text}</Card.Text>
         </Card.Body>
-        <Card.Footer>Différentes réponses possibles</Card.Footer>
+        <Card.Footer>
+                {
+                    data.answers.map(answer => {
+                        return (
+                            <Card.Text key={answer.id}>
+                                <Button onClick={() => handleAnswer(answer.ref)}>{answer.text}</Button>
+                            </Card.Text>
+                        )
+                    })
+                }
+        </Card.Footer>
         </Card>
     )
 }

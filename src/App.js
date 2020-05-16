@@ -4,6 +4,8 @@ import './static/css/App.scss'
 import logo from './static/images/logo.png'
 import Diagram from './Diagram'
 
+import data from "./diagram.json"
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <header className="App-header">
         
         <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
-        <Diagram />
+        <Diagram nodes={data}/>
 
       </header>
     </div>
