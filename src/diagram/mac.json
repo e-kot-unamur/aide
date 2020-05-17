@@ -30,11 +30,29 @@
         "answers" : []
     },
     "3" : {
-        "text" : "Démerde toi gros teubé",
-        "answers" : []
+        "text" : "Appuyer simultanément sur les touches Windows + R et saisissez ”cmd” dans la zone de texte apparue à l’écran + imgage",
+        "answers" : [
+            {
+            "text" : "Suivant",
+            "ref" : 5 
+            }
+        ]
     },
     "4" : {
         "text" : "Change d'OS",
+        "answers" : []
+    },
+    "5" : {
+        "text" : "Appuyer sur \"OK\", une nouvelle fenêtre s'ouvrira alors",
+        "answers" : [
+            {
+            "text" : "Suivant",
+            "ref" : 6 
+            }
+        ]
+    },
+    "6" : {
+        "text" : "Votre adresse mac est désormais donnée à la ligne \"Physical Adress\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante. Sur cet exemple, l’interface correspondante à l’adresse ”00-D8-61-4E-63-A0” est ”Ethernet adapter Ethernet”. ",
         "answers" : []
     }
 }
