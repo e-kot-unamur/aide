@@ -7,9 +7,6 @@ function Diagrams({ nodes, setDiagram }) {
     const [node, setNode] = useState(nodes[1]) //Node 0 is for preview
     const [history, setHistory] = useState([])
 
-    //console.log("\n\n")
-    console.log(nodes[0])
-
     const handleAnswer = (id) => {
         if (nodes[id]) {
             setHistory([...history, node]) //Add actual node to the stack
@@ -26,13 +23,12 @@ function Diagrams({ nodes, setDiagram }) {
             setHistory(temp)
             setNode(lastElement)
         } else {
-            setDiagram()
+            setDiagram() // diagram === undefined, previews will be rerendered
         }
     }
 
     return (
         <Node data={node}
-            history={history}
             handleAnswer={handleAnswer}
             handleReturn={handleReturn}
         />
