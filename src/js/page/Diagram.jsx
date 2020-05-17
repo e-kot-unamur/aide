@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-import Node from './component/Node'
+import Node from '../component/Node'
 
 function Diagram({nodes}) {
     const [node, setNode] = useState(nodes[0])

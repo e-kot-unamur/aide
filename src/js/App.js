@@ -1,10 +1,10 @@
 import React from 'react'
-import './static/css/App.scss'
+import '../static/css/App.scss'
 
-import logo from './static/images/logo.png'
-import Diagram from './Diagram'
+import logo from '../static/images/logo.png'
+import Diagram from './page/Diagram'
 
-import data from "./data.json"
+import data from "../diagram/internet.json"
 
 
 function App() {
