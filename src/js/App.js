@@ -1,11 +1,8 @@
 import React from 'react'
-import '../static/css/App.scss'
+import '../static/sass/App.scss'
 
 import logo from '../static/images/logo.png'
-import Diagram from './page/Diagram'
-
-import data from "../diagram/internet.json"
-
+import DiagramStream from './page/DiagramStream'
 
 function App() {
   return (
@@ -13,7 +10,7 @@ function App() {
       <header className="App-header">
         
         <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
-        <Diagram nodes={data}/>
+        <DiagramStream />
 
       </header>
     </div>

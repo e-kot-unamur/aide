@@ -1,0 +1,40 @@
+{
+    "0" : {
+        "text" : "Comment trouver mon addresse mac ?",
+        "answers" : [
+            {
+                "text" : "Trouver de l'aide",
+                "ref" : 1
+            }
+            ]
+    },
+    "1" : {
+        "text" : "Sur quelle système d'exploitation êtes vous ?",
+        "answers" : [
+            {
+                "text" : "Mac OS",
+                "ref" : 2 
+            },
+            {
+                "text" : "Windows",
+                "ref" : 3
+            },
+            {
+                "text" : "Linux",
+                "ref" : 4
+            }
+        ]
+    },
+    "2" : {
+        "text" : "Démerde toi capitaliste de mort",
+        "answers" : []
+    },
+    "3" : {
+        "text" : "Démerde toi gros teubé",
+        "answers" : []
+    },
+    "4" : {
+        "text" : "Change d'OS",
+        "answers" : []
+    }
+}
