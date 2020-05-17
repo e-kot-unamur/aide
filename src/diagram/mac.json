@@ -26,7 +26,7 @@
         ]
     },
     "2" : {
-        "text" : "Appuyer simultanément sur les touches Windows + R et saisissez ”cmd” dans la zone de texte apparue à l’écran + imgage",
+        "text" : "/*Ouvrez l'invite de commande*/. Faites la combinaison Windows + R, puis tapez cmd dans la fenêtre du terminal. Validez votre commande en appuyant sur la touche Entrée. ",
         "answers" : [
             {
             "text" : "Suivant",
@@ -35,16 +35,16 @@
         ]
     },
     "3" : {
-        "text" : "Appuyer sur \"OK\", une nouvelle fenêtre s'ouvrira alors",
+        "text" : "/*Exécutez ipconfig/*. Dans la fenêtre de l'invite de commande, tapez ipconfig/all, puis validez avec la touche Entrée. Vous devriez voir s'afficher les informations de configuration de toutes vos connexions réseau. ",
         "answers" : [
             {
             "text" : "Suivant",
-            "ref" : 4 
+            "ref" : 4
             }
         ]
     },
     "4" : {
-        "text" : "Votre adresse mac est désormais donnée à la ligne \"Physical Adress\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante. Sur cet exemple, l’interface correspondante à l’adresse ”00-D8-61-4E-63-A0” est ”Ethernet adapter Ethernet”. ",
+        "text" : "/*Recherchez la mention Adresse physique*/. C'est l'autre nom de l'adresse MAC. Si vous avez plusieurs périphériques réseau branchés (carte sans fil, carte Ethernet), vérifiez bien auquel de ces supports appartient l'adresse en question. À supposer que vous ayez les deux sur votre ordinateur, sachez que la connexion sans fil, parce qu'elle passe par une carte spécifique, a une adresse MAC différente de la connexion filaire (Ethernet).  ",
         "answers" : []
     },
     "10" : {
