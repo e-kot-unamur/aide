@@ -5,7 +5,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Diagram from './Diagram'
 import '../../static/sass/DiagramStream.scss'
 
-
 // TODO : Change diagram load with a backend API
 // This will result in a big payload when we'll be adding new diagrams
 import internetDiagram from "../../diagram/internet.json"
