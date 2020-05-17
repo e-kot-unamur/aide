@@ -36,7 +36,8 @@ function Stream() {
       <Row className="top-buffer">
         {
           diagram //if a diagram is selected then
-          ? <Diagram nodes={diagram} setDiagram={setDiagram} />
+          ? <Col><Diagram nodes={diagram} setDiagram={setDiagram} /></Col>
+          
           : Object.keys(previews).map((key, index) => {
             return (
               <Col sm="12" md="6" lg="4" className="top-buffer">

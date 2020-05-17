@@ -1,17 +1,16 @@
 import React from 'react'
 
-import { Card, Button, Col, Row } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import './Node.scss'
 
 function Node({ 
     data,
-    history,
     handleAnswer,
     handleReturn
  }) {
     
     return (
-        <Card className="node text-center">
+        <Card variant='warning' className="node text-center">
         <Card.Body>
             {
                 data  
@@ -20,23 +19,15 @@ function Node({
             }
         </Card.Body>
         <Card.Footer className="answers">
-            <Row>
-                {
-                    <Col><Button variant='warning' onClick={() => handleReturn()}>Retour</Button></Col>
-                }
                 {
                     data ? 
-                    data.answers.map(answer => {
-                        return (
-                            <Col key={answer.id}>
-                            <Button variant='secondary' onClick={() => handleAnswer(answer.ref)}>
-                                {answer.text}
-                            </Button>
-                            </Col>
-                        )
-                    }) : <></>
+                    data.answers.map(
+                        answer => <ListGroup.Item variant='primary' onClick={() => handleAnswer(answer.ref)}>{answer.text}</ListGroup.Item>) 
+                    : <></>
                 }
-            </Row>
+                {
+                    <ListGroup.Item variant='warning' onClick={() => handleReturn()}>Retour</ListGroup.Item>
+                }
         </Card.Footer>
         </Card>
     )
