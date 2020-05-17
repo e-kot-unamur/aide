@@ -9,17 +9,23 @@ function Node({
     handleAnswer,
     handleReturn
  }) {
+    
     return (
         <Card className="node text-center">
         <Card.Body>
-            <Card.Text>{data.text}</Card.Text>
+            {
+                data  
+                ? <Card.Text>{data.text}</Card.Text>
+                : <Card.Text>Loading</Card.Text>
+            }
         </Card.Body>
         <Card.Footer className="answers">
             <Row>
                 {
-                history.length === 0 ? <></> : <Col><Button variant='warning' onClick={() => handleReturn()}>Retour</Button></Col>
+                    <Col><Button variant='warning' onClick={() => handleReturn()}>Retour</Button></Col>
                 }
                 {
+                    data ? 
                     data.answers.map(answer => {
                         return (
                             <Col key={answer.id}>
@@ -28,7 +34,7 @@ function Node({
                             </Button>
                             </Col>
                         )
-                    })
+                    }) : <></>
                 }
             </Row>
         </Card.Footer>
