@@ -1,6 +1,6 @@
 {
     "0" : {
-        "text" : "Je n'ai plus internet",
+        "text" : "Je n'ai plus internet...",
         "answers" : [
             {
                 "text" : "Trouver de l'aide",
@@ -9,24 +9,24 @@
             ]
     },
     "1" : {
-        "text" : "Avez-vous demandez de l'aide au service technique",
+        "text" : "Avez-vous essayé avec un autre câble Ethernet ?",
         "answers" : [
             {
-                "text" : "Oui",
+                "text" : "Oui, ça marche",
                 "ref" : 2 
             },
             {
-                "text" : "Non",
+                "text" : "Oui, mais ça ne fonctionne toujours pas",
                 "ref" : 3
             }
         ]
     },
     "2" : {
-        "text" : "Prendre contact avec le service logement",
+        "text" : "Le problème vient donc de votre cable Ethernet. Au besoin, l'E-kot en vend à 3€, n'hésite pas à les contacter !",
         "answers" : []
     },
     "3" : {
-        "text" : "Avez-vous essayé un autre cable ethernet",
+        "text" : "Votre ordinateur fonctionne-t-il sur une autre prise de votre résidence universitaire ?",
         "answers" : [ 
             {
                 "text" : "Oui",
@@ -37,5 +37,64 @@
                 "ref" : 5
             }
         ]
+    },
+    "4" : {
+        "text" : "Votre prise n'a pas été activée ou est défaillante... Prenez contact avec l'E-kot !",
+        "answers" : []
+    },
+    "5" : {
+        "text" : "Avez-vous accès à  la page kotserv.unamur.be ?",
+        "answers" : [ 
+            {
+                "text" : "Oui",
+                "ref" : 6
+            },
+            {
+                "text" : "Non",
+                "ref" : 7
+            }
+        ]
+    },
+    "6" : {
+        "text" : "Votre quota est-il suppérieur à la limite ?",
+        "answers" : [ 
+            {
+                "text" : "Oui",
+                "ref" : 9
+            },
+            {
+                "text" : "Non",
+                "ref" : 8
+            }
+        ]
+    },
+    "7" : {
+        "text" : "Votre ordinateur est probablement mal configuré. Prenez contact avec l'E-kot pour une intervention",
+        "answers" : []
+    },
+    "8" : {
+        "text" : "Erreur inconnue... Prenez contact avec l'E-kot pour une intervention",
+        "answers" : []
+    },
+    "9" : {
+        "text" : "Y a-t-il plusieurs apparails identifés alors que vous n'en utilisez qu'un seul ?",
+        "answers" : [ 
+            {
+                "text" : "Oui",
+                "ref" : 11
+            },
+            {
+                "text" : "Non",
+                "ref" : 10
+            }
+        ]
+    },
+    "10" : {
+        "text" : "Vous avez probablement un problème de client torrent. Prenez contact avec l'E-kot pour une intervention",
+        "answers" : []
+    },
+    "11" : {
+        "text" : "Vous avez probablement emprunté ou prêté votre eID. Prenez contact avec l'E-kot pour supprimer les appareils qui ne vous appartiennent pas",
+        "answers" : []
     }
 }
