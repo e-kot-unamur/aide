@@ -1,9 +1,10 @@
 $theme-colors: (
-  "primary": #3A405A,
-  "secondary": #007991,
+  "primary": #007991,
+  "secondary": #3A405A, //FIXME
   "danger": #D62828,
   "success": #2CA58D,
   "warning": #E9D985,
+  "background": #3A405A
 );
 
 @import '~bootstrap/scss/bootstrap.scss';

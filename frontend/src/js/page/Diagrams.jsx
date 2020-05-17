@@ -3,8 +3,8 @@ import { useState } from 'react'
 
 import Node from '../component/Node'
 
-function Diagram({nodes}) {
-    const [node, setNode] = useState(nodes[0])
+function Diagrams({ nodes, setDiagram }) {
+    const [node, setNode] = useState(nodes[1]) //Node 0 is for preview
     const [history, setHistory] = useState([])
 
     const handleAnswer = (id) => {
@@ -17,18 +17,22 @@ function Diagram({nodes}) {
     }
 
     const handleReturn = () => {
-        let lastElement = history.pop()
-        setHistory(history)
-        setNode(lastElement)
+        if (history.length !== 0) {
+            let temp = history.slice()
+            let lastElement = temp.pop()
+            setHistory(temp)
+            setNode(lastElement)
+        } else {
+            setDiagram() // diagram === undefined, previews will be rerendered
+        }
     }
 
     return (
         <Node data={node}
-              history={history} 
-              handleAnswer={handleAnswer}  
-              handleReturn={handleReturn}
+            handleAnswer={handleAnswer}
+            handleReturn={handleReturn}
         />
     )
 }
 
-export default Diagram
+export default Diagrams
