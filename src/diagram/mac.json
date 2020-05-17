@@ -13,11 +13,11 @@
         "answers" : [
             {
                 "text" : "Mac OS",
-                "ref" : 2 
+                "ref" : 10 
             },
             {
                 "text" : "Windows",
-                "ref" : 3
+                "ref" : 2
             },
             {
                 "text" : "Linux",
@@ -26,33 +26,56 @@
         ]
     },
     "2" : {
-        "text" : "Démerde toi capitaliste de mort",
-        "answers" : []
-    },
-    "3" : {
         "text" : "Appuyer simultanément sur les touches Windows + R et saisissez ”cmd” dans la zone de texte apparue à l’écran + imgage",
         "answers" : [
             {
             "text" : "Suivant",
-            "ref" : 5 
+            "ref" : 3
             }
         ]
     },
-    "4" : {
-        "text" : "Change d'OS",
-        "answers" : []
-    },
-    "5" : {
+    "3" : {
         "text" : "Appuyer sur \"OK\", une nouvelle fenêtre s'ouvrira alors",
         "answers" : [
             {
             "text" : "Suivant",
-            "ref" : 6 
+            "ref" : 4 
             }
         ]
     },
-    "6" : {
+    "4" : {
         "text" : "Votre adresse mac est désormais donnée à la ligne \"Physical Adress\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante. Sur cet exemple, l’interface correspondante à l’adresse ”00-D8-61-4E-63-A0” est ”Ethernet adapter Ethernet”. ",
+        "answers" : []
+    },
+    "10" : {
+        "text" : "Cliquez sur la loupe, située en haut à droite de votre écran",
+        "answers" : [
+            {
+            "text" : "Suivant",
+            "ref" : 11 
+            }
+        ]
+    },
+    "11" : {
+        "text" : "Saisissez Terminal et lancez l'application Terminal",
+        "answers" : [
+            {
+            "text" : "Suivant",
+            "ref" : 12
+            }
+        ]
+    },
+    "12" : {
+        "text" : "Saisissez la commande suivante : \"ifconfig\" et appuyer sur la touche Entrée",
+        "answers" : [
+            {
+            "text" : "Suivant",
+            "ref" : 13 
+            }
+        ]
+    },
+    "13" : {
+        "text" : "Votre adresse mac se trouve à coté de l'entrée intitulée  \"inet\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante.",
         "answers" : []
     }
 }
