@@ -8,10 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
         <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
         <DiagramStream />
-
       </header>
     </div>
   );
