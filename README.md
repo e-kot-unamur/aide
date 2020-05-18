@@ -1,7 +1,7 @@
 # Diagramme interactif
 
 ### But 
-Rendre le diagramme classique interactif et plus attrayant afin de soulager nos messages facebook
+Rendre le diagramme classique interactif et plus attrayant afin de soulager nos messages Facebook
 
 
 ![](demo.gif)
@@ -10,25 +10,38 @@ Rendre le diagramme classique interactif et plus attrayant afin de soulager nos 
 
 ### Getting Started
 
-###### Serveur de dev
+The commands below will start the development server 
 
-Démarrer le front :
+``````bash
+$ cd interactive-diagram
+``````
 
-`````
-cd frontend
-npm install 
-npm start
-`````
-Démarrer le back :
+##### Docker :
 
-`````
-cd backend
-npm install 
-npm start
-`````
+``````bash
+$ docker-compose build # Run this only the first time, no need after
+$ docker-compose up [-d, --detach] 
+``````
 
-Se rendre sur `localhost:3000`
-(Le backend écoute le port `3001`)
+##### Start without Docker :
+
+###### Start front and back simultaneously
+
+````````bash
+# In your first terminal
+$ cd frontend
+$ npm install
+$ npm start
+
+# Open up a second terminal 
+$ cd backend
+$ npm install
+$ npm start
+````````
+
+Go on your `localhost`, client is running on port 80
+(Backend's listening on port `8080` in both docker and local configuration)
+
 
 
 ###### Si tu veux le mettre en production je te laisse faire les recherches gros
