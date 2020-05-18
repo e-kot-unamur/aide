@@ -14,7 +14,7 @@ function App() {
         <Stream />
       </div>
     </div>
-  );
+  )
 }
 
 export default App
