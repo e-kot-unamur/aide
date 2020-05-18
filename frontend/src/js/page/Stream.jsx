@@ -22,10 +22,8 @@ function Stream() {
   // Selection of a preview
   const handleSelect = (title) => {
     const req = url + endpoints['diagram'] + title
-    console.log(req)
     axios.get(req)
       .then(res => {
-        console.log(res.data)
         setDiagram(res.data)
       })
       .catch(error => console.log(error))
@@ -40,8 +38,8 @@ function Stream() {
           
           : Object.keys(previews).map((key, index) => {
             return (
-              <Col sm="12" md="6" lg="6" className="top-buffer">
-                <Preview diagram={previews[key]} title={key} handleSelect={handleSelect} />
+              <Col key={index} sm="12" md="6" lg="6" className="top-buffer">
+                <Preview  diagram={previews[key]} title={key} handleSelect={handleSelect} />
               </Col>
             )
           })
