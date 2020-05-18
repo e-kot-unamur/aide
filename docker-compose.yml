@@ -7,23 +7,25 @@ services:
       - "70:5000"
     volumes:
       - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
     links:
       - backend
     networks: 
-      - diagramnetwork
+      - diagramnetwork      
     stdin_open: true
     restart: always
         
   backend:
     build: ./backend
     ports:
-      - "8080:8080"
+      - "71:8080"
     volumes:
       - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
     networks: 
       - diagramnetwork
     restart: always
-
+    
 networks:
   diagramnetwork:
       driver: bridge
