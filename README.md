@@ -3,10 +3,17 @@
 ### But 
 Rendre le diagramme classique interactif et plus attrayant afin de soulager nos messages Facebook
 
-
 ![](demo.gif)
 
-
+### Ajouter de nouveaux diagrammes 
+```bash
+$ cd interactive-diagram/backend/diagram
+$ touch <nom du diagramme>.json
+```
+Modifier le json afin de créer le diagramme <br />
+L'importer au sein du fichier `index.js` <br />
+Relancer le backend, done ! <br />
+Pour plus de précisions voir le fichier `interactive-diagram/backend/diagram/README.md` 
 
 ### Getting Started
 
