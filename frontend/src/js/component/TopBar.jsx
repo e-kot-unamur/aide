@@ -16,11 +16,11 @@ function TopBar({ logo, width, ...props }) {
       />
       <div className="top-bar-links">
         <a href="https://www.facebook.com/ekotnamur" target="_blank" rel="noopener noreferrer" className="top-bar-link">
-          <img src={faFacebook} className='icon' />
+          <img src={faFacebook} className='icon' alt='facebook icone'/>
           <span>Prendre contact</span>
         </a>
         <a href="/" rel="noopener noreferrer" className="top-bar-link">
-          <img src={faInfoCircle} className='icon' />
+          <img src={faInfoCircle} className='icon' alt='A propos icone' />
           <span>A propos</span>
         </a>
       </div>
