@@ -1,0 +1,63 @@
+
+.top-bar {
+  text-align: center;
+  height: auto;
+  width: 100vw;
+  margin-top: 1vh;
+  position: absolute;
+  top: 0;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.top-bar-logo {
+  transition-duration: 0.3s;
+}
+
+.top-bar:hover .top-bar-logo {
+  transform: translate(-300%, 0);
+  opacity: 0;
+}
+
+.top-bar-links {
+  text-align: center;
+  top: inherit;
+  margin-top: inherit;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  width: 100vw;
+}
+
+.top-bar-link {
+  transition-duration: 0.7s;
+  color: transparent;
+  margin: 1vw;
+}
+
+.top-bar:hover .top-bar-links {
+  opacity: 1;
+}
+
+.top-bar:hover .top-bar-link {
+  text-align: center;
+  color: white;
+}
+
+@keyframes shake {
+  0% {
+    opacity: 0;
+    transform: translate(-10%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.icon {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
