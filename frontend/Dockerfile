@@ -10,14 +10,15 @@ COPY package*.json ./
 
 RUN npm install
 # If you are building your code for production
-#RUN npm ci --only=production
 
-RUN npm install -g serve
 # Bundle app source
+# RUN npm install -g serve -> PROD
+
 COPY . .
+# EXPOSE 5000 -> PROD
+EXPOSE 3000
 
-EXPOSE 5000
+# RUN npm run build -> PROD
 
-RUN npm run build
-
-CMD ["serve", "-s", "build"]
+# CMD ["serve", "-s", "build"] -> PROD
+CMD ["npm", "start"]
