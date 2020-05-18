@@ -9,16 +9,15 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
-# If you are building your code for production
+RUN npm install -g serve
 
+# If you are building your code for production
 # Bundle app source
-# RUN npm install -g serve -> PROD
 
 COPY . .
-# EXPOSE 5000 -> PROD
-EXPOSE 3000
+EXPOSE 5000
+# EXPOSE 3000
 
-# RUN npm run build -> PROD
-
-# CMD ["serve", "-s", "build"] -> PROD
-CMD ["npm", "start"]
+RUN npm run build 
+CMD ["serve", "-s", "build"] 
+# CMD ["npm", "start"]
