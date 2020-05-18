@@ -6,7 +6,7 @@
   margin-top: 1vh;
   position: absolute;
   top: 0;
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: slide 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 .top-bar-logo {
@@ -43,7 +43,7 @@
   color: white;
 }
 
-@keyframes shake {
+@keyframes slide {
   0% {
     opacity: 0;
     transform: translate(-10%, 0);
@@ -60,4 +60,9 @@
     width: 25px;
     height: auto;
     margin-right: 10px;
+}
+
+#odc {
+  text-align: center; 
+  opacity : 0.3;
 }
