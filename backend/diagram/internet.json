@@ -77,7 +77,7 @@
         "answers" : []
     },
     "9" : {
-        "text" : "Y a-t-il plusieurs apparails identifés alors que vous n'en utilisez qu'un seul ?",
+        "text" : "Y a-t-il plusieurs appareils identifés alors que vous n'en utilisez qu'un seul ?",
         "answers" : [ 
             {
                 "text" : "Oui",
