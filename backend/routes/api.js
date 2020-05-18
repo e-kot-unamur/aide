@@ -23,7 +23,6 @@ router.get('/diagrams', function(req, res, next) {
     for (let [key, diagram] of Object.entries(diagrams)) {
         firstNodes[key] = diagram[0]
     }
-    console.log(firstNodes)
     res.json(firstNodes)
 })
 

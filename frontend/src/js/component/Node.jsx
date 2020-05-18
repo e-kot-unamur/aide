@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Card, ListGroup } from 'react-bootstrap';
-import './Node.scss'
+import '../../static/sass/Node.scss'
 
 function Node({ 
     data,
@@ -19,15 +19,17 @@ function Node({
             }
         </Card.Body>
         <Card.Footer className="answers">
+            <ListGroup>
                 {
                     data ? 
                     data.answers.map(
-                        answer => <ListGroup.Item variant='primary' onClick={() => handleAnswer(answer.ref)}>{answer.text}</ListGroup.Item>) 
+                        answer => <ListGroup.Item key={answer.ref} variant='primary' onClick={() => handleAnswer(answer.ref)}>{answer.text}</ListGroup.Item>) 
                     : <></>
                 }
                 {
                     <ListGroup.Item variant='warning' onClick={() => handleReturn()}>Retour</ListGroup.Item>
                 }
+            </ListGroup>
         </Card.Footer>
         </Card>
     )
