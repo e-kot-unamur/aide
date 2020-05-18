@@ -29,7 +29,7 @@ function Node({
                     onClick={() => handleAnswer(answer.ref)}
                     variant='primary'
                     >
-                    <a href="#" className='link'>
+                    <a href="/#" className='link'>
                       {answer.text}
                     </a>
                   </ListGroup.Item>)
@@ -40,7 +40,7 @@ function Node({
             onClick={() => handleReturn()}
             variant='warning'
           >
-            <a href="#" className='link'>
+            <a href="/#" className='link'>
               Retour
             </a>
           </ListGroup.Item>
