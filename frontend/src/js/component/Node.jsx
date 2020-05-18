@@ -26,21 +26,24 @@ function Node({
                 answer =>
                   <ListGroup.Item
                     key={answer.ref}
+                    onClick={() => handleAnswer(answer.ref)}
                     variant='primary'
-                    onClick={() => handleAnswer(answer.ref)}>
+                    >
                     <a href="#" className='link'>
                       {answer.text}
                     </a>
                   </ListGroup.Item>)
               : <></>
           }
-          {
-            <ListGroup.Item variant='warning' href="#" onClick={() => handleReturn()}>
-              <a href="#" className='link'>
-                Retour
-              </a>
-            </ListGroup.Item>
-          }
+          <ListGroup.Item
+            className='bug-correction'
+            onClick={() => handleReturn()}
+            variant='warning'
+          >
+            <a href="#" className='link'>
+              Retour
+            </a>
+          </ListGroup.Item>
         </ListGroup>
       </Card.Footer>
     </Card>
