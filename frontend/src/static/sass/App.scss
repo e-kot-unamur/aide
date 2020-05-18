@@ -1,18 +1,79 @@
-.App-header {
+.body {
   background-color: var(--background);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.link {
-  color: var(--important);
 }
 
 #ekot-logo {
   opacity: 0.05;
   position: absolute;
+  height: 60vh;
 }
 
+.top-bar {
+  text-align: center;
+  height: auto;
+  width: 100vw;
+  margin-top: 1vh;
+  position: absolute;
+  top: 0;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.top-bar-logo {
+  transition-duration: 0.6s;
+}
+
+.top-bar:hover .top-bar-logo {
+  transform: translate(-300%, 0);
+}
+
+.top-bar-links {
+  text-align: center;
+  top: inherit;
+  margin-top: inherit;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  width: 100vw;
+}
+
+.top-bar-link {
+  transition-duration: 0.5s;
+  color: transparent;
+  margin: 1vw;
+}
+
+.top-bar:hover .top-bar-links {
+  opacity: 1;
+}
+
+.top-bar:hover .top-bar-link {
+  text-align: center;
+  color: white;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
