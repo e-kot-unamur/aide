@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Card, ListGroup } from 'react-bootstrap';
-import './Node.scss'
+import '../../static/sass/Node.scss'
 
 function Node({ 
     data,

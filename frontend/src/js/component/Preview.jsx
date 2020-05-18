@@ -13,7 +13,7 @@ function Preview({ diagram, title, handleSelect, ...props }) {
                     {
                         diagram.answers.map(answer => {
                             return (
-                                <Button key={Math.random()} variant='success' onClick={() => handleSelect(title)}> 
+                                <Button key={Math.random()} variant='primary' onClick={() => handleSelect(title)}> 
                                     {answer.text}
                                 </Button>
                             )

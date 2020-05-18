@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Spinner } from 'react-bootstrap'
 
-import '../../static/sass/DiagramStream.scss'
+import '../../static/sass/Stream.scss'
 import Preview from '../component/Preview'
 import Diagram from './Diagrams'
 import axios from 'axios'
 import { url, endpoints } from '../lib/index'
 
 function Stream() {
-  const [previews, setPreviews] = useState({})
+  const [previews, setPreviews] = useState()
   const [diagram, setDiagram] = useState()
 
   useEffect(() => {
@@ -34,15 +34,15 @@ function Stream() {
       <Row className="top-buffer">
         {
           diagram //if a diagram is selected then
-          ? <Col><Diagram nodes={diagram} setDiagram={setDiagram} /></Col>
-          
-          : Object.keys(previews).map((key, index) => {
-            return (
-              <Col key={index} sm="12" md="6" lg="6" className="top-buffer">
-                <Preview  diagram={previews[key]} title={key} handleSelect={handleSelect} />
-              </Col>
-            )
-          })
+            ? <Col><Diagram nodes={diagram} setDiagram={setDiagram} /></Col>
+            : previews
+              ? Object.keys(previews).map((key, index) => {
+                return (
+                  <Col key={index} sm="12" md="6" lg="6" className="top-buffer">
+                    <Preview diagram={previews[key]} title={key} handleSelect={handleSelect} />
+                  </Col>
+                )
+            }) : <Col className="loading"><Spinner variant="primary" animation="grow" /></Col>
         }
       </Row>
     </Container>
