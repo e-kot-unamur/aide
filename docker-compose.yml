@@ -4,7 +4,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "80:3000"
+      - "70:5000"
     volumes:
       - ./frontend:/usr/src/app
     links:
@@ -12,6 +12,7 @@ services:
     networks: 
       - diagramnetwork
     stdin_open: true
+    restart: always
         
   backend:
     build: ./backend
@@ -21,6 +22,7 @@ services:
       - ./backend:/usr/src/app
     networks: 
       - diagramnetwork
+    restart: always
 
 networks:
   diagramnetwork:
