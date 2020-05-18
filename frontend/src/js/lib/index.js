@@ -1,5 +1,5 @@
 // api address  
-const url = 'http://localhost:3001/api'
+const url = 'http://localhost:8080/api'
 
 // endpoints
 const diagram = '/diagram/' //require an argument

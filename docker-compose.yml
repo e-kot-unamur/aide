@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+    links:
+      - backend
+    networks: 
+      - diagramnetwork
+    stdin_open: true
+        
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/usr/src/app
+    networks: 
+      - diagramnetwork
+
+networks:
+  diagramnetwork:
+      driver: bridge
