@@ -10,7 +10,7 @@ function TopBar({ logo, width, ...props }) {
         alt="E-kot logo"
       />
       <div className="top-bar-links">
-        <a href="#" className="top-bar-link">
+        <a href="https://www.facebook.com/ekotnamur" target="_blank" className="top-bar-link">
           <span>Prendre contact</span>
         </a>
         <a href="#" className="top-bar-link">
