@@ -40,7 +40,7 @@ function Stream() {
           
           : Object.keys(previews).map((key, index) => {
             return (
-              <Col sm="12" md="6" lg="4" className="top-buffer">
+              <Col sm="12" md="6" lg="6" className="top-buffer">
                 <Preview diagram={previews[key]} title={key} handleSelect={handleSelect} />
               </Col>
             )
