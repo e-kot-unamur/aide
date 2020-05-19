@@ -2,7 +2,7 @@
 
 ### Démo
 
-Vous pouvez accéder à la dernière version du projet depuis [ekot.be](akap.unamur.be:70)
+Vous pouvez accéder à la dernière version du projet depuis [e-kot.be](akap.unamur.be:70)
 
 
 
