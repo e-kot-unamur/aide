@@ -5,7 +5,6 @@ var router = express.Router()
 
 // Testing route
 router.get('/', function(req, res, next) {
-    console.log(diagrams)
     res.send('API is working properly')
 })
 

@@ -12,8 +12,6 @@ function Node({
 }) {
   const [imgModal, setImgModal] = useState(false)
 
-  console.log(data)
-
   return (
     <>
       <Card variant='warning' className="node text-center">

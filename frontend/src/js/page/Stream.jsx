@@ -24,10 +24,9 @@ function Stream() {
     const req = url + endpoints['diagram'] + title
     axios.get(req)
       .then(res => {
-        console.log(title)
         setDiagram({'nodes':res.data, 'title':title})
       })
-      .catch(error => console.log(error))
+      .catch(error => console.error(error))
   }
 
   return (

@@ -22,8 +22,6 @@ function Diagrams({ title, nodes, setDiagram }) {
             let lastElement = temp.pop()
             setHistory(temp)
             setNode({'id': lastElement.id, 'data': lastElement.data})
-            console.log(temp)
-            console.log(lastElement)
         } else {
             setDiagram() // diagram === undefined, previews will be rerendered
         }
