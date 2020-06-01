@@ -2,7 +2,7 @@
 
 ### Démo
 
-Vous pouvez accéder à la dernière version du projet depuis **[aide.ekot.be](akap.unamur.be:70)**
+Vous pouvez accéder à la dernière version du projet depuis [aide.e-kot.be](http://aide.e-kot.be/)
 
 
 
@@ -25,6 +25,8 @@ Modifier le *json* afin de créer le diagramme <br />
 L'importer au sein du fichier `interactive-diagram/backend/public/diagram/index.js` <br />
 Relancer le backend, done ! <br />
 Pour plus de précisions voir le fichier `interactive-diagram/backend/public/diagram/README.md` 
+
+
 
 
 
@@ -63,6 +65,8 @@ $ npm start
 
 Go on your `localhost`, client is running on port 70 (docker) or 3000 (npm development server)
 (Backend's listening on port `8080` in both docker and local configuration)
+
+
 
 ### Production 
 
