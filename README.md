@@ -2,7 +2,7 @@
 
 ### Démo
 
-Vous pouvez accéder à la dernière version du projet depuis **[ekot.be](akap.unamur.be:70)**
+Vous pouvez accéder à la dernière version du projet depuis **[aide.ekot.be](akap.unamur.be:70)**
 
 
 
@@ -16,13 +16,15 @@ Rendre le diagramme classique interactif et plus attrayant afin de soulager nos 
 
 ### Ajouter de nouveaux diagrammes 
 ```bash
-$ cd interactive-diagram/backend/diagram
+$ cd interactive-diagram/backend/public/diagram
+$ mkdir <nouveau dossier>
+$ cd <nouveau dossier> 
 $ touch <nom du diagramme>.json
 ```
 Modifier le *json* afin de créer le diagramme <br />
-L'importer au sein du fichier `index.js` <br />
+L'importer au sein du fichier `interactive-diagram/backend/public/diagram/index.js` <br />
 Relancer le backend, done ! <br />
-Pour plus de précisions voir le fichier `interactive-diagram/backend/diagram/README.md` 
+Pour plus de précisions voir le fichier `interactive-diagram/backend/public/diagram/README.md` 
 
 
 
