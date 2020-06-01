@@ -10,6 +10,7 @@
     },
     "1" : {
         "text" : "Avez-vous essayé avec un autre câble Ethernet ?",
+        "image" : true,
         "answers" : [
             {
                 "text" : "Oui, ça marche",

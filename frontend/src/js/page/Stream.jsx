@@ -24,7 +24,8 @@ function Stream() {
     const req = url + endpoints['diagram'] + title
     axios.get(req)
       .then(res => {
-        setDiagram(res.data)
+        console.log(title)
+        setDiagram({'nodes':res.data, 'title':title})
       })
       .catch(error => console.log(error))
   }
@@ -34,7 +35,7 @@ function Stream() {
       <Row className="top-buffer">
         {
           diagram //if a diagram is selected then
-            ? <Col><Diagram nodes={diagram} setDiagram={setDiagram} /></Col>
+            ? <Col><Diagram nodes={diagram['nodes']} title={diagram['title']} setDiagram={setDiagram} /></Col>
             : previews
               ? Object.keys(previews).map((key, index) => {
                 return (

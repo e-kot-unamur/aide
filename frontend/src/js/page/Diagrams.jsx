@@ -3,15 +3,15 @@ import { useState } from 'react'
 
 import Node from '../component/Node'
 
-function Diagrams({ nodes, setDiagram }) {
-    const [node, setNode] = useState(nodes[1]) //Node 0 is for preview
+function Diagrams({ title, nodes, setDiagram }) {
+    const [node, setNode] = useState({'id': 1, 'data': nodes[1]}) //Node 0 is for preview
     const [history, setHistory] = useState([])
 
     const handleAnswer = (id) => {
         if (nodes[id]) {
-            setHistory([...history, node]) //Add actual node to the stack
-            setNode(nodes[id]) //Change the node to the next one 
-        } else {
+            setHistory([...history, {'id':node.id, 'data':node.data}]) //Add actual node to the stack
+            setNode({'id': id, 'data': nodes[id]}) //Change the node to the next one 
+        } else {    
             console.error('There is no node specified for the answer, check the json !')
         }
     }
@@ -21,16 +21,25 @@ function Diagrams({ nodes, setDiagram }) {
             let temp = history.slice()
             let lastElement = temp.pop()
             setHistory(temp)
-            setNode(lastElement)
+            setNode({'id': lastElement.id, 'data': lastElement.data})
+            console.log(temp)
+            console.log(lastElement)
         } else {
             setDiagram() // diagram === undefined, previews will be rerendered
         }
     }
+    
+    // Give the URL where to find the img
+    const getImgFromRemote = (nodeNumber) => {
+        return `http://localhost:8080/diagrams/${title}/${nodeNumber}`
+    }
 
     return (
-        <Node data={node}
+        <Node data={node.data}
             handleAnswer={handleAnswer}
             handleReturn={handleReturn}
+            nodeId={node.id}
+            getImgFromRemote={getImgFromRemote}
         />
     )
 }

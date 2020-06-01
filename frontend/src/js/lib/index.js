@@ -1,6 +1,6 @@
 // api address  
 //FIXME - Don't know how to do this properly - .env ? 
-const url = 'http://akap.unamur.be:71/api'
+const url = 'http://localhost:8080/api'
 
 // endpoints
 const diagram = '/diagram/' //require an argument

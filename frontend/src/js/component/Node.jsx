@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Card, ListGroup } from 'react-bootstrap';
 import '../../static/sass/Node.scss'
 
 function Node({
-  data,
+  data,       
+  nodeId, // To get the image related to the node, if one
+  getImgFromRemote,
   handleAnswer,
   handleReturn
 }) {
 
   return (
     <Card variant='warning' className="node text-center">
+      {
+        data.image && nodeId
+        ? <div className='illustration-container'>
+            <img className='illustration' 
+              variant='top' 
+              src={getImgFromRemote(nodeId)}
+              />
+          </div>
+        : <></>
+      }
       <Card.Body>
         {
-          data
+          data.text
             ? <Card.Text>{data.text}</Card.Text>
             : <Card.Text>Loading</Card.Text>
         }
@@ -21,7 +33,7 @@ function Node({
       <Card.Footer className="answers">
         <ListGroup>
           {
-            data ?
+            data.answers ?
               data.answers.map(
                 answer =>
                   <ListGroup.Item

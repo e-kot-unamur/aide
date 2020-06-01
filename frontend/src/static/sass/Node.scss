@@ -10,4 +10,21 @@
 
 .link {
     color: var(--secondary);
+    cursor: pointer;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.illustration-container {
+    width: inherit;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.illustration {
+    width: 100%;
+    position: relative; //by default
 }
