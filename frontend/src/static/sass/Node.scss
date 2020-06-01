@@ -67,10 +67,11 @@
     opacity: 1;
 }
 
+//FIX-ME : proper styling for modal and img
+
 .full-screen-illustration {
     width: 70%; height: auto;
-    box-shadow:  0 0 25px black;
-    opacity: unset;
+    border: 1px solid #ddd;
 }
 
 .full-screen-container{
