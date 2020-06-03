@@ -76,3 +76,55 @@
   text-align: center;
   opacity: 0.3;
 }
+
+// Tooltip 
+#top-bar::before {
+  content: "Besoin d'aide ?";
+  position: absolute;
+  padding: 0 0.3em 0.3em 0.3em;
+  opacity: 0.7;
+
+  color: var(--text);
+  background-color: var(--primary);
+  border: var(--secondary);
+  border-radius: 3px;
+  z-index: 2;
+
+  top: 122%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#top-bar::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  opacity: 0.7;
+
+  background-color: var(--primary);
+  border: var(--secondary);
+
+  -webkit-clip-path: polygon(50% 0%, 50% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 40%);
+  clip-path: polygon(50% 0%, 50% 0%, 100% 40%, 0% 40%, 100% 100%, 0% 100%, 100% 100%, 0% 40%);
+
+  top: 107%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+}
+
+#top-bar:hover::before {
+  opacity: 0;
+}
+
+#top-bar:hover::after {
+  opacity: 0;
+}
