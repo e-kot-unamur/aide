@@ -65,8 +65,8 @@ $ npm install
 $ npm start
 ````````
 
-Go on your `localhost`, client is running on port 70 (docker) or 3000 (npm development server)
-(Backend's listening on port `8080` in both docker and local configuration)
+Go on your `localhost`, client is running on port 8082 (docker) or 3000 (npm development server)
+(Backend's listening on port `8083` in docker and `8080` for the local configuration)
 
 
 
@@ -117,6 +117,7 @@ RUN npm run build
 
 CMD ["serve", "-s", "build"] 
 `````
+*FIXME : serve package isn't for production*
 
 ###### Edit the Dockerfile in the backend folder
 

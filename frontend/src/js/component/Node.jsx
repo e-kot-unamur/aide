@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Card, ListGroup, Button, Modal } from 'react-bootstrap';
+import { Card, ListGroup, Modal } from 'react-bootstrap';
 import '../../static/sass/Node.scss'
 
 function Node({
@@ -14,7 +14,7 @@ function Node({
 
   return (
     <>
-      <Card variant='warning' className="node text-center">
+      <Card className="node text-center">
         {
           data.image && nodeId
             ? <div
@@ -22,7 +22,6 @@ function Node({
               onClick={() => setImgModal(true)}
             >
               <img className='illustration'
-                variant='top'
                 alt='illustration'
                 src={getImgFromRemote(nodeId)}
               />
@@ -46,7 +45,6 @@ function Node({
                     <ListGroup.Item
                       key={answer.ref}
                       onClick={() => handleAnswer(answer.ref)}
-                      variant='primary'
                     >
                       <a href="/#" className='link'>
                         {answer.text}
@@ -55,9 +53,8 @@ function Node({
                 : <></>
             }
             <ListGroup.Item
-              className='bug-correction'
+              className='back-option'
               onClick={() => handleReturn()}
-              variant='warning'
             >
               <a href="/#" className='link'>
                 Retour

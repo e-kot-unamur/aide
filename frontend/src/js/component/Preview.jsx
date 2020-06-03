@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Button, ListGroup } from 'react-bootstrap';
 
-//FIXME - mathrandom mdr
 function Preview({ diagram, title, handleSelect, ...props }) {
     return (
         <Card className="node text-center">
@@ -11,9 +10,9 @@ function Preview({ diagram, title, handleSelect, ...props }) {
             <Card.Footer className="answers">
                 <ListGroup>
                     {
-                        diagram.answers.map(answer => {
+                        diagram.answers.map((answer, index) => {
                             return (
-                                <Button key={Math.random()} variant='primary' onClick={() => handleSelect(title)}> 
+                                <Button key={index} variant='primary' onClick={() => handleSelect(title)}> 
                                     {answer.text}
                                 </Button>
                             )
