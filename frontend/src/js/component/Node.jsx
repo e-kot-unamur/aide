@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Card, ListGroup, Button, Modal } from 'react-bootstrap';
+import { Card, ListGroup, Modal } from 'react-bootstrap';
 import '../../static/sass/Node.scss'
 
 function Node({

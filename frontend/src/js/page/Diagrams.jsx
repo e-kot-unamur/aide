@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 import Node from '../component/Node'
+import { url, endpoints } from '../lib/'
 
 function Diagrams({ title, nodes, setDiagram }) {
     const [node, setNode] = useState({'id': 1, 'data': nodes[1]}) //Node 0 is for preview
@@ -29,7 +30,7 @@ function Diagrams({ title, nodes, setDiagram }) {
     
     // Give the URL where to find the img
     const getImgFromRemote = (nodeNumber) => {
-        return `http://localhost:8080/diagrams/${title}/${nodeNumber}`
+        return url + endpoints.staticImages + `${title}/${nodeNumber}`
     }
 
     return (
