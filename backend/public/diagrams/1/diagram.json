@@ -46,7 +46,7 @@
         "answers": []
     },
     "5": {
-        "text": "Avez-vous accès à  la page kotserv.unamur.be ?",
+        "text": "Avez-vous accès à la page kotserv.unamur.be ?",
         "answers": [
             {
                 "text": "Oui",
@@ -59,7 +59,7 @@
         ]
     },
     "6": {
-        "text": "Votre quota est-il suppérieur à la limite ?",
+        "text": "Votre quota est-il supérieur à la limite ?",
         "answers": [
             {
                 "text": "Oui",

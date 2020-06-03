@@ -75,7 +75,7 @@
         ]
     },
     "13": {
-        "text": "Votre adresse mac se trouve à coté de l'entrée intitulée  \"inet\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante.",
+        "text": "Votre adresse mac se trouve à coté de l'entrée intitulée  \"inet\". Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresse et de l’interface correspondante.",
         "answers": []
     },
     "20": {
@@ -88,7 +88,7 @@
         ]
     },
     "21": {
-        "text": "/*Affichez les informations des interfaces réseau IP.*/ Sur la ligne de commande, tapez ifconfig -a, puis validez en appuyant sur la touche Entrée. Si l'accès vous est refusé, tapez sudo ifconfig -a, puis entrez votre mot de passe au moment voulu",
+        "text": "/*Affichez les informations des interfaces réseau IP.*/ Sur la ligne de commande, tapez 'ifconfig -a', puis validez en appuyant sur la touche Entrée. Si l'accès vous est refusé, tapez 'sudo ifconfig -a', puis entrez votre mot de passe au moment voulu",
         "answers": [
             {
                 "text": "Suivant",
