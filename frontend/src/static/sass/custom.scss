@@ -92,18 +92,24 @@ a:hover {
 }
 
 // FIXME - Not working why ?
+// Bootstrap, when creating the modal doesn't have access to the CSS variable
+// Make every modal ourself ? 
 .modal {
   .modal-content {
     transition-duration: var(--transition-duration);
     border-radius: 2px;
-    color: var(--text);
-
-    .modal-header {
-      background-color: var(--component-foreground);
-    }
+    
     .modal-body {
       background-color: var(--component-background);
     }
+  }
+  // Not working either
+  .modal-content::before {
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border:3px solid var(--component-foreground);
   }
 }
 
