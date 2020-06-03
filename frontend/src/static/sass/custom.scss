@@ -1,10 +1,119 @@
-$theme-colors: (
-  "primary": #007991,
-  "secondary": #3A405A, //FIXME
-  "danger": #D62828,
-  "success": #2CA58D,
-  "warning": #E9D985,
-  "background": #3A405A
-);
+@import "~bootstrap/scss/bootstrap.scss";
 
-@import '~bootstrap/scss/bootstrap.scss';
+//define our themes colors
+[data-theme="light"] {
+  --primary: #3a5ebb;
+  --secondary: #6293d0;
+  --reference: #1d3461cc;
+  --reference-active: #1d3461;
+
+  --background: #bdbdbd;
+  --component-foreground: #e5e5e5cc;
+  --component-background: #e5e5e5;
+  --text: #131313;
+  --transition-duration: 0.25s !important;
+}
+
+[data-theme="dark"] {
+  --primary: #162447;
+  --secondary: #1f4068;
+  --reference: #77a6cfcc;
+  --reference-active: #77a6cf;
+
+  --background: #121212;
+  --component-foreground: #292929cc;
+  --component-background: #292929;
+  --text: #eeeeee;
+  --transition-duration: 0.25s !important;
+}
+
+// The idea behind the theme is to use CSS variables to change
+// the app colors at runtime
+// Since we cannot pass CSS variables to bootstrap while
+// redifining theme, we need to be exhaustive on the bootstrap
+// components we edit
+// ------------------------------------------------------------
+// THIS SECTION IS THEME RELATED ONLY
+// If you need to edit the CSS of a particular component, edit
+// the scss file for that component
+#body {
+  transition-duration: var(--transition-duration);
+}
+
+#topbar {
+  transition-duration: var(--transition-duration);
+}
+
+[data-theme="light"] {
+  .icon {
+    transition-duration: var(--transition-duration);
+    -webkit-filter: invert(0%); /* safari 6.0 - 9.0 */
+    filter: invert(0%);
+  }
+}
+
+[data-theme="dark"] {
+  .icon {
+    transition-duration: var(--transition-duration);
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+  }
+}
+
+.card {
+  transition-duration: var(--transition-duration);
+  border-radius: 2px;
+  color: var(--text);
+  background-color: var(--component-foreground);
+  .card-body {
+    transition-duration: var(--transition-duration);
+  }
+
+  .card-footer {
+    transition-duration: var(--transition-duration);
+    background-color: var(--component-background);
+  }
+}
+
+.list-group {
+  .list-group-item {
+    border-radius: 2px;
+    transition-duration: var(--transition-duration);
+  }
+}
+
+a {
+  transition-duration: var(--transition-duration);
+  color: var(--reference);
+}
+
+a:hover {
+  color: var(--reference-active);
+}
+
+// FIXME - Not working why ?
+.modal {
+  .modal-content {
+    transition-duration: var(--transition-duration);
+    border-radius: 2px;
+    color: var(--text);
+
+    .modal-header {
+      background-color: var(--component-foreground);
+    }
+    .modal-body {
+      background-color: var(--component-background);
+    }
+  }
+}
+
+.btn {
+  border-radius: 2px;
+  background-color: var(--primary);
+  border-color: var(--secondary);
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}

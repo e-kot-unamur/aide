@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 import '../../static/sass/TopBar.scss'
-import faFacebook from '../../static/icons/facebook.svg'
-import faInfoCircle from '../../static/icons/info-circle.svg'
-
+import { ReactComponent as FaFacebook } from '../../static/icons/facebook.svg'
+import { ReactComponent as FaInfoCircle } from '../../static/icons/info-circle.svg'
+import { ReactComponent as FaAdjustSolid } from '../../static/icons/adjust-solid.svg'
 import { Modal } from 'react-bootstrap'
 
-function TopBar({ logo, width, ...props }) {
+function TopBar({ logo, width, setTheme, ...props }) {
   const [aboutShow, setAboutShow] = useState(false)
 
   return (
@@ -20,13 +20,20 @@ function TopBar({ logo, width, ...props }) {
         />
         <div className="top-bar-links">
           <a href="https://www.messenger.com/t/ekotnamur" target="_blank" rel="noopener noreferrer" className="top-bar-link">
-            <img src={faFacebook} className='icon' alt='facebook icone' />
+            <FaFacebook className='icon' alt='A propos icone' />
             <span>Prendre contact</span>
           </a>
           <a href="/#" rel="noopener noreferrer" className="top-bar-link" onClick={() => setAboutShow(true)}>
-            <img src={faInfoCircle} className='icon' alt='A propos icone' />
+            <FaInfoCircle className='icon' alt='A propos icone' />
             <span>A propos</span>
           </a>
+          {
+            setTheme
+              ? <div id='theme-button'>
+                <FaAdjustSolid className='icon' alt='Theme' onClick={() => setTheme()} />
+              </div>
+              : <></>
+          }
         </div>
       </div>
       <About

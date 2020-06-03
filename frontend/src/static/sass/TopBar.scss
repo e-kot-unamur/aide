@@ -1,9 +1,10 @@
-
-.top-bar {
+#top-bar {
+  background-color: var(--component-foreground);
   text-align: center;
   height: auto;
   width: 100vw;
-  margin-top: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   position: absolute;
   top: 0;
   animation: slide 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -13,7 +14,7 @@
   transition-duration: 0.3s;
 }
 
-.top-bar:hover .top-bar-logo {
+#top-bar:hover .top-bar-logo {
   transform: translate(-300%, 0);
   opacity: 0;
 }
@@ -21,7 +22,7 @@
 .top-bar-links {
   text-align: center;
   top: inherit;
-  margin-top: inherit;
+  padding-top: 2.5vh;
   opacity: 0;
   transition: 0.5s;
   position: absolute;
@@ -34,13 +35,13 @@
   margin: 1vw;
 }
 
-.top-bar:hover .top-bar-links {
+#top-bar:hover .top-bar-links {
   opacity: 1;
 }
 
-.top-bar:hover .top-bar-link {
+#top-bar:hover .top-bar-link {
   text-align: center;
-  color: white;
+  color: var(--text);
 }
 
 @keyframes slide {
@@ -55,14 +56,23 @@
 }
 
 .icon {
-    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-    filter: invert(100%);
-    width: 25px;
-    height: auto;
-    margin-right: 10px;
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
 }
 
+#theme-button {
+  width: fit-content;
+  height: 100%;
+  position: absolute;
+  padding-top: 2.5vh;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+// ChausSUUUU
 #odc {
-  text-align: center; 
-  opacity : 0.3;
+  text-align: center;
+  opacity: 0.3;
 }
