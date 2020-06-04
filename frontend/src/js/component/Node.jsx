@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { Card, ListGroup, Modal } from 'react-bootstrap';
 import '../../static/sass/Node.scss'
+import APIParser from '../lib/APIParser'
 
 function Node({
   data,
@@ -12,6 +13,7 @@ function Node({
 }) {
   const [imgModal, setImgModal] = useState(false)
 
+  //FIXME : Implement our own function instead of dangerouslySetInnerHTML
   return (
     <>
       <Card className="node text-center">
@@ -32,7 +34,12 @@ function Node({
         <Card.Body>
           {
             data.text
-              ? <Card.Text>{data.text}</Card.Text>
+              ? <Card.Text>
+                  <span dangerouslySetInnerHTML={
+                    { __html: APIParser.parseContact(data.text) }
+                    }>
+                  </span>
+                </Card.Text>
               : <Card.Text>Loading</Card.Text>
           }
         </Card.Body>

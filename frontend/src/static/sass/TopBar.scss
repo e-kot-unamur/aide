@@ -76,3 +76,92 @@
   text-align: center;
   opacity: 0.3;
 }
+
+// Tooltip
+#top-bar::before {
+  content: "Autre chose ?";
+  position: absolute;
+  padding: 0 0.3em 0.3em 0.3em;
+
+  color: var(--text);
+  background-color: var(--primary);
+  border: var(--secondary);
+  border-radius: 2px;
+  z-index: 2;
+
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-duration: 0.1s;
+  animation-name: shake;
+  animation-duration: 3s;
+
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: center center;
+}
+
+#top-bar::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+
+  background-color: var(--primary);
+  border: var(--secondary);
+
+  -webkit-clip-path: polygon(50% 0%, 50% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 40%);
+  clip-path: polygon(50% 0%, 50% 0%, 100% 40%, 0% 40%, 100% 100%, 0% 100%, 100% 100%, 0% 40%);
+
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-duration: 0.1s;
+  animation-name: shake;
+  animation-duration: 3s;
+
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: center center;
+}
+
+#top-bar:hover::before {
+  opacity: 0;
+}
+
+#top-bar:hover::after {
+  opacity: 0;
+}
+
+@keyframes shake {
+  0% {
+    background-color: var(--primary);
+    left: 50%;
+  }
+  2% {
+    left: 49.7%;
+  }
+  4% {
+    left: 50.3%;
+  }
+  6% {
+    left: 49.7%;
+  }
+  12% {
+    left: 50%;
+  }
+  50% {
+    background-color: var(--secondary);
+  }
+  100% {
+    background-color: var(--primary);
+    left: 50%;
+  }
+}

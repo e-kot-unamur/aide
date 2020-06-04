@@ -25,7 +25,7 @@
         ]
     },
     "2": {
-        "text": "Le problème vient donc de votre cable Ethernet. Au besoin, l'E-kot en vend à 3€, n'hésite pas à les contacter !",
+        "text": "Le problème vient donc de votre cable Ethernet. Au besoin, l'E-kot en vend à 3€, n'hésite pas <contact>à les contacter !</contact>",
         "answers": []
     },
     "3": {
@@ -42,11 +42,11 @@
         ]
     },
     "4": {
-        "text": "Votre prise n'a pas été activée ou est défaillante... Prenez contact avec l'E-kot !",
+        "text": "Votre prise n'a pas été activée ou est défaillante... <contact>Prenez contact avec l'E-kot !</contact>",
         "answers": []
     },
     "5": {
-        "text": "Avez-vous accès à la page kotserv.unamur.be ?",
+        "text": "Avez-vous accès à la page <a href='http://kotserv.unamur.be' target='_blank'>kotserv.unamur.be</a> ?",
         "answers": [
             {
                 "text": "Oui",
@@ -72,11 +72,11 @@
         ]
     },
     "7": {
-        "text": "Votre ordinateur est probablement mal configuré. Prenez contact avec l'E-kot pour une intervention",
+        "text": "Votre ordinateur est probablement mal configuré. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
         "answers": []
     },
     "8": {
-        "text": "Erreur inconnue... Prenez contact avec l'E-kot pour une intervention",
+        "text": "Erreur inconnue... <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
         "answers": []
     },
     "9": {
@@ -93,11 +93,11 @@
         ]
     },
     "10": {
-        "text": "Vous avez probablement un problème de client torrent. Prenez contact avec l'E-kot pour une intervention",
+        "text": "Vous avez probablement un problème de client torrent. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
         "answers": []
     },
     "11": {
-        "text": "Vous avez probablement emprunté ou prêté votre eID. Prenez contact avec l'E-kot pour supprimer les appareils qui ne vous appartiennent pas",
+        "text": "Vous avez probablement emprunté ou prêté votre eID. <contact>Prenez contact avec l'E-kot</contact> pour supprimer les appareils qui ne vous appartiennent pas.",
         "answers": []
     }
 }
