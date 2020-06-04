@@ -47,6 +47,19 @@ Il vous faudra ajouter vos images dans le dossier du diagramme en renommant votr
 
 Le nœud 0 servira d'introduction au problème affiché à l'utilisateur (exemple : ***Je n'ai plus internet...***) et aura pour `NODE_NUMBER_REF`  le premier nœud. 
 
+#### HTML Tags
+
+L'application affichera vos tags HTML si vous les insérez au sein des diagrammes : 
+
+- **bold** : `<b>`
+- *italic* : `<i>` 
+- <u>underlined</u> : `<u>`
+- newline : `<br/>`
+- `Code` :  `<code>`
+- Link to contact page (specified within the app) : `<contact>` 
+
+###### Faites très attention avec les tags HTML. L'utilisation d'autres tags, que ceux-ci, est fortement déconseillée. Ceux-ci peuvent produire des problèmes de sécurités, ou provoquer un comportement inattendu.    
+
 ### Référencer le nouveau diagramme
 
 Ouvrez le fichier `index.js`
@@ -67,4 +80,4 @@ const exportList = {
 }
 ``````
 
-**Et voilà !**, relancez le serveur et c'est parti
+**Et voilà !**, redémarrer le serveur et c'est parti
