@@ -5,6 +5,7 @@ import { ReactComponent as FaFacebook } from '../../static/icons/facebook.svg'
 import { ReactComponent as FaInfoCircle } from '../../static/icons/info-circle.svg'
 import { ReactComponent as FaAdjustSolid } from '../../static/icons/adjust-solid.svg'
 import { Modal } from 'react-bootstrap'
+import { contact } from '../lib/index'
 
 function TopBar({ logo, width, setTheme, ...props }) {
   const [aboutShow, setAboutShow] = useState(false)
@@ -19,7 +20,7 @@ function TopBar({ logo, width, setTheme, ...props }) {
           alt="E-kot logo"
         />
         <div className="top-bar-links">
-          <a href="https://www.messenger.com/t/ekotnamur" target="_blank" rel="noopener noreferrer" className="top-bar-link">
+          <a href={contact} target="_blank" rel="noopener noreferrer" className="top-bar-link">
             <FaFacebook className='icon' alt='A propos icone' />
             <span>Prendre contact</span>
           </a>
