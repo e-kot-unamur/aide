@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
-import Node from '../component/Node'
-import { url, endpoints } from '../lib/'
+import InnerNode from 'js/component/home/InnerNode'
+import { url, endpoints } from 'js/lib'
 
-function Diagrams({ title, nodes, setDiagram }) {
+function Diagram({ title, nodes, setDiagram }) {
     const [node, setNode] = useState({'id': 1, 'data': nodes[1]}) //Node 0 is for preview
     const [history, setHistory] = useState([])
 
@@ -34,7 +34,7 @@ function Diagrams({ title, nodes, setDiagram }) {
     }
 
     return (
-        <Node data={node.data}
+        <InnerNode data={node.data}
             handleAnswer={handleAnswer}
             handleReturn={handleReturn}
             nodeId={node.id}
@@ -43,4 +43,4 @@ function Diagrams({ title, nodes, setDiagram }) {
     )
 }
 
-export default Diagrams
+export default Diagram

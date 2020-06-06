@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card, Button, ListGroup } from 'react-bootstrap';
-import APIParser from '../lib/APIParser'
+import APIParser from 'js/lib/APIParser'
 
 //FIXME : Implement our own function instead of dangerouslySetInnerHTML
-function Preview({ diagram, title, handleSelect, ...props }) {
+function PreviewNode({ diagram, title, handleSelect, ...props }) {
   return (
     <Card className="node text-center">
       <Card.Body>
@@ -30,4 +30,4 @@ function Preview({ diagram, title, handleSelect, ...props }) {
   )
 }
 
-export default Preview
+export default PreviewNode

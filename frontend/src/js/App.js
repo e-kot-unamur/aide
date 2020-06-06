@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import '../static/sass/App.scss'
+import 'static/sass/App.scss'
 
-import logo from '../static/images/logo.png'
-import TopBar from './component/TopBar'
-import Stream from './page/Stream'
+import logo from 'static/images/logo.png'
+import TopBar from 'js/layout/TopBar'
+import Stream from 'js/page/home/Home'
 
 function App() {
   const [theme, setTheme] = useState('light')

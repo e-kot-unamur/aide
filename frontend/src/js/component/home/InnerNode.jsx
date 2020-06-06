@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import { Card, ListGroup, Modal } from 'react-bootstrap';
-import '../../static/sass/Node.scss'
-import APIParser from '../lib/APIParser'
+import 'static/sass/Node.scss'
+import APIParser from 'js/lib/APIParser'
 
-function Node({
+function InnerNode({
   data,
   nodeId, // To get the image related to the node, if one
   getImgFromRemote,
@@ -116,4 +116,4 @@ function FullScreenImg({
   );
 }
 
-export default Node
+export default InnerNode

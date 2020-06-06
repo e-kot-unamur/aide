@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
-
-import '../../static/sass/Stream.scss'
-import Preview from '../component/Preview'
-import Diagram from './Diagrams'
+import { url, endpoints } from 'js/lib/index'
 import axios from 'axios'
-import { url, endpoints } from '../lib/index'
+
+import 'static/sass/Stream.scss'
+import PreviewNode from 'js/component/home/PreviewNode'
+import Diagram from './Diagram'
 
 function Stream() {
   const [previews, setPreviews] = useState()
@@ -24,7 +24,7 @@ function Stream() {
     const req = url + endpoints['diagram'] + title
     axios.get(req)
       .then(res => {
-        setDiagram({'nodes':res.data, 'title':title})
+        setDiagram({ 'nodes': res.data, 'title': title })
       })
       .catch(error => console.error(error))
   }
@@ -34,15 +34,18 @@ function Stream() {
       <Row className="top-buffer">
         {
           diagram //if a diagram is selected then
-            ? <Col><Diagram nodes={diagram['nodes']} title={diagram['title']} setDiagram={setDiagram} /></Col>
+            ? <Col>
+                <Diagram nodes={diagram['nodes']} title={diagram['title']} setDiagram={setDiagram} />
+              </Col>
             : previews
               ? Object.keys(previews).map((key, index) => {
                 return (
                   <Col key={index} sm="12" md="6" lg="6" className="top-buffer">
-                    <Preview diagram={previews[key]} title={key} handleSelect={handleSelect} />
+                    <PreviewNode diagram={previews[key]} title={key} handleSelect={handleSelect} />
                   </Col>
                 )
-            }) : <Col className="loading"><Spinner variant="primary" animation="grow" /></Col>
+              }) 
+              : <Col className="loading"><Spinner variant="primary" animation="grow" /></Col>
         }
       </Row>
     </Container>
