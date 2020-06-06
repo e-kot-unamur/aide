@@ -4,11 +4,11 @@ import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import { url, endpoints } from 'js/lib/index'
 import axios from 'axios'
 
-import 'static/sass/Stream.scss'
+import 'static/sass/page/home/Home.scss'
 import PreviewNode from 'js/component/home/PreviewNode'
 import Diagram from './Diagram'
 
-function Stream() {
+function Home() {
   const [previews, setPreviews] = useState()
   const [diagram, setDiagram] = useState()
 
@@ -52,4 +52,4 @@ function Stream() {
   )
 }
 
-export default Stream
+export default Home

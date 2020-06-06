@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Card, ListGroup, Modal } from 'react-bootstrap';
-import 'static/sass/Node.scss'
+import 'static/sass/component/home/InnerNode.scss'
 import APIParser from 'js/lib/APIParser'
 
 function InnerNode({

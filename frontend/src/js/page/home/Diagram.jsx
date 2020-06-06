@@ -1,13 +1,24 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import InnerNode from 'js/component/home/InnerNode'
+import FeedbackModal from 'js/component/home/FeedbackModal'
 import { url, endpoints } from 'js/lib'
 
 function Diagram({ title, nodes, setDiagram }) {
     const [node, setNode] = useState({'id': 1, 'data': nodes[1]}) //Node 0 is for preview
     const [history, setHistory] = useState([])
+    const [showFeedbackModal, setShowFeedbackModal] = useState(false) //FIXME
 
+    // Checking for a root node
+    // Then ask for the user feedback
+    useEffect(() => {
+        const userFeedback = () => setTimeout(() => setShowFeedbackModal(true), 500) //FIXME - Set a proper timeout
+        if (node.data.answers.length === 0) {
+            userFeedback()
+        }
+    }, [node.data.answers])
+
+    // Change node according to the answer specified
     const handleAnswer = (id) => {
         if (nodes[id]) {
             setHistory([...history, {'id':node.id, 'data':node.data}]) //Add actual node to the stack
@@ -17,6 +28,7 @@ function Diagram({ title, nodes, setDiagram }) {
         }
     }
 
+    // Back button
     const handleReturn = () => {
         if (history.length !== 0) {
             let temp = history.slice()
@@ -34,12 +46,18 @@ function Diagram({ title, nodes, setDiagram }) {
     }
 
     return (
+        <>
         <InnerNode data={node.data}
             handleAnswer={handleAnswer}
             handleReturn={handleReturn}
             nodeId={node.id}
             getImgFromRemote={getImgFromRemote}
         />
+        <FeedbackModal 
+            show={showFeedbackModal}
+            onHide={() => setShowFeedbackModal(false)}
+        />
+        </>
     )
 }
 
