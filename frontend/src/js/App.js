@@ -3,7 +3,7 @@ import 'static/sass/App.scss'
 
 import logo from 'static/images/logo.png'
 import TopBar from 'js/layout/TopBar'
-import Stream from 'js/page/home/Home'
+import Home from 'js/page/home/Home'
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -16,7 +16,7 @@ function App() {
       <div id="body" data-theme={theme}>
         <TopBar id="top-bar" logo={logo} width="50" setTheme={enableDarkTheme} />
         <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
-        <Stream />
+        <Home />
       </div>
     </div>
   )
