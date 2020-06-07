@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react'
 
 import InnerNode from 'js/component/home/InnerNode'
-import FeedbackModal from 'js/component/home/FeedbackModal'
+import FeedbackSystem from 'js/component/home/FeedbackSystem'
 import { url, endpoints } from 'js/lib'
 
 function Diagram({ title, nodes, setDiagram }) {
     const [node, setNode] = useState({'id': 1, 'data': nodes[1]}) //Node 0 is for preview
     const [history, setHistory] = useState([])
-    const [showFeedbackModal, setShowFeedbackModal] = useState(false) //FIXME
+    const [showFeedbackSystem, setShowFeedbackSystem] = useState(false) //FIXME
 
     // Checking for a root node
     // Then ask for the user feedback
     useEffect(() => {
-        const userFeedback = () => setTimeout(() => setShowFeedbackModal(true), 500) //FIXME - Set a proper timeout
+        const userFeedback = (v) => setTimeout(() => setShowFeedbackSystem(v), 500) //FIXME - Set a proper timeout
         if (node.data.answers.length === 0) {
-            userFeedback()
+            userFeedback(true)
+        } else {
+            userFeedback(false)
         }
     }, [node.data.answers])
 
@@ -53,9 +55,9 @@ function Diagram({ title, nodes, setDiagram }) {
             nodeId={node.id}
             getImgFromRemote={getImgFromRemote}
         />
-        <FeedbackModal 
-            show={showFeedbackModal}
-            onHide={() => setShowFeedbackModal(false)}
+        <FeedbackSystem 
+            show={showFeedbackSystem}
+            onHide={() => setShowFeedbackSystem(false)}
         />
         </>
     )

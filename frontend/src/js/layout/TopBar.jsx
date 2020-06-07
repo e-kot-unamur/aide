@@ -21,7 +21,7 @@ function TopBar({ logo, width, setTheme, ...props }) {
         />
         <div className="top-bar-links">
           <a href={contact} target="_blank" rel="noopener noreferrer" className="top-bar-link">
-            <FaFacebook className='icon' alt='A propos icone' />
+            <FaFacebook className='icon' alt='Facebook icone' />
             <span>Prendre contact</span>
           </a>
           <a href="/#" rel="noopener noreferrer" className="top-bar-link" onClick={() => setAboutShow(true)}>
