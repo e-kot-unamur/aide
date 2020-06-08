@@ -13,7 +13,7 @@ function Diagram({ title, nodes, setDiagram }) {
   // Checking for a root node
   // Then ask for the user feedback
   useEffect(() => {
-    const userFeedback = (v) => setTimeout(() => setShowFeedbackSystem(v), 5000) //FIXME - Set a proper timeout
+    const userFeedback = (v) => setTimeout(() => setShowFeedbackSystem(v), 5000)
     if (node.data.answers.length === 0) {
       userFeedback(true)
     } else {
@@ -58,7 +58,15 @@ function Diagram({ title, nodes, setDiagram }) {
       />
       {
         showFeedbackSystem
-          ? <FeedbackSystem className='center' />
+          ? <div
+              className='feedback-system-background'
+              onClick={() => setShowFeedbackSystem(false)}
+            >
+              <FeedbackSystem
+                handleClose={() => setShowFeedbackSystem(false)}
+                className='center'
+              />
+            </div>
           : <></>
       }
     </>

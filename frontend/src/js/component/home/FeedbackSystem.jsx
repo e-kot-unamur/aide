@@ -3,8 +3,9 @@ import 'static/sass/component/home/FeedbackSystem.scss'
 import { Card, InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
 import { url, endpoints } from 'js/lib'
 import axios from 'axios'
+import { handlePropagation } from 'js/lib/utils'
 
-function FeedbackSystem({ show, ...props }) {
+function FeedbackSystem({ show, handleClose, ...props }) {
   // User inputs
   // reactions
   const [sadCry, setSadCry] = useState(false)
@@ -57,7 +58,11 @@ function FeedbackSystem({ show, ...props }) {
   }
 
   return (
-    <div {...props} show-feedback={show ? 'true' : 'false'}>
+    <div {...props}
+      show-feedback={show ? 'true' : 'false'}
+      onClick={e => handlePropagation(e)}
+    >
+      <span className='close-btn' onClick={() => handleClose()}>×</span>
       <Card className='feedback-system'>
         <Card.Body>
           <Card.Title>Problème résolu ?</Card.Title>

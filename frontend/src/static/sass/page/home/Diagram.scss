@@ -8,3 +8,24 @@
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
     animation: 0.7s ease 0s 1 slide;
 }
+
+.feedback-system-background {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    animation: 0.7s ease 0s 1 color-fade;
+    animation-fill-mode: forwards;  
+}
+
+// App wide animations
+@keyframes color-fade {
+    0% {
+        background-color: none;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
