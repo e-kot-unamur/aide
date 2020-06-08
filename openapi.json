@@ -1,159 +1,178 @@
 {
-    "openapi": "3.0.1",
-    "info": {
-        "title": "e-kot diagramme interactif",
-        "version": "0.1.3"
-    },
-    "servers": [
-        {
-            "url": "https://aide.e-kot.be"
-        }
-    ],
-    "tags": [
-        {
-            "name": "diagram",
-            "description": "Everything related to diagrams"
-        },
-        {
-            "name": "feedback",
-            "description": "Everything related to users feedback"
-        }
-    ],
-    "paths": {
-        "/diagrams": {
-            "get": {
-                "tags": [
-                    "diagram"
-                ],
-                "description": "Fetch a preview (first node) of every diagram",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "json": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/DiagramPreview"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/diagram": {
-            "get": {
-                "tags": [
-                    "diagram"
-                ],
-                "description": "Fetch the requested diagram",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "json": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/Diagram"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/feedbacks": {
-            "get": {
-                "tags": [
-                    "feedback"
-                ],
-                "description": "Fetch all the feedbacks",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {}
-                    }
-                }
-            }
-        },
-        "/feedback": {
-            "post": {
-                "tags": [
-                    "feedback"
-                ],
-                "description": "Post",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {}
-                    }
-                }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "DiagramPreview": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "object",
-                        "properties": {
-                            "text": {
-                                "type": "string"
-                            },
-                            "answers": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Answers"
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "Diagram": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "object",
-                        "properties": {
-                            "text": {
-                                "type": "string"
-                            },
-                            "image": {
-                                "type": "object",
-                                "properties": {
-                                    "caption": {
-                                        "type": "string"
-                                    }
-                                }
-                            },
-                            "answers": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/Answers"
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "Answers": {
-                "type": "object",
-                "properties": {
-                    "text": {
-                        "type": "string"
-                    },
-                    "ref": {
-                        "type": "integer"
-                    }
-                }
-            }
-        }
+  "openapi": "3.0.1",
+  "info": {
+    "title": "e-kot diagramme interactif",
+    "version": "0.1.3"
+  },
+  "servers": [
+    {
+      "url": "https://aide.e-kot.be"
     }
+  ],
+  "tags": [
+    {
+      "name": "diagram",
+      "description": "Everything related to diagrams"
+    },
+    {
+      "name": "feedback",
+      "description": "Everything related to users feedback"
+    }
+  ],
+  "paths": {
+    "/diagrams": {
+      "get": {
+        "tags": [
+          "diagram"
+        ],
+        "description": "Fetch a preview (first node) of every diagram",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiagramPreview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagram": {
+      "get": {
+        "tags": [
+          "diagram"
+        ],
+        "description": "Fetch the requested diagram",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Diagram"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks": {
+      "get": {
+        "tags": [
+          "feedback"
+        ],
+        "description": "Fetch all the feedbacks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Feedback"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedback": {
+      "post": {
+        "tags": [
+          "feedback"
+        ],
+        "description": "Post",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DiagramPreview": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "answers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Answers"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Diagram": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "image": {
+                "type": "object",
+                "properties": {
+                  "caption": {
+                    "type": "string"
+                  }
+                }
+              },
+              "answers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Answers"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Answers": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "ref": {
+            "type": "integer"
+          }
+        }
+      },
+      "Info": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "Feedback": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
 }
