@@ -17,8 +17,9 @@ function FeedbackSystem({ show, ...props }) {
     }
   }
 
-  function sendFeedback() {
-    //TODO - send selection and comment to the API
+  function sendFeedback(emoji, comment) {
+    console.log('%c sendFeedBack call', 'color:orange')
+
   }
 
   return (
@@ -27,7 +28,7 @@ function FeedbackSystem({ show, ...props }) {
         <Card.Body>
           <Card.Title>Problème résolu ?</Card.Title>
           <Card.Text>
-            <p>Votre avis nous intéresse !</p>
+            Votre avis nous intéresse !
           </Card.Text>
           <Row>
             <Col className={`option-container ${sadCry ? 'selected' : ''}`} onClick={() => setSelection('first')}>
@@ -39,11 +40,10 @@ function FeedbackSystem({ show, ...props }) {
           </Row>
         </Card.Body>
         <Card.Footer>
-
           <InputGroup>
             <FormControl />
             <InputGroup.Append>
-              <Button>Envoyer</Button>
+              <Button onClick={() => sendFeedback()}>Envoyer</Button>
             </InputGroup.Append>
           </InputGroup>
         </Card.Footer>
