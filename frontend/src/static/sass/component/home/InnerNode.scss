@@ -1,17 +1,5 @@
 .node {
-    animation-name: appear;
-    animation-duration: 1s;
-}
-
-@keyframes appear {
-    from {
-        top: -100px;
-        opacity: 0;
-    }
-    to {
-        top: 0px;
-        opacity: 1;
-    }
+    animation: 0.7s ease 0s 1 slide;
 }
 
 .link {
