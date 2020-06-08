@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "e-kot diagramme interactif",
+        "version": "0.1.3"
+    },
+    "servers": [
+        {
+            "url": "https://aide.e-kot.be"
+        }
+    ],
+    "tags": [
+        {
+            "name": "diagram",
+            "description": "Everything related to diagrams"
+        },
+        {
+            "name": "feedback",
+            "description": "Everything related to users feedback"
+        }
+    ],
+    "paths": {
+        "/diagrams": {
+            "get": {
+                "tags": [
+                    "diagram"
+                ],
+                "description": "Fetch a preview (first node) of every diagram",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/diagram": {
+            "get": {
+                "tags": [
+                    "diagram"
+                ],
+                "description": "Fetch the requested diagram",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {}
+                    }
+                }
+            }
+        }
+    },
+    "components":  {}
+}
