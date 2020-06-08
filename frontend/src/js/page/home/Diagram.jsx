@@ -16,8 +16,6 @@ function Diagram({ title, nodes, setDiagram }) {
     const userFeedback = (v) => setTimeout(() => setShowFeedbackSystem(v), 5000)
     if (node.data.answers.length === 0) {
       userFeedback(true)
-    } else {
-      userFeedback(false)
     }
   }, [node.data.answers])
 
