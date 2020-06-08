@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
-import { Card, InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
 import 'static/sass/component/home/FeedbackSystem.scss'
-
+import { Card, InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
+import { url, endpoints } from 'js/lib'
+import axios from 'axios'
 
 function FeedbackSystem({ show, ...props }) {
+  // User inputs
+  // reactions
   const [sadCry, setSadCry] = useState(false)
   const [grinHearts, setGrinHearts] = useState(false)
+  // comment
+  let commentRef = React.createRef()
+  const [comment, setComment] = useState('')
 
-  const setSelection = (option) => {
+  const setReaction = (option) => {
     if (option === 'first') {
       setGrinHearts(false)
       setSadCry(!sadCry)
@@ -17,9 +23,37 @@ function FeedbackSystem({ show, ...props }) {
     }
   }
 
-  function sendFeedback(emoji, comment) {
-    console.log('%c sendFeedBack call', 'color:orange')
+  /**
+   * Returns the user reaction  
+   * 
+   * @return {Boolean} true if resolved (grinHearts), false if unresolved (sadCry), null otherwise     
+   */
+  const getReaction = () => {
+    return sadCry ? ('sadCry') : (grinHearts ? 'gringeHearts' : null)
+  }
 
+  /**
+   * Send feedback to the API  
+   * 
+   * @param {String} emoji   User's reaction
+   * @param {String} comment User's comment 
+   * @return {Boolean}       True if HTTP status is 200
+   */
+  const sendFeedback = async (emoji, comment) => {
+    console.log('%c sendFeedBack call', 'color:orange')
+    console.log(emoji, comment)
+
+    const req = url + endpoints['feedback']
+    const body = { 'reaction': emoji, 'comment': comment }
+    return await axios.post(req, body)
+      .then(res => {
+        console.log(`%c HTTP status : ${res.status}`, 'color:purple')
+        return res.status === 200 ? true : false
+      })
+      .catch(error => {
+        console.error(error)
+        return false
+      })
   }
 
   return (
@@ -31,19 +65,32 @@ function FeedbackSystem({ show, ...props }) {
             Votre avis nous intéresse !
           </Card.Text>
           <Row>
-            <Col className={`option-container ${sadCry ? 'selected' : ''}`} onClick={() => setSelection('first')}>
+            <Col
+              className={`option-container ${sadCry ? 'selected' : ''}`}
+              onClick={() => setReaction('first')}
+            >
               <span className='sad-cry-solid option' />
             </Col>
-            <Col className={`option-container ${grinHearts ? 'selected' : ''}`} onClick={() => setSelection('second')}>
+            <Col
+              className={`option-container ${grinHearts ? 'selected' : ''}`}
+              onClick={() => setReaction('second')}
+            >
               <span className='grin-hearts-solid option' />
             </Col>
           </Row>
         </Card.Body>
         <Card.Footer>
           <InputGroup>
-            <FormControl />
+            <FormControl
+              ref={commentRef}
+              type='text'
+              onChange={() => setComment(commentRef.current.value)}
+            />
             <InputGroup.Append>
-              <Button onClick={() => sendFeedback()}>Envoyer</Button>
+              <Button
+                onClick={() => sendFeedback(getReaction(), comment)}>
+                Envoyer
+              </Button>
             </InputGroup.Append>
           </InputGroup>
         </Card.Footer>

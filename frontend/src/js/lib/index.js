@@ -9,11 +9,13 @@ const contact = 'https://www.messenger.com/t/ekotnamur'
 const staticImages = '/diagrams/' //static files
 const diagram = '/api/diagram/' //require an argument
 const diagrams = '/api/diagrams/'
+const feedback = '/api/feedback/'
 
 const endpoints = {
     'staticImages' : staticImages,
     'diagram' : diagram,
     'diagrams' : diagrams,
+    'feedback' : feedback,
 }
 
 export {
