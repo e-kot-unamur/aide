@@ -1,0 +1,55 @@
+// Removing transparency of the primary 
+// color -if any- for more lisibility
+.feedback-system::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    background-color: white;
+}
+
+.option-container {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    transition-duration: 0.2s;
+}
+
+.sad-cry-solid {
+    mask: url("../../../icons/sad-cry-solid.svg");
+}
+
+.grin-hearts-solid {
+    mask: url("../../../icons/grin-hearts-solid.svg");
+}
+
+.option {
+    display: inline-block;
+    width: 49px;
+    height: 50px;
+    background: var(--emoji-color);
+    mask-size: cover;
+    transition-duration: 0.2s;
+    animation: 1.5s ease 0s infinite beat;
+}
+
+.option-container:hover,
+.option-container:focus {
+    box-shadow: inset 0 0 100px var(--primary);
+}
+
+.selected {
+    box-shadow: inset 0 0 100px var(--primary);
+}
+
+@keyframes beat {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.9, 0.9);
+    }
+}

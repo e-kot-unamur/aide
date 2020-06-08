@@ -4,6 +4,7 @@
 [data-theme="light"] {
   --primary: #3a5ebb;
   --secondary: #6293d0;
+  --emoji-color: #FFA500;
   --reference: #1d3461cc;
   --reference-active: #1d3461;
 
@@ -15,8 +16,9 @@
 }
 
 [data-theme="dark"] {
-  --primary: #162447;
-  --secondary: #1f4068;
+  --primary: #1f4068;
+  --secondary: #162447;
+  --emoji-color: #FDD45F;
   --reference: #77a6cfcc;
   --reference-active: #77a6cf;
 
@@ -126,4 +128,16 @@ a:hover {
 
 .spinner-grow {
   background-color: var(--primary);
+}
+
+// App wide animations
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(-10vw, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
