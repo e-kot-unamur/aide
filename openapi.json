@@ -60,39 +60,51 @@
         }
       }
     },
-    "/feedbacks": {
-      "get": {
-        "tags": [
-          "feedback"
-        ],
-        "description": "Fetch all the feedbacks",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feedback"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/feedback": {
       "post": {
         "tags": [
           "feedback"
         ],
         "description": "Post",
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {}
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request : the given format is incorrect",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Info"
+                },
+                "example": {
+                  "message": "json format is required"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity : missing parameter",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Info"
+                },
+                "example": {
+                  "message": "property 'reaction' is missing"
+                }
+              }
+            }
           }
         }
       }
@@ -167,8 +179,14 @@
       },
       "Feedback": {
         "type": "object",
+        "required": [
+          "reaction"
+        ],
         "properties": {
-          "message": {
+          "reaction": {
+            "type": "string"
+          },
+          "comment": {
             "type": "string"
           }
         }
