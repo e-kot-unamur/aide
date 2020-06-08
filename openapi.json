@@ -29,7 +29,16 @@
                 "responses": {
                     "200": {
                         "description": "OK",
-                        "content": {}
+                        "content": {
+                            "json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DiagramPreview"
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -43,11 +52,108 @@
                 "responses": {
                     "200": {
                         "description": "OK",
+                        "content": {
+                            "json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Diagram"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/feedbacks": {
+            "get": {
+                "tags": [
+                    "feedback"
+                ],
+                "description": "Fetch all the feedbacks",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/feedback": {
+            "post": {
+                "tags": [
+                    "feedback"
+                ],
+                "description": "Post",
+                "responses": {
+                    "200": {
+                        "description": "OK",
                         "content": {}
                     }
                 }
             }
         }
     },
-    "components":  {}
+    "components": {
+        "schemas": {
+            "DiagramPreview": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            },
+                            "answers": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Answers"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "Diagram": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            },
+                            "image": {
+                                "type": "object",
+                                "properties": {
+                                    "caption": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "answers": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Answers"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "Answers": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "ref": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
 }
