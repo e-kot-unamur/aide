@@ -29,10 +29,12 @@ Relancer le backend, done ! <br />
 Pour plus de précisions voir le fichier `interactive-diagram/backend/public/diagram/README.md` 
 
 
+------------
+### API
+##### Documentation
+You can view the OpenAPI specification of the backend [on this link](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/e-kot-unamur/interactive-diagram/master/openapi.json)
 
-
-
-
+Each route is specified within `interactive-diagram/openapi.json`
 
 ------------
 
@@ -71,6 +73,7 @@ Go on your `localhost`, client is running on port 8082 (docker) or 3000 (npm dev
 (Backend's listening on port `8083` in docker and `8080` for the local configuration)
 
 
+----------------
 
 ### Production 
 
