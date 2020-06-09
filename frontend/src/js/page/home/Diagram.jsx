@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import 'static/sass/page/home/Diagram.scss'
 import InnerNode from 'js/component/home/InnerNode'
 import FeedbackSystem from 'js/component/home/FeedbackSystem'
-import { url, endpoints } from 'js/lib'
+import { url, endpoints } from 'js/lib/api'
 
 function Diagram({ title, nodes, setDiagram }) {
   const [node, setNode] = useState({ 'id': 1, 'data': nodes[1] }) //Node 0 is for preview

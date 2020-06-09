@@ -4,7 +4,7 @@ import { ReactComponent as FaFacebook } from 'static/icons/facebook.svg'
 import { ReactComponent as FaInfoCircle } from 'static/icons/info-circle.svg'
 import { ReactComponent as FaAdjustSolid } from 'static/icons/adjust-solid.svg'
 import { Link } from "react-router-dom"
-import { contact } from 'js/lib/index'
+import { contact } from 'js/lib/api'
 import 'static/sass/layout/TopBar.scss'
 
 function TopBar({ logo, width, setTheme, ...props }) {

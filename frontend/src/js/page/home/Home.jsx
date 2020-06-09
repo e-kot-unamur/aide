@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
-import { url, endpoints } from 'js/lib/index'
+import { url, endpoints } from 'js/lib/api'
 import axios from 'axios'
 
 import 'static/sass/page/home/Home.scss'

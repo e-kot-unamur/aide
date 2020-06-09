@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import 'static/sass/component/home/FeedbackSystem.scss'
 import { Card, InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap'
-import { url, endpoints } from 'js/lib'
+import { url, endpoints } from 'js/lib/api'
 import axios from 'axios'
 import { handlePropagation } from 'js/lib/utils'
 

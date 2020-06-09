@@ -1,4 +1,4 @@
-import { contact } from '../lib/index'
+import { contact } from './api'
 
 class APIParser {
     /**
