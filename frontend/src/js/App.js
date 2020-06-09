@@ -7,7 +7,6 @@ import Home from 'js/page/home/Home'
 import About from 'js/page/about/About'
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Redirect,
 } from "react-router-dom"
@@ -20,7 +19,6 @@ function App() {
 
   return (
     <Router>
-      <Switch>
         <div data-theme={theme}>
 
           <TopBar id="top-bar" logo={logo} width="50" setTheme={enableDarkTheme} />
@@ -37,9 +35,8 @@ function App() {
           <Route path="/about">
             <AboutPage />
           </Route>
-
+          
         </div>
-      </Switch>
     </Router>
   )
 }
