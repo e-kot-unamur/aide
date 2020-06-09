@@ -53,9 +53,9 @@ function InnerNode({
                       key={answer.ref}
                       onClick={() => handleAnswer(answer.ref)}
                     >
-                      <a className='link'>
+                      <span className='link'>
                         {answer.text}
-                      </a>
+                      </span>
                     </ListGroup.Item>)
                 : <></>
             }
@@ -63,9 +63,9 @@ function InnerNode({
               className='back-option'
               onClick={() => handleReturn()}
             >
-              <a className='link'>
+              <span className='link'>
                 Retour
-              </a>
+              </span>
             </ListGroup.Item>
           </ListGroup>
         </Card.Footer>
