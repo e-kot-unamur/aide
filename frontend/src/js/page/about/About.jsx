@@ -14,11 +14,11 @@ function About() {
       </Row>
       <Row>
         <Col md>
-          <p>Il s'agit d'un kot à projet de l'UNamur visant à aider les étudiants rencontrant divers problèmes liés à l'informatique.</p>
+          <p>L'E-kot est un kot à projet de l'UNamur visant à aider les étudiants rencontrant divers problèmes liés à l'informatique.</p>
         </Col>
         <Col md>
           <p>
-            Ce site a pour but de vous aider, via sa démarche intuitive,
+            Ce site a donc pour but de vous aider, via sa démarche intuitive,
             en tentant de répondre aux questions les plus fréquentes
             (et liées à l'informatique) des étudiants de l'UNamur.
           </p>

@@ -1,13 +1,14 @@
 #top-bar {
-  background-color: var(--component-foreground);
-  text-align: center;
-  height: auto;
+  position: fixed;
+  top: 0;
+  height: 75px;
   width: 100vw;
+  text-align: center;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  position: absolute;
-  top: 0;
+  z-index: 100000;
   animation: 0.7s ease 0s 1 slide;
+  background-color: var(--component-background);
 }
 
 .top-bar-logo {
@@ -20,12 +21,11 @@
 }
 
 .top-bar-links {
-  text-align: center;
-  top: inherit;
-  padding-top: 2.5vh;
+  top: 30%;
   opacity: 0;
-  transition: 0.5s;
+  text-align: center;
   position: absolute;
+  transition: 0.5s;
   width: 100vw;
 }
 
@@ -46,7 +46,6 @@
 
 .icon {
   width: 25px;
-  height: auto;
   margin-right: 10px;
 }
 
@@ -54,16 +53,9 @@
   width: fit-content;
   height: 100%;
   position: absolute;
-  padding-top: 2.5vh;
   top: 0;
   right: 0;
   cursor: pointer;
-}
-
-// ChausSUUUU
-#odc {
-  text-align: center;
-  opacity: 0.3;
 }
 
 // Tooltip

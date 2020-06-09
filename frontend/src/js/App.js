@@ -19,24 +19,24 @@ function App() {
 
   return (
     <Router>
-        <div data-theme={theme}>
+      <div data-theme={theme}>
 
-          <TopBar id="top-bar" logo={logo} width="50" setTheme={enableDarkTheme} />
-          <img src={logo} id="ekot-logo" alt="Logo de l'ekot" />
+        <TopBar id="top-bar" logo={logo} width="50" setTheme={enableDarkTheme} />
+        <div id="ekot-logo-container"><img src={logo} id="ekot-logo" alt="Logo de l'ekot" /></div>
 
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
 
-          <Route exact path="/home">
-            <HomePage />
-          </Route>
+        <Route exact path="/home">
+          <HomePage />
+        </Route>
 
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          
-        </div>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+
+      </div>
     </Router>
   )
 }
