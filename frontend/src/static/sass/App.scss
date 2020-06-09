@@ -1,4 +1,4 @@
-#body {
+.body {
   background-color: var(--background);
   height: 100vh;
   display: flex;
@@ -9,5 +9,8 @@
 #ekot-logo {
   opacity: 0.05;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   height: 60vh;
 }
