@@ -84,6 +84,17 @@
   }
 }
 
+.list-group-item {
+  span {
+    transition-duration: var(--transition-duration);
+    color: var(--reference);
+  }
+  
+  span:hover {
+    color: var(--reference-active);
+  }
+}
+
 a {
   transition-duration: var(--transition-duration);
   color: var(--reference);
@@ -91,6 +102,11 @@ a {
 
 a:hover {
   color: var(--reference-active);
+}
+
+b,
+p {
+  color: var(--text);
 }
 
 // FIXME - Not working why ?
