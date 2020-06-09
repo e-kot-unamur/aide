@@ -53,7 +53,7 @@ function InnerNode({
                       key={answer.ref}
                       onClick={() => handleAnswer(answer.ref)}
                     >
-                      <a href="/#" className='link'>
+                      <a className='link'>
                         {answer.text}
                       </a>
                     </ListGroup.Item>)
@@ -63,7 +63,7 @@ function InnerNode({
               className='back-option'
               onClick={() => handleReturn()}
             >
-              <a href="/#" className='link'>
+              <a className='link'>
                 Retour
               </a>
             </ListGroup.Item>
