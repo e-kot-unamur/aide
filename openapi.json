@@ -40,7 +40,7 @@
         }
       }
     },
-    "/diagram": {
+    "/diagram/{id}": {
       "get": {
         "tags": [
           "diagram"
@@ -61,11 +61,50 @@
       }
     },
     "/feedback": {
+      "get": {
+        "tags": [
+          "feedback"
+        ],
+        "description": "Fetch the requested feedbacks",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "ids to filter by",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Feedbacks"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity : missing parameter",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Info"
+                },
+                "example": {
+                  "message": "Query parameter 'id' is missing"
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "feedback"
         ],
-        "description": "Post",
+        "description": "Add a new feedback to the db",
         "requestBody": {
           "content": {
             "json": {
@@ -102,6 +141,26 @@
                 },
                 "example": {
                   "message": "property 'reaction' is missing"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks": {
+      "get": {
+        "tags": [
+          "feedback"
+        ],
+        "description": "Get information about all feedbacks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbacksOverview"
                 }
               }
             }
@@ -188,6 +247,39 @@
           },
           "comment": {
             "type": "string"
+          }
+        }
+      },
+      "Feedbacks": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "object",
+            "properties": {
+              "comment": {
+                "type": "string"
+              },
+              "reaction": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "FeedbacksOverview": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "string"
+          },
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
