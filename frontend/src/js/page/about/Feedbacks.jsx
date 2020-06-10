@@ -62,11 +62,13 @@ function Information({ metadata, feedbacks }) {
       </div>
       <div>
         {
-          feedbacks.length !== 0 ?
-            Object
-              .entries(feedbacks)
-              .map(([key, value]) => <Feedback feedback={value} />)
-            : <p>Aucun étudiant n'a encore donné d'avis</p>
+          feedbacks ?
+            feedbacks.length !== 0 ?
+              Object
+                .entries(feedbacks)
+                .map(([key, value]) => <Feedback feedback={value} />)
+              : <p>Aucun étudiant n'a encore donné d'avis</p>
+            : <></>
         }
       </div>
     </>

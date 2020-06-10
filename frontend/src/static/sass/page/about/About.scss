@@ -8,3 +8,8 @@
     animation: 0.7s ease 0s 1 slide;
     transition-duration: 0.2s;
 }
+
+#feedbacks-container {
+    height: 45vh;
+    overflow: auto;
+}

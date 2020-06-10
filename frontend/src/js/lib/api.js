@@ -1,6 +1,6 @@
 // api address  
 //FIXME - Don't know how to do this properly - .env ? 
-const url = 'http://localhost:8080'
+const url = 'http://192.168.1.38:8080'
 
 // Contact address 
 const contact = 'https://www.messenger.com/t/ekotnamur'
