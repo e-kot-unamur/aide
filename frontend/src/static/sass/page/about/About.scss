@@ -1,12 +1,10 @@
 .light-background {
-    padding-top: 20px;
-    min-width: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    min-width: 100%;
     max-width: 92%;
     border-radius: 2px;
     background-color: var(--component-foreground);
     animation: 0.7s ease 0s 1 slide;
-    transition-duration: 1s;
-}
-
-.light-background:hover {
+    transition-duration: 0.2s;
 }

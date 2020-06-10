@@ -1,0 +1,40 @@
+.feedback {
+    transition-duration: .2s;
+    color: var(--text);
+
+    .feedback-reaction {
+        z-index: 2;
+        width: 30px;
+        height: 31px;
+        mask-size: cover;
+        position: relative;
+        display: inline-block;
+        background: var(--emoji-color);
+
+        translate: -10px -15px;
+    }
+
+    .feedback-text {
+        z-index: 1;
+        padding: 5px;
+        text-align: justify;
+        text-justify: inter-word;
+        position: relative;
+        border-radius: 15px;
+        translate: 1px -30px;
+        background-color: var(--component-background);
+
+        .feedback-related {
+            translate: 1px -2px;
+            font-size: 0.6em;
+        }
+    }
+}
+
+.sad-cry-solid {
+    mask: url("../../../icons/sad-cry-solid.svg");
+}
+
+.grin-hearts-solid {
+    mask: url("../../../icons/grin-hearts-solid.svg");
+}
