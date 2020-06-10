@@ -34,7 +34,7 @@ function About() {
         </Row>
         <hr />
         <Row>
-          <Col xs='12' md='10' lg='8' id='feedbacks-container'>
+          <Col xs='12' md={{ span:10, offset:1}} lg={{ span:8, offset:2}} id='feedbacks-container'>
             <Feedbacks />
           </Col>
         </Row>

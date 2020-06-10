@@ -1,4 +1,7 @@
 .feedback {
+    opacity: 0;
+    animation: 0.5s ease 0s 1 slide;
+    animation-fill-mode: forwards;
     transition-duration: .2s;
     color: var(--text);
 

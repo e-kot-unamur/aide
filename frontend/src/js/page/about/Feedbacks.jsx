@@ -17,14 +17,14 @@ function Feedbacks() {
     axios.get(overview)
       .then(res => setFeedbacksOverview(res.data))
       .catch(error => console.error(error))
+
+    setTimeout(() => setLoading(false), 2000) //FIXME - delete
   }, [])
 
   useEffect(() => {
     const fn = async () => {
       setFeedbacks(await getFeedbacks(feedbacksOverview.ids))
-      setLoading(false)
     }
-
     fn()
   }, [feedbacksOverview])
 
@@ -37,35 +37,38 @@ function Feedbacks() {
   }
 
   return (
-    <Container>
-      <Row className="top-buffer">
-        {
-          !loading ?
-            <Information
-              metadata={feedbacksOverview}
-              feedbacks={feedbacks} />
-            : <Col className="loading">
-              <Spinner
-                variant="primary"
-                animation="grow"
-              />
-            </Col>
-        }
-      </Row>
-    </Container>
+    <>
+      {
+        !loading ?
+          <Information
+            metadata={feedbacksOverview}
+            feedbacks={feedbacks} />
+          : <Col className="loading">
+            <Spinner
+              variant="primary"
+              animation="grow"
+            />
+          </Col>
+      }
+    </>
   )
 }
 
 function Information({ metadata, feedbacks }) {
   return (
     <>
-      {
-        feedbacks.length !== 0 ?
-          Object
-            .entries(feedbacks)
-            .map(([key, value]) => <Feedback feedback={value} />)
-          : <p>Aucun étudiant n'a encore donné d'avis</p>
-      }
+      <div className='feedbacks-total'>
+        <span><b>{metadata.total}</b> avis</span>
+      </div>
+      <div>
+        {
+          feedbacks.length !== 0 ?
+            Object
+              .entries(feedbacks)
+              .map(([key, value]) => <Feedback feedback={value} />)
+            : <p>Aucun étudiant n'a encore donné d'avis</p>
+        }
+      </div>
     </>
   )
 }
