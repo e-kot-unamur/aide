@@ -41,14 +41,14 @@ function FeedbackSystem({ show, handleClose, ...props }) {
    * @return {Boolean}       True if HTTP status is 200
    */
   const sendFeedback = async (emoji, comment) => {
-    console.log('%c sendFeedBack call', 'color:orange')
-    console.log(emoji, comment)
-
     const req = url + endpoints['feedback']
-    const body = { 'reaction': emoji, 'comment': comment }
+    const body = { 
+      'reaction': emoji, 
+      'comment': comment,
+      'diagram': "Internet" //FIXME
+    }
     return await axios.post(req, body)
       .then(res => {
-        console.log(`%c HTTP status : ${res.status}`, 'color:purple')
         return res.status === 200 ? true : false
       })
       .catch(error => {

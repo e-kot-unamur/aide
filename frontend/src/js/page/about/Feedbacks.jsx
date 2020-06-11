@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Container, Row, Col, Spinner } from 'react-bootstrap'
+import { Col, Spinner } from 'react-bootstrap'
 import { url, endpoints } from 'js/lib/api'
 import Feedback from 'js/component/about/Feedback'
 import axios from 'axios'
@@ -9,16 +9,17 @@ import 'static/sass/page/about/Feedbacks.scss'
 function Feedbacks() {
   const [loading, setLoading] = useState(true)
   const [feedbacks, setFeedbacks] = useState({})
-  const [feedbacksOverview, setFeedbacksOverview] = useState({})
+  const [feedbacksOverview, setFeedbacksOverview] = useState({ "ids": [] })
 
   // Load feedbacks info on creation
   useEffect(() => {
     const overview = url + endpoints['feedbacks']
     axios.get(overview)
-      .then(res => setFeedbacksOverview(res.data))
+      .then(res => {
+        setFeedbacksOverview(res.data)
+        setLoading(false)
+      })
       .catch(error => console.error(error))
-
-    setTimeout(() => setLoading(false), 2000) //FIXME - delete
   }, [])
 
   useEffect(() => {

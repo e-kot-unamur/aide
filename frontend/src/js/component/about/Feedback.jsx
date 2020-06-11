@@ -7,7 +7,7 @@ function Feedback({ feedback }) {
       <span className={`feedback-reaction ${feedback.reaction}`} />
       <div className='feedback-text'>
         <div className='feedback-comment'>{feedback.comment}</div>
-        <div className='feedback-related'>{feedback.related}</div>
+        <div className='feedback-related'>{feedback.diagram}</div>
       </div>
     </div>
   )
