@@ -30,7 +30,7 @@ function FeedbackSystem({ show, handleClose, ...props }) {
    * @return {Boolean} true if resolved (grinHearts), false if unresolved (sadCry), null otherwise     
    */
   const getReaction = () => {
-    return sadCry ? ('sadCry') : (grinHearts ? 'gringeHearts' : null)
+    return sadCry ? ('negative') : (grinHearts ? 'positive' : 'neutral')
   }
 
   /**
