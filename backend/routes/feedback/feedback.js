@@ -20,13 +20,27 @@ routes.post('/', function (req, res, next) {
         return
     }
 
-    let fb = new feedback()
-    if (fb.save(req.body)) {
-        res.status(200)
+    if ('reaction' in req.body) {
+        if (!(['positive', 'negative', 'neutral'].includes(req.body.reaction))) {
+            res.status(422).json({ "message": "missing property" })
+            return
+        }
+    } else {
+        res.status(422).json({ "message": "missing property" })
+        return      
+    }
+    
+    if ((!('comment' in req.body) || !('diagram' in req.body))) {
+        res.status(422).json({ "message": "missing property" })
         return
     }
-    res.status(422).json({ "message": "json properties are incorrect" })
 
+    let fb = new feedback()
+    if (fb.save(req.body)) {
+        res.status(200).json({"message":"OK"})
+        return
+    }
+    res.status(422).json({ "message": "missing property" })
 })
 
 module.exports = routes;

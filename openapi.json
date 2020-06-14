@@ -133,14 +133,14 @@
             }
           },
           "422": {
-            "description": "Unprocessable Entity : missing parameter",
+            "description": "Unprocessable Entity : missing property",
             "content": {
               "json": {
                 "schema": {
                   "$ref": "#/components/schemas/Info"
                 },
                 "example": {
-                  "message": "property 'reaction' is missing"
+                  "message": "missing property"
                 }
               }
             }
@@ -247,6 +247,9 @@
           },
           "comment": {
             "type": "string"
+          },
+          "diagram": {
+            "type": "string"
           }
         }
       },
@@ -259,10 +262,13 @@
               "comment": {
                 "type": "string"
               },
-              "reaction": {
+              "diagram": {
                 "type": "string"
               },
               "date": {
+                "type": "string"
+              },
+              "reaction": {
                 "type": "string"
               }
             }
