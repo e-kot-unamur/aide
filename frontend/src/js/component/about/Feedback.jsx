@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import 'static/sass/component/about/Feedback.scss'
 
 function Feedback({ feedback }) {
@@ -7,7 +7,7 @@ function Feedback({ feedback }) {
       <span className={`feedback-reaction ${feedback.reaction}`} />
       <div className='feedback-text'>
         <div className='feedback-comment'>{feedback.comment}</div>
-        <div className='feedback-related'>{feedback.diagram}</div>
+        <div className='feedback-related'>{Date(feedback.date)}</div>
       </div>
     </div>
   )

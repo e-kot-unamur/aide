@@ -5,7 +5,7 @@ import { url, endpoints } from 'js/lib/api'
 import axios from 'axios'
 import { handlePropagation } from 'js/lib/utils'
 
-function FeedbackSystem({ show, handleClose, ...props }) {
+function FeedbackSystem({ show, handleClose, diagramId, ...props }) {
   // User inputs
   // reactions
   const [sadCry, setSadCry] = useState(false)
@@ -33,6 +33,14 @@ function FeedbackSystem({ show, handleClose, ...props }) {
     return sadCry ? ('negative') : (grinHearts ? 'positive' : 'neutral')
   }
 
+  const handleAnswer = () => {
+    const reaction = getReaction()
+    if (reaction !== 'neutral' || comment.length > 0) {
+        sendFeedback(getReaction(), comment)
+      }
+    handleClose()
+  }
+
   /**
    * Send feedback to the API  
    * 
@@ -42,10 +50,10 @@ function FeedbackSystem({ show, handleClose, ...props }) {
    */
   const sendFeedback = async (emoji, comment) => {
     const req = url + endpoints['feedback']
-    const body = { 
-      'reaction': emoji, 
+    const body = {
+      'reaction': emoji,
       'comment': comment,
-      'diagram': "Internet" //FIXME
+      'diagram': diagramId ? diagramId : ''
     }
     return await axios.post(req, body)
       .then(res => {
@@ -93,7 +101,7 @@ function FeedbackSystem({ show, handleClose, ...props }) {
             />
             <InputGroup.Append>
               <Button
-                onClick={() => sendFeedback(getReaction(), comment)}>
+                onClick={() => handleAnswer()}>
                 Envoyer
               </Button>
             </InputGroup.Append>

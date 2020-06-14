@@ -62,6 +62,7 @@ function Diagram({ title, nodes, setDiagram }) {
             >
               <FeedbackSystem
                 handleClose={() => setShowFeedbackSystem(false)}
+                diagram={title}
                 className='center'
               />
             </div>
