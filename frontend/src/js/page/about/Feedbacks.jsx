@@ -67,7 +67,7 @@ function Information({ metadata, feedbacks }) {
             feedbacks.length !== 0 ?
               Object
                 .entries(feedbacks)
-                .map(([key, value]) => <Feedback feedback={value} />)
+                .map(([key, value]) => <Feedback key={key} feedback={value} />)
               : <p>Aucun étudiant n'a encore donné d'avis</p>
             : <></>
         }
