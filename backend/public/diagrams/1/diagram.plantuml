@@ -1,0 +1,55 @@
+@startuml
+
+skinparam backgroundColor #EAEAEA
+skinparam note {
+    BackgroundColor #F0C808
+    BorderColor #FE4A49
+}
+skinparam state {
+    BackgroundColor #fff
+    BackgroundColor<<Leaf>> #000000
+    FontColor<<Leaf>> #FFF
+    BorderColor #4F6D7A
+}
+
+state "Je n'ai plus internet" as root  
+state "Faites vous parti d'un logement universitaire ?" as logementState
+
+state "Avez vous un accès à kotserv ?" as kotservState
+
+state "Veuillez changer de cable ethernet" as ethernetState
+state "Veuillez changer de prise RJ45 par une autre du batiment" as rj45State
+
+state "Avez vous déjà enregistré correctement \nvotre ordinateur via la page de kotserv ?" as registeredState
+state "Veuillez vérifier votre quota sur la page [...]" as quotaState
+
+
+state "Veuillez prendre contact avec nous via facebook ou par mail" as contactLeaf <<Leaf>>
+state "Veuillez suivre les instructions afin de \ncorrectement enregistrer votre ordinateur sur kotserv" as registerLeaf <<Leaf>>
+state "Veuillez attendre suffisament longtemps que \nvotre quota repasse en dessous de la limite autorisée" as quotaLeaf <<Leaf>>
+
+note left of kotservState : Veuilez couper votre WIFI \net assurez vous de brancher \ncorrectement votre cable ethernet
+note "Il est demandé à l'étudiant, \navant tout contact avec nous, \nde prendre note du numéro \n(donné en tout noeud de fin) \nservant à référencer le chemin \nparcouru dans le diagramme" as N1 
+
+
+root --> logementState
+
+logementState --> contactLeaf : Non 
+logementState --> kotservState : Oui 
+
+kotservState -> ethernetState : Non
+kotservState --> registeredState : Oui
+
+ethernetState -> kotservState : Fonctionne
+ethernetState -> rj45State : Ca ne fonctionne pas
+
+rj45State --> contactLeaf : Ca ne fonctionne pas 
+rj45State --> contactLeaf : Ca fonctionne  
+
+registeredState --> registerLeaf : Non
+registeredState --> quotaState : Oui
+
+quotaState ---> contactLeaf : Je n'ai pas atteint la limite de mon quota
+quotaState --> quotaLeaf : J'ai atteint la limite de mon quota
+
+@enduml
