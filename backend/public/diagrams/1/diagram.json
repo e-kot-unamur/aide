@@ -64,7 +64,7 @@
         ]
     },
     "6": {
-        "text": "Votre quota est-il supérieur à la limite ?",
+        "text": "Votre quota est-il supérieur à la limite ? Vous pouvez le vérifier via <a href='https://kotserv.unamur.be/users/users-index.php' target='_blank'>kotserv.unamur.be/users</a>",
         "answers": [
             {
                 "text": "Oui.",
@@ -77,7 +77,7 @@
         ]
     },
     "7": {
-        "text": "Veuillez enregistrer votre ordinateur sur la page de kotserv. Attention à rentrer des identifiants corrects, càd votre eID (et non votre adresse mail !) ainsi que le mot de passe correspondant. Veuillez redémarrer votre ordinateur. Cela devrait maintenant fonctionner. <br/> Pour plus d'informations, cliquez <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>ici</a>",
+        "text": "Veuillez enregistrer votre ordinateur sur la page de kotserv. Attention à rentrer des identifiants corrects, càd votre eID (et non votre adresse mail !) ainsi que le mot de passe correspondant. Ensuite, veillez à redémarrer votre ordinateur. Cela devrait maintenant fonctionner. <br/>Pour plus d'informations, cliquez <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>ici</a>",
         "answers": []
     },
     "8": {

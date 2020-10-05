@@ -29,6 +29,7 @@ state "Veuillez suivre les instructions afin de \ncorrectement enregistrer votre
 state "Veuillez attendre suffisament longtemps que \nvotre quota repasse en dessous de la limite autorisée" as quotaLeaf <<Leaf>>
 
 note left of kotservState : Veuilez couper votre WIFI \net assurez vous de brancher \ncorrectement votre cable ethernet
+note bottom of quotaLeaf : Il est ici demandé d'autres informations \nafin de comprendre la cause du dépassement \ndu quota de l'étudiant 
 note "Il est demandé à l'étudiant, \navant tout contact avec nous, \nde prendre note du numéro \n(donné en tout noeud de fin) \nservant à référencer le chemin \nparcouru dans le diagramme" as N1 
 
 
