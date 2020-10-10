@@ -49,19 +49,13 @@ function Diagram({ title, nodes, setDiagram }) {
   // Give an error code based on the id of each nodes
   const getErrorCode = (nodeNumber) => {
     const nodeLists = [...history.map(node => node.id), nodeNumber]
-    let code = nodeLists.map((node, index) => {
-      if (index + 1 === nodeLists.length) {
-        return `${node}`
-      } else {
-        return `${node}-`
-      }
-    })
-    return code
+    return `${title}-${nodeLists.join('-')}`
   }
 
   return (
     <>
-      <InnerNode data={node.data}
+      <InnerNode 
+        data={node.data}
         handleAnswer={handleAnswer}
         handleReturn={handleReturn}
         nodeId={node.id}
