@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import 'static/sass/page/retriever/Retriever.scss'
-import { url, endpoints } from 'js/lib/api'
+import APIParser from 'js/lib/APIParser'
 import axios from 'axios'
+import { url, endpoints } from 'js/lib/api'
+import { Card } from 'react-bootstrap';
+import 'static/sass/page/retriever/Retriever.scss'
 
 export default function Retriever() {
   const [diagramId, setDiagramId] = useState(null)
@@ -26,21 +28,27 @@ export default function Retriever() {
 
   return (
     <div id='retriever'>
-      <input onChange={e => handleChange(e.target.value)} />
-      {
-        errorCode.length === 0 && <p>Rentre le code erreur mec</p>
-      }
-      {
-        diagram && errorCode.map(nodeId => {
-          if (nodeId.length === 0) {
-            return <></>
-          }
-          if (diagram[nodeId]) {
-            return <p>{diagram[nodeId].text}</p>
-          } else {
-            return <p>Le noeud n'existe pas</p>
-          }
-        })
+      <input className='retriever-input' onChange={e => handleChange(e.target.value)} />
+      { errorCode.length > 1 && <Card>
+        <Card.Body>
+          <Card.Text>
+            {
+              errorCode.map(nodeId => {
+                if (nodeId.length === 0) {
+                  return <></>
+                }
+                if (diagram[nodeId]) {
+                  return <><div dangerouslySetInnerHTML={
+                    { __html: APIParser.parseContact(diagram[nodeId].text) }
+                  } /><hr/></>
+                } else {
+                  return <><p>Le noeud n'existe pas</p><hr/></>
+                }
+              })
+            }
+          </Card.Text>
+        </Card.Body>
+      </Card>
       }
     </div>
   )
