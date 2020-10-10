@@ -5,6 +5,7 @@ import logo from 'static/images/logo.png'
 import TopBar from 'js/layout/TopBar'
 import Home from 'js/page/home/Home'
 import About from 'js/page/about/About'
+import Retriever from './page/retriever/Retriever'
 import {
   BrowserRouter as Router,
   Route,
@@ -36,6 +37,11 @@ function App() {
           <AboutPage />
         </Route>
 
+        {/* Find a proper name */}
+        <Route path="/retriever">
+          <RetrieverPage />
+        </Route>
+
       </div>
     </Router>
   )
@@ -53,6 +59,14 @@ function AboutPage() {
   return (
     <div id="about-body" className='body'>
       <About />
+    </div>
+  )
+}
+
+function RetrieverPage() {
+  return (
+    <div id="retriever-body" className='body'>
+      <Retriever />
     </div>
   )
 }
