@@ -9,7 +9,8 @@ function InnerNode({
   nodeId, // To get the image related to the node, if one
   getImgFromRemote,
   handleAnswer,
-  handleReturn
+  handleReturn,
+  getErrorCode,
 }) {
   const [imgModal, setImgModal] = useState(false)
 
@@ -41,6 +42,15 @@ function InnerNode({
                   </span>
                 </Card.Text>
               : <Card.Text>Loading</Card.Text>
+          }
+          {
+            data.answers.length < 1 
+              ? <p>
+                Si vous devez prendre contact avec l'E-kot, 
+                merci de communiquer ce code d'erreur : 
+                <b> {getErrorCode(nodeId)}</b> !
+                </p>
+              : <></>
           }
         </Card.Body>
         <Card.Footer className="answers">

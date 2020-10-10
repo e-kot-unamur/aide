@@ -46,6 +46,19 @@ function Diagram({ title, nodes, setDiagram }) {
     return url + endpoints.staticImages + `${title}/${nodeNumber}`
   }
 
+  // Give an error code based on the id of each nodes
+  const getErrorCode = (nodeNumber) => {
+    const nodeLists = [...history.map(node => node.id), nodeNumber]
+    let code = nodeLists.map((node, index) => {
+      if (index + 1 === nodeLists.length) {
+        return `${node}`
+      } else {
+        return `${node}-`
+      }
+    })
+    return code
+  }
+
   return (
     <>
       <InnerNode data={node.data}
@@ -53,6 +66,7 @@ function Diagram({ title, nodes, setDiagram }) {
         handleReturn={handleReturn}
         nodeId={node.id}
         getImgFromRemote={getImgFromRemote}
+        getErrorCode={getErrorCode}
       />
       {
         showFeedbackSystem
