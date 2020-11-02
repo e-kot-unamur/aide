@@ -24,7 +24,7 @@
 </style>
 
 <Container style="height: 100%;">
-  <Background />
-  <Navbar {version} />
+  <Background {version} />
+  <Navbar />
   <Diagrams />
 </Container>

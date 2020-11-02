@@ -1,3 +1,7 @@
+<script>
+  export let version;
+</script>
+
 <style>
   .background {
     position: fixed;
@@ -13,10 +17,14 @@
 
   .logo {
     margin-top: 20vh;
+  }
+
+  .semi-transparent {
     opacity: 0.15;
   }
 </style>
 
 <div class="background">
-  <img class="logo" src="images/logo.png" alt="E-kot logo" />
+  <img class="logo semi-transparent" src="images/logo.png" alt="E-kot logo" />
+  <p class="semi-transparent">v{version}</p>
 </div>
