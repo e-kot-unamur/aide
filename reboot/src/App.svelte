@@ -1,11 +1,30 @@
 <script>
-  import { Container, Card, Col, Row } from "svelte-chota";
-  import diagrams from "./diagrams/diagram.js";
-  import Diagram from "./components/Diagram.svelte";
+  import { Container } from "svelte-chota";
+  import Navbar from "./components/overall/Navbar.svelte";
+  import Diagrams from "./components/diagrams/Diagrams.svelte";
+  import Background from "./components/overall/Background.svelte";
 
   export let version;
-
-  console.log(diagrams)
 </script>
 
+<style>
+  :global(:root) {
+    --color-primary: #3a5ebb;
+    --color-background: #ebe8e8;
+    --color-lightGrey: #bdbdbd;
+    --color-grey: #857a7a;
+    --color-darkGrey: #545252;
+    --color-error: #f64740;
+    --color-success: #0cf574;
+    --grid-maxWidth: 120rem;
+    --grid-gutter: 2rem;
+    --font-size: 1.6rem;
+    --font-family: "Helvetica Neue", sans-serif;
+  }
+</style>
 
+<Container style="height: 100%;">
+  <Background />
+  <Navbar {version} />
+  <Diagrams />
+</Container>

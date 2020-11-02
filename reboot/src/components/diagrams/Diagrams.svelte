@@ -1,6 +1,6 @@
 <script>
   import { Col, Row } from "svelte-chota";
-  import diagrams from "../../diagrams/diagram.js";
+  import diagrams from "../../static/diagrams/diagram.js";
   import Diagram from "./Diagram.svelte";
 
   let selection;
@@ -9,16 +9,28 @@
   }
 </script>
 
-<Row>
-  {#if selection >= 0}
-    <Col>
-      <Diagram diagram={diagrams[selection]} on:back={focus} node={1} />
-    </Col>
-  {:else}
-    {#each diagrams as diagram, i}
+<style>
+  main {
+    max-height: min-content;
+    min-height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<main>
+  <Row>
+    {#if selection >= 0}
       <Col>
-        <Diagram on:selection={() => focus(i)} {diagram} />
+        <Diagram diagram={diagrams[selection]} on:back={focus} node={1} />
       </Col>
-    {/each}
-  {/if}
-</Row>
+    {:else}
+      {#each diagrams as diagram, i}
+        <Col>
+          <Diagram on:selection={() => focus(i)} {diagram} hideButton={true} />
+        </Col>
+      {/each}
+    {/if}
+  </Row>
+</main>

@@ -746,10 +746,6 @@ input:disabled:hover {
     align-items: stretch
 }
 
-.nav img {
-    max-height: 3rem
-}
-
 .nav-center,
 .nav-left,
 .nav-right,

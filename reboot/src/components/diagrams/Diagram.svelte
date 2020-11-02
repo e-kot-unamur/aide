@@ -1,10 +1,12 @@
 <script>
   import { Card, Button } from "svelte-chota";
   import { createEventDispatcher } from "svelte";
-  import htmlParser from "../../lib/HtmlParser.js"
+  import htmlParser from "../../lib/HtmlParser.js";
   export let diagram;
 
   export let node = 0;
+  export let hideButton = false;
+
   let refs = [];
   let selected = false;
 
@@ -16,23 +18,27 @@
   }
 
   function goBack() {
-    refs.length ? (node = refs.pop()) : dispatch("back");;
+    refs.length ? (node = refs.pop()) : dispatch("back");
   }
 
-  $: node, (selected = refs.length > 0), dispatch("selection");
+  $: node, (selected = node > 0), dispatch("selection");
 </script>
 
-<Card>
-  <h4 slot="header">
-    {#if !selected}{diagram[0].text}{/if}
-  </h4>
+<Card style="height: 100%;">
+  {#if !selected}
+    <h4>{diagram[0].text}</h4>
+  {:else}
+    <p class="text-justify">
+      {@html htmlParser.parseContact(diagram[node].text)}
+    </p>
+  {/if}
 
-  <span> {@html htmlParser.parseContact(diagram[node].text)} </span>
-
-  <div slot="footer" class="is-right">
+  <div slot="footer" class="answers text-right">
     {#each diagram[node].answers as answer}
       <Button clear on:click={() => goToNode(answer.ref)}>{answer.text}</Button>
     {/each}
-    <Button on:click={goBack}>Retour</Button>
+    {#if !hideButton}
+      <Button outline secondary on:click={goBack}>Retour.</Button>
+    {/if}
   </div>
 </Card>
