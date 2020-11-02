@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "^2.0.0",
@@ -16,7 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "chota": "^0.8.0",
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "svelte-chota": "^1.7.1"
   }
 }
