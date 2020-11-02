@@ -21,12 +21,20 @@
 
 <main>
   {#if selection >= 0}
-    <Diagram diagram={diagrams[selection]} on:back={focus} node={1} />
+    <Diagram
+      id={selection}
+      diagram={diagrams[selection]}
+      on:back={focus}
+      node={1} />
   {:else}
-    {#each diagrams as diagram, i}
-    <div class="diagram">
-      <Diagram on:selection={() => focus(i)} {diagram} hideButton={true} />
-    </div>
+    {#each diagrams as diagram, id}
+      <div class="diagram">
+        <Diagram
+          {id}
+          on:selection={() => focus(id)}
+          {diagram}
+          hideButton={true} />
+      </div>
     {/each}
   {/if}
 </main>
