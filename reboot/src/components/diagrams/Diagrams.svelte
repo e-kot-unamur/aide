@@ -11,26 +11,22 @@
 
 <style>
   main {
-    max-height: min-content;
-    min-height: 85%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .diagram {
+    margin-top: 2rem;
   }
 </style>
 
 <main>
-  <Row>
-    {#if selection >= 0}
-      <Col>
-        <Diagram diagram={diagrams[selection]} on:back={focus} node={1} />
-      </Col>
-    {:else}
-      {#each diagrams as diagram, i}
-        <Col>
-          <Diagram on:selection={() => focus(i)} {diagram} hideButton={true} />
-        </Col>
-      {/each}
-    {/if}
-  </Row>
+  {#if selection >= 0}
+    <Diagram diagram={diagrams[selection]} on:back={focus} node={1} />
+  {:else}
+    {#each diagrams as diagram, i}
+    <div class="diagram">
+      <Diagram on:selection={() => focus(i)} {diagram} hideButton={true} />
+    </div>
+    {/each}
+  {/if}
 </main>
