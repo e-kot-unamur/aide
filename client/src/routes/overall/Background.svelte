@@ -22,9 +22,19 @@
   .semi-transparent {
     opacity: 0.15;
   }
+
+  .bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: var(--color-darkGrey);
+    margin: 10px;
+    opacity: 0.5;
+  }
 </style>
 
 <div class="background">
   <img class="logo semi-transparent" src="images/logo.png" alt="E-kot logo" />
-  <p class="semi-transparent">v{version}</p>
+  <p class="bottom-right">v{version}, © tsepton</p>
 </div>
+<p class="bottom-right"></p>
