@@ -1,170 +1,46 @@
 # Diagramme interactif
 
-![GitHub tag](https://img.shields.io/github/v/tag/e-kot-unamur/interactive-diagram)
-
+![GitHub tag](https://img.shields.io/github/v/tag/e-kot-unamur/interactive-diagram)![Website tag](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=online&url=https%3A%2F%2Faide-e-kot.be)
 ### Démo
 
-Vous pouvez accéder à la dernière version du projet depuis [aide.e-kot.be](http://aide.e-kot.be/)
-
-
-
-![](demo.gif)
-
-
+Vous pouvez accéder à la dernière version du projet depuis [aide.e-kot.be](https://aide.e-kot.be/).
 
 ### But 
 
-Rendre le diagramme classique interactif et plus attrayant afin de soulager nos messages Facebook
+Rendre le diagramme classique interactif et plus attrayant afin de soulager nos messages Facebook.
 
 ### Ajouter de nouveaux diagrammes 
 ```bash
-$ cd interactive-diagram/backend/public/diagram
+$ cd <project-files>/client/src/static/diagrams/
 $ mkdir <nouveau dossier>
 $ cd <nouveau dossier> 
 $ touch <nom du diagramme>.json
 ```
-Modifier le *json* afin de créer le diagramme <br />
-L'importer au sein du fichier `interactive-diagram/backend/public/diagram/index.js` <br />
-Relancer le backend, done ! <br />
-Pour plus de précisions voir le fichier `interactive-diagram/backend/public/diagram/README.md` 
+Modifiez le *json* afin de créer le diagramme, <br />importez le au sein du fichier `diagram.js`, <br />et voilà !
 
+Pour plus de précisions voir le fichier `TODO.md` 
 
-------------
-### API
-##### Documentation
-You can view the OpenAPI specification of the backend [on this link](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/e-kot-unamur/interactive-diagram/master/openapi.json)
+-------
 
-Each route is specified within `interactive-diagram/openapi.json`
+### Commencer à coder...
 
-------------
+##### Développement :
 
-### Getting Started
-
-The commands below will start the development server 
+Pour le développement, aucun Dockerfile n'est disponible (je suis pas payé je te rappelle), il faut donc avoir *npm* ou *yarn* afin de démarrer le serveur de développement :
 
 ``````bash
-$ cd interactive-diagram
+$ cd <project-files>/client
+$ npm install
+$ npm run dev
 ``````
 
-##### Docker :
+##### Production :
 
 ``````bash
-$ docker-compose build # Run this only the first time, no need after
-$ docker-compose up [-d, --detach] 
+$ docker build --tag aide-ekot:2.0 .
+$ docker run --publish <server-port>:80 --detach --name aide-ekot aide-ekot:2.0
 ``````
 
-##### Start without Docker :
-
-###### Start front and back simultaneously
-
-````````bash
-# In your first terminal
-$ cd frontend
-$ npm install
-$ npm start
-
-# Open up a second terminal 
-$ cd backend
-$ npm install
-$ npm start
-````````
-
-Go on your `localhost`, client is running on port 8082 (docker) or 3000 (npm development server)
-(Backend's listening on port `8083` in docker and `8080` for the local configuration)
-
-
-----------------
-
-### Production 
-
-##### Without Docker 
-
-``````bash
-# In your first terminal
-$ cd frontend
-$ npm install
-$ npm install -g serve
-$ npm run build
-$ serve -s build
-
-# Open up a second terminal 
-$ cd backend
-$ npm install
-$ NODE_ENV production
-$ npm start
-``````
-
-
-
-##### Docker
-
-###### Edit the Dockerfile in the frontend folder
-
-`````dockerfile
-FROM node:10
-
-# Create app directory
-WORKDIR /usr/src/app
-COPY package*.json ./
-
-# Install app dependencies
-RUN npm install
-RUN npm install -g serve
-
-# Bundle app source
-COPY . .
-
-# Exposing the port (5000 is the default for npm's serve package)
-EXPOSE 5000
-
-# Building for production
-RUN npm run build 
-
-CMD ["serve", "-s", "build"] 
-`````
-*FIXME : serve package isn't for production*
-
-###### Edit the Dockerfile in the backend folder
-
-`````dockerfile
-FROM node:10
-
-# Create app directory
-WORKDIR /usr/src/app
-COPY package*.json ./
-
-# Install app dependencies
-RUN npm install
-
-# Bundle app source
-COPY . .
-
-# Telling NodeJS that this is for prod
-ENV NODE_ENV production
-
-# Exposing the port (5000 is the default for npm's serve package)
-EXPOSE 8080
-
-CMD ["npm", "start"] 
-`````
-
-###### Edit docker-compose.yml 
-
-`````dockerfile
-...
-  frontend:
-    build: ./frontend
-    ports:
-      - "XX:5000"
-...
-`````
-
-*Note : Replace `XX` with wathever port you'd like the app to be served on*
-
-###### Finally, build and launch the app in detach mode 
-
-`````bash
-$ cd interactive-diagram
-$ docker-compose up --build -d
-`````
-
+> Check ton `localhost` mon gars ! 
+>
+> -- 2019, <cite>Random livreur de delsart qui m'appela un beau jour de printemps</cite> 
