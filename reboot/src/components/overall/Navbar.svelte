@@ -18,7 +18,7 @@
 
 <Nav>
   <!-- svelte-ignore a11y-missing-attribute -->
-  <a slot="left" class="brand" on:click={(e) => goto(e, 'home')}>
+  <a slot="left" class="brand" on:click={(e) => goto('home')}>
     <img class="logo" src="images/logo.png" alt="E-kot logo" />
   </a>
 
