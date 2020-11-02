@@ -6,9 +6,10 @@
   import Diagrams from "./routes/diagrams/Diagrams.svelte";
   import About from "./routes/about/About.svelte";
   import Admin from "./routes/admin/Admin.svelte";
+  import Fallback from "./routes/fallback/Fallback.svelte";
 
   export let version;
-  export let url="";
+  export let url = "";
 </script>
 
 <style>
@@ -31,8 +32,9 @@
   <Background {version} />
   <Navbar />
   <Router {url}>
-    <Route path="/home" component={Diagrams} />
+    <Route path="/" component={Diagrams} />
     <Route path="/about" component={About} />
     <Route path="/admin" component={Admin} />
+    <Route path="" component={Fallback} />
   </Router>
 </Container>
