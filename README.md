@@ -1,6 +1,7 @@
 # Diagramme interactif
 
 ![GitHub tag](https://img.shields.io/github/v/tag/e-kot-unamur/interactive-diagram)![Website tag](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=online&url=https%3A%2F%2Faide-e-kot.be)
+
 ### Démo
 
 Vous pouvez accéder à la dernière version du projet depuis [aide.e-kot.be](https://aide.e-kot.be/).
