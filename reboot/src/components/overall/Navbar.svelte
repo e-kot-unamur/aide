@@ -1,5 +1,10 @@
 <script>
+  import { navigate } from "svelte-routing";
   import { Nav } from "svelte-chota";
+
+  function goto(e, page) {
+    navigate(`/${page}`);
+  }
 </script>
 
 <style>
@@ -12,13 +17,18 @@
 </style>
 
 <Nav>
-  <a slot="left" href="/" class="brand">
+  <!-- svelte-ignore a11y-missing-attribute -->
+  <a slot="left" class="brand" on:click={(e) => goto(e, 'home')}>
     <img class="logo" src="images/logo.png" alt="E-kot logo" />
   </a>
 
+  <!-- svelte-ignore a11y-missing-attribute -->
   <a
     slot="right"
+    class="active"
     href="https://www.messenger.com/t/ekotnamur"
     target="_blank">Prendre Contact</a>
-  <a slot="right" class="active" href="/">A propos</a>
+
+  <!-- svelte-ignore a11y-missing-attribute -->
+  <a slot="right" class="active" on:click={(e) => goto(e, 'about')}>A propos</a>
 </Nav>

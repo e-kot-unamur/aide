@@ -1,10 +1,13 @@
 <script>
   import { Container } from "svelte-chota";
+  import { Router, Route } from "svelte-routing";
   import Navbar from "./components/overall/Navbar.svelte";
-  import Diagrams from "./components/diagrams/Diagrams.svelte";
   import Background from "./components/overall/Background.svelte";
+  import Diagrams from "./components/diagrams/Diagrams.svelte";
+  import About from "./components/about/About.svelte";
 
   export let version;
+  export let url="";
 </script>
 
 <style>
@@ -26,5 +29,8 @@
 <Container style="height: 100%;">
   <Background {version} />
   <Navbar />
-  <Diagrams />
+  <Router {url}>
+    <Route path="/home" component={Diagrams} />
+    <Route path="/about" component={About} />
+  </Router>
 </Container>
