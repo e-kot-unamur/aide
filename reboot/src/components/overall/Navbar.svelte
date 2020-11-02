@@ -2,7 +2,7 @@
   import { navigate } from "svelte-routing";
   import { Nav } from "svelte-chota";
 
-  function goto(e, page) {
+  function goto(page) {
     navigate(`/${page}`);
   }
 </script>
@@ -30,5 +30,5 @@
     target="_blank">Prendre Contact</a>
 
   <!-- svelte-ignore a11y-missing-attribute -->
-  <a slot="right" class="active" on:click={(e) => goto(e, 'about')}>A propos</a>
+  <a slot="right" class="active" on:click={() => goto('about')}>A propos</a>
 </Nav>
