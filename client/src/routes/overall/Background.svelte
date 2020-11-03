@@ -20,7 +20,7 @@
   }
 
   .semi-transparent {
-    opacity: 0.15;
+    opacity: 0.04;
   }
 
   .bottom-right {
