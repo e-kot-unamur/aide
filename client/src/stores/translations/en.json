@@ -1,16 +1,15 @@
 {
     "navbar-contact": "Contact",
     "navbar-about": "About",
-    "diagram-errorCode": "TODO",
+    "diagram-errorCode": "Translation in progress...",
     "diagram-back": "Back",
-    "about-title1": "TODO",
-    "about-title2": "TODO",
-    "about-title3": "TODO",
-    "about-title4": "TODO",
-    "about-text1": "TODO",
-    "about-text2": "TODO",
-    "about-text3": "TODO",
-    
+    "about-title1": "Translation in progress...",
+    "about-title2": "Translation in progress...",
+    "about-title3": "Translation in progress...",
+    "about-title4": "Translation in progress...",
+    "about-text1": "Translation in progress...",
+    "about-text2": "Translation in progress...",
+    "about-text3": "Translation in progress...",
     "admin-errorCode": "Error code", 
-    "fallback-inner": "TODO"
+    "fallback-inner": "Translation in progress..."
 }
