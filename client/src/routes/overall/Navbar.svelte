@@ -1,6 +1,6 @@
 <script>
   import { links } from "svelte-routing";
-  import { lang } from "../../stores/lang.js";
+  import lang, { getString } from "../../stores/lang.js";
 
   const contact = "https://www.messenger.com/t/ekotnamur";
   const languages = ["fr", "en"];
@@ -25,7 +25,9 @@
       <div class="card">
         {#each languages as language}
           <p>
-            <a href="/?lang={language}" on:click={() => lang.set(language)}>{language}</a>
+            <a
+              href="/?lang={language}"
+              on:click={() => lang.set(language)}>{language}</a>
           </p>
         {/each}
       </div>
@@ -33,8 +35,8 @@
   </div>
 
   <div class="nav-right" use:links>
-      <a class="active" href={contact} target="_blank">Contacter</a>
-      <a href="/about">A propos</a>
+    <a class="active" href={contact} target="_blank">{getString($lang, "contact")}</a>
+    <a href="/about">{getString($lang, "about")}</a>
   </div>
 </nav>
 
