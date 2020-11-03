@@ -10,5 +10,9 @@
 </style>
 
 <main>
-  {@html getString($lang, "fallback-inner")}
+  <h1>{getString($lang, 'fallback-title1')}</h1>
+  <p>{getString($lang, 'fallback-text1')}</p>
+  <p>{@html getString($lang, 'fallback-text2')}</p>
+  <hr />
+  <h6>{getString($lang, 'fallback-title2')}</h6>
 </main>

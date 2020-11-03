@@ -1,15 +1,18 @@
 {
     "navbar-contact": "Contact",
     "navbar-about": "About",
-    "diagram-errorCode": "Translation in progress...",
+    "about-title1": "About",
+    "about-title2": "What are we ?",
+    "about-title3": "Social networks",
+    "about-title4": "Why the error code provided matters",
+    "about-text1": "The E-kot is a project kot of computer science students, volunteering to help other students when they have problems related to the field of computer science. The help is normally provided during sessions, but these are no longer available due to the current health crisis.",
+    "about-text2": "There is also a Facebook page where students can ask their questions and receive an answer as soon as possible.",
+    "about-text3": "The idea of this site is to answer the most frequently asked questions directly. Depending on the user's problem, he or she will be able to find valuable information by answering the various questions, which will - perhaps - allow the solution to be found directly on the site. If the problem persists, they can however contact us via Facebook by giving the code that the site will have provided at the end of the process.",
+    "diagram-errorCode": "If you need to contact us, please provide this error code",
     "diagram-back": "Back",
-    "about-title1": "Translation in progress...",
-    "about-title2": "Translation in progress...",
-    "about-title3": "Translation in progress...",
-    "about-title4": "Translation in progress...",
-    "about-text1": "Translation in progress...",
-    "about-text2": "Translation in progress...",
-    "about-text3": "Translation in progress...",
     "admin-errorCode": "Error code", 
-    "fallback-inner": "Translation in progress..."
+    "fallback-title1": "We're sorry...",
+    "fallback-title2": "PS: don't hesitate to follow the E-kot on social networks!",
+    "fallback-text1": "This page is not available,",
+    "fallback-text2": "click <a href=\"/\" use:link>here</a> to be redirected to the home page."
 }
