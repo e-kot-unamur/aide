@@ -28,9 +28,9 @@
   }
 </style>
 
+<Background {version} />
+<Navbar />
 <Container style="height: 100%;">
-  <Background {version} />
-  <Navbar />
   <Router {url}>
     <Route path="/" component={Diagrams} />
     <Route path="/about" component={About} />

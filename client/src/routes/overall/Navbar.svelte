@@ -1,6 +1,9 @@
 <script>
-  import { link } from "svelte-routing";
-  import { Nav } from "svelte-chota";
+  import { links } from "svelte-routing";
+  import { lang } from "../../stores/lang.js";
+
+  const contact = "https://www.messenger.com/t/ekotnamur";
+  const languages = ["fr", "en"];
 </script>
 
 <style>
@@ -12,16 +15,27 @@
   }
 </style>
 
-<Nav>
-  <a href="/" slot="left" class="brand" use:link>
-    <img class="logo" src="images/logo.png" alt="E-kot logo" />
-  </a>
+<nav class="nav">
+  <div class="nav-left" use:links>
+    <a href="/" class="brand">
+      <img class="logo" src="images/logo.png" alt="E-kot logo" />
+    </a>
+    <details class="dropdown">
+      <summary class="tag outline">{$lang}</summary>
+      <div class="card">
+        {#each languages as language}
+          <p>
+            <a href="/?lang={language}" on:click={() => lang.set(language)}>{language}</a>
+          </p>
+        {/each}
+      </div>
+    </details>
+  </div>
 
-  <a
-    slot="right"
-    class="active"
-    href="https://www.messenger.com/t/ekotnamur"
-    target="_blank">Prendre Contact</a>
+  <div class="nav-right" use:links>
+      <a class="active" href={contact} target="_blank">Contacter</a>
+      <a href="/about">A propos</a>
+  </div>
+</nav>
 
-  <a href="/about" slot="right" class="active" use:link>A propos</a>
-</Nav>
+<hr />
