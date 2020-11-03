@@ -1,9 +1,10 @@
 <script>
   import { Card, Button } from "svelte-chota";
   import { createEventDispatcher } from "svelte";
+  import lang, { getString } from "../../stores/lang.js";
   import htmlParser from "../../lib/HtmlParser.js";
-  export let diagram;
 
+  export let diagram;
   export let id = "";
   export let node = 0;
   export let hideButton = false;
@@ -46,8 +47,7 @@
       {@html htmlParser.parseContact(diagram[node].text)}
     </p>
     <p class="text-grey">
-      Si vous devez prendre contact avec l'E-kot, merci de bien vouloir
-      communiquer ce code d'erreur : {errorCode}.
+      {getString($lang, "diagram-errorCode")} : {errorCode}.
     </p>
   {/if}
 
@@ -64,7 +64,7 @@
     {/each}
     {#if !hideButton}
       <hr />
-      <Button outline secondary on:click={goBack}>Retour.</Button>
+      <Button outline secondary on:click={goBack}>{getString($lang, "diagram-back")}</Button>
     {/if}
   </div>
 </Card>

@@ -1,4 +1,15 @@
 {
-    "contact": "Contacter",
-    "about": "A propos"
+    "navbar-contact": "Contacter",
+    "navbar-about": "A propos",
+    "about-title1": "A propos",
+    "about-title2": "Qu'est-ce que l'ekot ?",
+    "about-title3": "Réseaux sociaux",
+    "about-title4": "L'importance du code d'erreur",
+    "about-text1": "L'e-kot est un kot à projet d'étudiants en informatique, aidant bénévolement  les autres étudiants lorsqu'ils ont des soucis lié au domaine de informatique.  L'aide se fait en temps normal via des permanences, cependant elles ne sont  plus disponibles avec la crise sanitaire actuelle.",
+    "about-text2": "Il y a également une page facebook (E-kot) où les étudiants peuvent poser  leurs questions et recevront une réponse le plus tôt possible.",
+    "about-text3": "L'idée de ce site est de répondre directement aux questions les plusfréquemment posées. En fonction du problème de l'utilisateur, il pourra trouverdes informations précieuses en répondant aux à diverses questions, ce qui permettra - peut être - de trouver directement la solution sur le site. Si le problème persiste, il pourra cependant nous contacter via facebook endonnant le code que le site lui aura fournit à la fin de sa démarche.",
+    "diagram-errorCode": "Si vous devez prendre contact avec l'E-kot, merci de bien vouloir communiquer ce code d'erreur",
+    "diagram-back": "Retour",
+    "admin-errorCode": "Code d'erreur",
+    "fallback-inner": "<h1>Désolé</h1><p>Cette page n'existe pas,</p><p>cliquez <a href=\"/\" use:link>ici</a> pour être redirigé vers la page d'accueil.</p><hr /><h6>PS : n'hésitez pas à suivre l'E-kot sur les réseaux sociaux !</h6>"
 }

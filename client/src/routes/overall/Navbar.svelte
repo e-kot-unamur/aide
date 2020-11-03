@@ -25,8 +25,8 @@
       <div class="card">
         {#each languages as language}
           <p>
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a
-              href="/?lang={language}"
               on:click={() => lang.set(language)}>{language}</a>
           </p>
         {/each}
@@ -35,8 +35,8 @@
   </div>
 
   <div class="nav-right" use:links>
-    <a class="active" href={contact} target="_blank">{getString($lang, "contact")}</a>
-    <a href="/about">{getString($lang, "about")}</a>
+    <a class="active" href={contact} target="_blank">{getString($lang, "navbar-contact")}</a>
+    <a href="/about">{getString($lang, "navbar-about")}</a>
   </div>
 </nav>
 

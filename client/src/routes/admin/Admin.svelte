@@ -1,4 +1,5 @@
 <script>
+  import lang, { getString } from "../../stores/lang.js";
   import { Input } from "svelte-chota";
   import Tree from "./Tree.svelte";
 
@@ -13,7 +14,7 @@
 
 <main>
   <p>
-    <Input placeholder="Error code" bind:value={code} />
+    <Input placeholder={getString($lang, "admin-errorCode")} bind:value={code} />
   </p>
 
   <Tree {code} />
