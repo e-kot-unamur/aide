@@ -1,5 +1,4 @@
 <script>
-  import { Container } from "svelte-chota";
   import { Router, Route } from "svelte-routing";
   import Navbar from "./routes/overall/Navbar.svelte";
   import Background from "./routes/overall/Background.svelte";
@@ -30,11 +29,11 @@
 
 <Background {version} />
 <Navbar />
-<Container style="height: 100%;">
+<div class="container" style="height: 100%;">
   <Router {url}>
     <Route path="/" component={Diagrams} />
     <Route path="/about" component={About} />
     <Route path="/admin" component={Admin} />
     <Route path="" component={Fallback} />
   </Router>
-</Container>
+</div>

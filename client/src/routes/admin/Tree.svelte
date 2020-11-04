@@ -1,12 +1,11 @@
 <script>
   import diagrams from "../../static/diagrams/diagram.js";
-  import { Card } from "svelte-chota";
   export let code = "";
 
   let nodes, root;
 
   function refIsNextNode(index, ref) {
-    return (nodes[index + 1] === ref.toString()) 
+    return nodes[index + 1] === ref.toString();
   }
 
   $: (root = code.split("-")[0]),
@@ -17,8 +16,10 @@
 </script>
 
 {#if diagrams[root]}
-  <Card>
-    <h4 slot="header">{diagrams[root][0].text}</h4>
+  <div class="card">
+    <header>
+      <h4>{diagrams[root][0].text}</h4>
+    </header>
     <hr />
     {#each nodes as node, index}
       {#if diagrams[root][node]}
@@ -35,5 +36,5 @@
         <p>Erreur, le noeud {node} n'existe pas.</p>
       {/if}
     {/each}
-  </Card>
+  </div>
 {/if}

@@ -1,5 +1,4 @@
 <script>
-  import { Card, Button } from "svelte-chota";
   import { createEventDispatcher } from "svelte";
   import lang, { getString } from "../../stores/lang.js";
   import htmlParser from "../../lib/HtmlParser.js";
@@ -39,7 +38,7 @@
   }
 </style>
 
-<Card>
+<div class="card">
   {#if !selected}
     <h5>{diagram[0].text}</h5>
   {:else}
@@ -47,13 +46,15 @@
       {@html htmlParser.parseContact(diagram[node].text)}
     </p>
     <p class="text-grey">
-      {getString($lang, "diagram-errorCode")} : {errorCode}.
+      {getString($lang, 'diagram-errorCode')}
+      :
+      {errorCode}.
     </p>
   {/if}
 
   <hr />
 
-  <div slot="footer">
+  <footer>
     {#if diagram[node].answers.length}<br />{/if}
     {#each diagram[node].answers as answer}
       <!-- Buttons from chota are broken if text is too long... -->
@@ -64,7 +65,9 @@
     {/each}
     {#if !hideButton}
       <hr />
-      <Button outline secondary on:click={goBack}>{getString($lang, "diagram-back")}</Button>
+      <button
+        class="button outline secondary"
+        on:click={goBack}>{getString($lang, 'diagram-back')}</button>
     {/if}
-  </div>
-</Card>
+  </footer>
+</div>
