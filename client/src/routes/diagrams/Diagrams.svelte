@@ -1,12 +1,15 @@
 <script>
-  import { Col, Row } from "svelte-chota";
-  import diagrams from "../../static/diagrams/diagram.js";
+  import translations from "../../static/diagrams/diagram.js";
+  import lang from "../../stores/lang.js";
   import Diagram from "./Diagram.svelte";
 
   let selection;
+
   function focus(ref) {
     selection = ref;
   }
+
+  $: diagrams = translations[$lang];
 </script>
 
 <style>

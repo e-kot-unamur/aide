@@ -1,4 +1,12 @@
-import internet from "./1/diagram.json"
-import mac from "./2/diagram.json"
+import frInternet from "./1/fr.json"
+import frMac from "./2/fr.json"
 
-export default [internet, mac]
+import enInternet from "./1/en.json"
+import enMac from "./2/en.json"
+
+const diagrams = {
+    "fr": [frInternet, frMac],
+    "en": [enInternet, enMac],
+}
+
+export default diagrams
