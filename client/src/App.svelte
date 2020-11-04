@@ -27,8 +27,8 @@
   }
 
   .container {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
   }
 </style>
 
