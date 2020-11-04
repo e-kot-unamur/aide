@@ -9,12 +9,6 @@
   $: diagram = translations[$lang][code.charAt(0)];
 </script>
 
-<style>
-  main {
-    margin-top: 10rem;
-  }
-</style>
-
 <main>
   <p>
     <label for="name">{getString($lang, 'admin-errorCode')}</label>

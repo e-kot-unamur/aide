@@ -25,11 +25,16 @@
     --font-size: 1.6rem;
     --font-family: "Helvetica Neue", sans-serif;
   }
+
+  .container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 </style>
 
 <Background {version} />
 <Navbar />
-<div class="container" style="height: 100%;">
+<div class="container">
   <Router {url}>
     <Route path="/" component={Diagrams} />
     <Route path="/about" component={About} />

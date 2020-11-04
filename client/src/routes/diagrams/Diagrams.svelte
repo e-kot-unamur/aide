@@ -13,10 +13,6 @@
 </script>
 
 <style>
-  main {
-    margin-top: 10rem;
-  }
-
   .diagram {
     margin-top: 2rem;
   }

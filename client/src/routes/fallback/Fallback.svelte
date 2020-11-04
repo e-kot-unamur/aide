@@ -1,13 +1,8 @@
 <script>
+  // The link is used inside the @html
   import { link } from "svelte-routing";
   import lang, { getString } from "../../stores/lang.js";
 </script>
-
-<style>
-  main {
-    margin-top: 10rem;
-  }
-</style>
 
 <main>
   <h1>{getString($lang, 'fallback-title1')}</h1>
