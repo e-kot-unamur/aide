@@ -12,7 +12,7 @@
 
     z-index: -1;
     text-align: center;
-    background-color: var(--color-background);
+    background-color: var(--bg-secondary-color);
   }
 
   .logo {

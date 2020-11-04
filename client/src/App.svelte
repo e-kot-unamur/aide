@@ -9,21 +9,36 @@
 
   export let version;
   export let url = "";
+
+  const date = new Date();
+  const now = date.getHours() * 60 + date.getMinutes();
+  const day = 8 * 60 < now && now <= 20 * 60;
 </script>
 
 <style>
   :global(:root) {
-    --color-primary: #3a5ebb;
-    --color-background: #ebe8e8;
-    --color-lightGrey: #bdbdbd;
-    --color-grey: #857a7a;
-    --color-darkGrey: #545252;
-    --color-error: #f64740;
-    --color-success: #0cf574;
-    --grid-maxWidth: 120rem;
-    --grid-gutter: 2rem;
-    --font-size: 1.6rem;
-    --font-family: "Helvetica Neue", sans-serif;
+    --color-error: #f15152;
+    --color-success: #20a169;
+  }
+
+  :global(.light-theme) {
+    --bg-color: #fff;
+    --bg-secondary-color: #f5f5f5;
+    --font-color: #333;
+    --color-primary: #197bbd;
+    --color-lightGrey: #adaeae;
+    --color-grey: #898c8b;
+    --color-darkGrey: #2e3532;
+  }
+
+  :global(.dark-theme) {
+    --bg-color: #3d3d3d;
+    --bg-secondary-color: #292929;
+    --font-color: #eeeeee;
+    --color-primary: #5db1ea;
+    --color-lightGrey: #dce1e4;
+    --color-grey: #d1d7dc;
+    --color-darkGrey: #607180;
   }
 
   .container {
@@ -32,13 +47,15 @@
   }
 </style>
 
-<Background {version} />
-<Navbar />
-<div class="container">
-  <Router {url}>
-    <Route path="/" component={Diagrams} />
-    <Route path="/about" component={About} />
-    <Route path="/admin" component={Admin} />
-    <Route path="" component={Fallback} />
-  </Router>
-</div>
+<main class={day ? 'light-theme' : 'dark-theme'}>
+  <Background {version} />
+  <Navbar />
+  <div class="container">
+    <Router {url}>
+      <Route path="/" component={Diagrams} />
+      <Route path="/about" component={About} />
+      <Route path="/admin" component={Admin} />
+      <Route path="" component={Fallback} />
+    </Router>
+  </div>
+</main>
