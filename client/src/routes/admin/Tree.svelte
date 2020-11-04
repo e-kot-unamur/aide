@@ -1,39 +1,38 @@
 <script>
-  import diagrams from "../../static/diagrams/diagram.js";
-  export let code = "";
+  import lang, { getString } from "../../stores/lang.js";
+  export let code, diagram;
 
-  let nodes, root;
+  let nodes;
 
   function refIsNextNode(index, ref) {
     return nodes[index + 1] === ref.toString();
   }
 
-  $: (root = code.split("-")[0]),
-    (nodes = code
-      .split("-")
-      .slice(1)
-      .filter((str) => str !== ""));
+  $: nodes = code
+    .split("-")
+    .slice(1)
+    .filter((str) => str !== "");
 </script>
 
-{#if diagrams[root]}
+{#if diagram}
   <div class="card">
     <header>
-      <h4>{diagrams[root][0].text}</h4>
+      <h4>{diagram[0].text}</h4>
     </header>
     <hr />
     {#each nodes as node, index}
-      {#if diagrams[root][node]}
+      {#if diagram[node]}
         <p>
-          {@html diagrams[root][node].text}
+          {@html diagram[node].text}
         </p>
-        {#each diagrams[root][node].answers as { text, ref }}
+        {#each diagram[node].answers as { text, ref }}
           {#if refIsNextNode(index, ref)}
             <p class="text-grey text-right">{text}</p>
             <hr />
           {/if}
         {/each}
       {:else}
-        <p>Erreur, le noeud {node} n'existe pas.</p>
+        <p>{getString($lang, 'admin-error')}</p>
       {/if}
     {/each}
   </div>
