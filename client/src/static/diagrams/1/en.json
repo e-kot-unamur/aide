@@ -1,6 +1,148 @@
 {
     "0": {
-        "text": "Translation in progress...",
+        "text": "I can't connect to internet",
+        "answers": [
+            {
+                "text": "Find help !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Do you live in an university housing",
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 2
+            },
+            {
+                "text": "Yes.",
+                "ref": 3
+            }
+        ]
+    },
+    "2": {
+        "text": "E-kot members could help you. Contact them <contact>here</contact> !",
         "answers": []
+    },
+    "3": {
+        "text": "Before going further, turn off Wi-Fi on your computer and make sure your ethernet cable is correctly plugged on both sides (in the computer and in your rooter)",
+        "image": {
+            "caption": "Picture of an ethernet cable :"
+        },
+        "answers": [
+            {
+                "text": "The cable is correctly plugged.",
+                "ref": 4
+            }
+        ]
+    },
+    "4": {
+        "text": "Can you browse to this page <a href='http://kotserv.unamur.be' target='_blank'>kotserv.unamur.be</a> ?",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 5
+            },
+            {
+                "text": "No.",
+                "ref": 13
+            }
+        ]
+    },
+    "5": {
+        "text": "Have you already registered your computer on this page ?",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 6
+            },
+            {
+                "text": "No.",
+                "ref": 7
+            }
+        ]
+    },
+    "6": {
+        "text": "Is your quota over the limit ? You can check it out on <a href='https://kotserv.unamur.be/users/users-index.php' target='_blank'>kotserv.unamur.be/users</a>",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 9
+            },
+            {
+                "text": "No.",
+                "ref": 8
+            }
+        ]
+    },
+    "7": {
+        "text": "Please register your computer on kotserv. Be careful to enter the correct credentials, which means, your eID (not your e-mail adress !) and the corresponding password. Than, reboot your computer. On the restart, internet should work.. <br/>For more information, click <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>here</a>",
+        "answers": []
+    },
+    "8": {
+        "text": "<contact>Contact E-kot</contact> for an intervention.",
+        "answers": []
+    },
+    "9": {
+        "text": "Are there several connected devices when you only use one ?",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 11
+            },
+            {
+                "text": "No.",
+                "ref": 10
+            }
+        ]
+    },
+    "10": {
+        "text": "You probably have a torrent client issue. <contact>Contact E-kot</contact> for an intervention.",
+        "answers": []
+    },
+    "11": {
+        "text": "You probably have borrowed someone's eID or let someone use yours. <contact>Contact E-kot</contact> to delete the device(s) that doesn't belong to you",
+        "answers": []
+    },
+    "12": {
+        "text": "Your computer is probably incorrectly configured. <contact>Contact E-kot</contact> for an intervention.",
+        "answers": []
+    },
+    "13": {
+        "text": "Please, try with an other ethernet cable. If you don't have an other one, you can get one from <contact>E-kot</contact> for 3€.",
+        "answers": [
+            {
+                "text": "I tried with an other cable, I can continue the registration of my computer on the university network.",
+                "ref": 4
+            },
+            {
+                "text": "It still doesn't work.",
+                "ref": 14
+            }
+        ]
+    },
+    "14": {
+        "text": "Please, try with an other wall plug in your housing.",
+        "answers": [
+            {
+                "text": "I tied with an other wall plug and it worked.",
+                "ref": 8
+            },
+            {
+                "text": "It still doesn't work.",
+                "ref": 12
+            }
+        ]
+    },
+    "15": {
+        "text": "Please, try with an other wall plug in your housing.",
+        "answers": [
+            {
+                "text": "I tied with an other wall plug and it worked.",
+                "ref": 8
+            }
+        ]
     }
+
 }

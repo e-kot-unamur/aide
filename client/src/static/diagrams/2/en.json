@@ -1,6 +1,103 @@
 {
     "0": {
-        "text": "Translation in progress...",
+        "text": "How do i find my MAC adress ?",
+        "answers": [
+            {
+                "text": "Find help !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "On which operatin system are you ?",
+        "answers": [
+            {
+                "text": "MAC OS",
+                "ref": 10
+            },
+            {
+                "text": "Windows",
+                "ref": 2
+            },
+            {
+                "text": "Linux",
+                "ref": 20
+            }
+        ]
+    },
+    "2": {
+        "text": "/*Open your command prompt*/.<br /> Press on <i>Windows + R</i>, write <code>cmd</code> in the window. <br/>Press <i>Enter</i> to validate.",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 3
+            }
+        ]
+    },
+    "3": {
+        "text": "/*Execute ipconfig/*.<br /> In the command prompt, write <code>ipconfig/all</code>, then validate with <i>Enter</i>. <br />The configuration information of all your network connections should be displayed. ",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 4
+            }
+        ]
+    },
+    "4": {
+        "text": "/*Search for <i>Physical address</i>*/.<br /> This is the other name for the MAC adress. If you have multiple network devices connected (wireless card, ethernet card), make sure to check which of these media the address in question belongs to.<br/>Assuming you have both on your computer, know that your wireless connection as a different MAC adress than your ethernet connection because it doesn't use the same card.",
+        "answers": []
+    },
+    "10": {
+        "text": "Click on the magnifier at the top right of your screen.",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 11
+            }
+        ]
+    },
+    "11": {
+        "text": "Write <code>Terminal</code> and execute the <i>Terminal</i> app",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 12
+            }
+        ]
+    },
+    "12": {
+        "text": "Write the following command : <code>ifconfig</code> and validate with <i>Enter</i>",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Your MAC adress is the one next to the entry titled <code>inet</code>. Multiple adresses could be listed there, in this case, write down on a paper each adress with its corressponding interface.",
+        "answers": []
+    },
+    "20": {
+        "text": "/*Open the commande prompt.*/<br/> Depending on your operating system, it can be called <i>Terminal, Xterm, Shell</i> or simply <i>command prompt</i>.",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 21
+            }
+        ]
+    },
+    "21": {
+        "text": "/*Display IP network interface information.*/<br/> On the command line, write <code>ifconfig -a</code>, then validate by pressing <i>Enter</i>.<br/>If access is denied, write <code>sudo ifconfig -a</code>, then enter your password when it is asked.",
+        "answers": [
+            {
+                "text": "Next.",
+                "ref": 22
+            }
+        ]
+    },
+    "22": {
+        "text": "/*Find your MAC adress.*/<br/> Scroll until you find the active network connection (the primary ethernet port is called <i>eth0</i>). Find the entry <i>HWaddr</i> : that's your MAC adress.",
         "answers": []
     }
 }
