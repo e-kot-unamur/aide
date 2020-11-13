@@ -1,0 +1,20 @@
+@startuml
+
+skinparam backgroundColor #EAEAEA
+skinparam note {
+    BackgroundColor #F0C808
+    BorderColor #FE4A49
+}
+skinparam state {
+    BackgroundColor #fff
+    BackgroundColor<<Leaf>> #000000
+    FontColor<<Leaf>> #FFF
+    BorderColor #4F6D7A
+}
+
+state "Mon pc est lent..." as root  
+state "Basile bouge toi les couilles" as basxtrem  
+
+root --> basxtrem
+
+@enduml

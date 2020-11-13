@@ -1,0 +1,124 @@
+{
+    "0": {
+        "text": "Votre PC est lent?",
+        "answers": [
+            {
+                "text": "Trouver de l'aide !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Sur quel système d'exploitation êtes vous ?",
+        "answers": [
+            {
+                "text": "MAC OS",
+                "ref": 10
+            },
+            {
+                "text": "Windows",
+                "ref": 2
+            },
+            {
+                "text": "Linux",
+                "ref": 20
+            }
+        ]
+    },
+    "2": {
+        "text": "Le disque dur est-il rempli<br> Il moins de 5 Go de disponible ?",
+        "answers": [
+            {
+                "text": "Oui",
+                "ref": 3
+            },
+            {
+                "text": "Non",
+                "ref": 4
+            }
+        ]
+    },
+    "3": {
+        "text": "Il faut trouver une solution pour vider un minimum le disque dur<br>Mettre ce qui est important sur un autre support de stockage tel qu'une clé usb ou un disque dur externe",
+        "answers": []
+    },
+    "4": {
+        "text": "Quelques étapes qui peuvent rendre votre PC plus rapide.",
+        "answers": [
+            {
+                "text":"Désactiver certains programmes qui se lancent au <b>démarrage</b> du pc.",
+                "ref": 5
+            },
+            {
+                "text": "Désactiver certains services qui sont inutiles.",
+                "ref": 6
+            },
+            {
+                "text": "Nettoyer l'ordinateur.",
+                "ref": 7
+            },
+            {
+                "text": "Problèmes sur le navigateur web.",
+                "ref": 8
+            },
+            {
+                "text": "Autres astuces.",
+                "ref": 9
+            }
+
+        ]
+    },
+    "5": {
+        "text": "Il faut vérifier les programmes qui se lance au démarrage du pc et retirer tout ce qui n’est pas utile<b> Appuyez simultanément sur les touches ctrl + shift + escape/échap, ensuite dans l'onglet Démarrage, vérifier ce qui est lancé au démarrage et retirez tout ce dont vous n'avez pas besoin. (Vous pourrez toujours lancer les programmes désactiver une fois l'ordi lancé)",
+        "answers": [{
+            "text": "Revenir aux diverses étapes.",
+            "ref": 4
+        }
+    ]
+    },
+    "6": {
+        "text": "Pour désactiver les services inutiles, appuyez simultanément sur les touches Windows + R, tapez ensuite msconfig et fait enter.<br>Dans l’onglet Services, cochez <em>Masquez tous les services Microsoft</em> pour être sûr de ne pas désactiver des services indispensables.<br>Ensuite vous pouvez désactivez en décochant la case à gauche du service puis faire <em>appliquer.</em><br>Désactivez les services qui vous semble bizarres ou ceux dont le Fabricant est Inconnu, ou enfin les services pas très intéressants tel que McAfee,…",
+        "answers": [
+            {
+                "text": "Revenir aux diverses étapes.",
+                "ref": 4
+            }
+        ]
+    },
+    "7": {
+        "text": "Si vous avez avast et ou ccleaner, désinstallez-les, Windows defender fait le taf. Pour le nettoyer correctement, installez <em>adwcleaner</em> disponible <a href=\"https://fr.malwarebytes.com/adwcleaner/\">ICI,<br>dans tableau de bord lancer l’analyse, le nettoyage se fait automatiquement.<br>(Vous pouvez désinstaller adwcleaner après le nettoyage si vous n’en n’avez plus l’utilité)",
+        "answers": [
+            {
+                "text": "Revenir aux diverses étapes.",
+                "ref": 4
+            }
+        ]
+    },
+    "8": {
+        "text": "Vérifiez les extensions de votre navigateur et retirez ce qui est inutile/bizarre.<br>Sur Google Chrome, cliquez en haut à droit sur les 3 ronds -> Plus d'outils -> Extensions<br><br><br>Le nouvel onglet / la page au lancement du navigateur n’est pas celle désirée?<br><br>Si vous êtes sur Google Chrome, allez dans les paramètres du navigateur, ensuite dans <em>Moteur de recherche</em>, cliquez sur <em>Gérer les moteurs de recherche</em> et choisissez celui que vous voulez.<br><br>Si vous avez une/des pages que vous ne souhaitez pas au lancement du navigateur,<br> allez dans <em>Au démarrage</em>, choisissez soit <em>ouvrir la page « nouvel onglet »</em> ou choisissez la/les pages que vous souhaitez dans <em>Ouvrir une page ou un ensemble de pages spécifiques</em>.",
+        "answers": [
+            {
+                "text": "Revenir aux diverses étapes.",
+                "ref": 4
+            }
+        ]
+    },
+    "9": {
+        "text": "Evitez de mettre trop de contenu sur le bureau, cela peut ralentir le démarrage.<br>Si vous avez un SSD + HDD, mettez seulement le nécessaire sur le ssd et le reste sur le HDD pour que le démarage soit plus rapide.",
+        "answers": [
+            {
+                "text": "Revenir aux diverses étapes.",
+                "ref": 4
+            }
+        ]
+    },
+    "10": {
+        "text": "MAC TODO",
+        "answers": [
+        ]
+    },
+    "20": {
+        "text": "LINUX TODO",
+        "answers": []
+    }
+}
