@@ -15,11 +15,13 @@ Rendre le diagramme classique interactif et plus attrayant afin de soulager nos 
 $ cd <project-files>/client/src/static/diagrams/
 $ mkdir <nouveau dossier>
 $ cd <nouveau dossier> 
-$ touch <nom du diagramme>.json
+$ touch en.json fr.json
 ```
-Modifiez le *json* afin de créer le diagramme, <br />importez le au sein du fichier `diagram.js`, <br />et voilà !
+Modifiez les *json* afin de créer le diagramme en français et en anglais, <br />importez les au sein du fichier `diagram.js`, <br />et voilà !
 
-Pour plus de précisions voir le fichier `TODO.md` 
+> Attention à garder les mêmes *ref* et *id* de noeuds entre le fichier français et sa traduction anglaise ! 
+
+Pour plus de précisions sur la structure du fichier *.json*, voir sa [documentation relative](client/src/static/diagrams/README.md).
 
 -------
 
