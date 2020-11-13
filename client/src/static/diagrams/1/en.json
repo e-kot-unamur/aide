@@ -134,15 +134,5 @@
                 "ref": 12
             }
         ]
-    },
-    "15": {
-        "text": "Please, try with an other wall plug in your housing.",
-        "answers": [
-            {
-                "text": "I tied with an other wall plug and it worked.",
-                "ref": 8
-            }
-        ]
     }
-
 }

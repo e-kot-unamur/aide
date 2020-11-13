@@ -134,15 +134,5 @@
                 "ref": 12
             }
         ]
-    },
-    "15": {
-        "text": "Veuillez essayer via une autre prise du logement universitaire.",
-        "answers": [
-            {
-                "text": "J'ai changé de prise, et cela fonctionne.",
-                "ref": 8
-            }
-        ]
     }
-
 }
