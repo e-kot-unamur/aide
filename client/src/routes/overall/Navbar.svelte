@@ -27,7 +27,7 @@
 
   <div class="nav-center">
     <a href="/" class="brand">
-      <img class="logo" src="images/logo.png" alt="E-kot logo" />
+      <img class="logo" src="images/logo.webp" alt="E-kot logo" />
     </a>
   </div>
 
