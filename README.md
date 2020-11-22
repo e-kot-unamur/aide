@@ -1,6 +1,15 @@
-# Diagramme interactif
+<div style="text-align:center">
+    <h1>
+        Diagramme interactif
+    </h1>
+    <img src="https://img.shields.io/website?down_color=red&down_message=down&up_color=brightgreen&style=flat-square&up_message=online&url=https%3A%2F%2Faide.e-kot.be" />
+    <img src="https://img.shields.io/github/languages/code-size/e-kot-unamur/interactive-diagram?style=flat-square" />
+    <img src="https://img.shields.io/github/v/tag/e-kot-unamur/interactive-diagram?style=flat-square" />
+    <img src="https://img.shields.io/github/last-commit/e-kot-unamur/interactive-diagram?style=flat-square" />
+    <img src="https://img.shields.io/github/contributors/e-kot-unamur/interactive-diagram?style=flat-square" />
+</div>
 
-![version tag](https://img.shields.io/github/v/tag/e-kot-unamur/interactive-diagram)![Size tag](https://img.shields.io/github/languages/code-size/e-kot-unamur/interactive-diagram)![Website tag](https://img.shields.io/website?down_color=red&down_message=down&up_color=brightgreen&up_message=online&url=https%3A%2F%2Faide.e-kot.be)
+
 
 ### Démo
 
