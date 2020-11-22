@@ -21,7 +21,7 @@
 
 <nav class="nav">
   <div class="nav-left">
-    <a href={contact} target="_blank">{getString($lang, 'navbar-contact')}</a>
+    <a href={contact} target="_blank" rel="noopener">{getString($lang, 'navbar-contact')}</a>
     <a href="/about">{getString($lang, 'navbar-about')}</a>
   </div>
 
