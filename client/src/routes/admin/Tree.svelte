@@ -9,6 +9,7 @@
   }
 
   $: nodes = code
+    .trim()
     .split("-")
     .slice(1)
     .filter((str) => str !== "");

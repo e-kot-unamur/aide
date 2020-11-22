@@ -6,7 +6,7 @@
   let code = "";
   let diagram;
 
-  $: diagram = translations[$lang][code.charAt(0)];
+  $: diagram = translations[$lang][code.trim().charAt(0)];
 </script>
 
 <main>
