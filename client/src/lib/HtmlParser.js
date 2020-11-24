@@ -12,7 +12,7 @@ export default class HtmlParser {
      */
     static parseContact(text) {
         return text
-            .replace('<contact>', `<a href="${contact}" target="_blank">`)
+            .replace('<contact>', `<a href="${contact}" target="_blank" rel="noopener">`)
             .replace('</contact>', '</a>')
     }
 }

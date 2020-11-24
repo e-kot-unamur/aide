@@ -21,13 +21,13 @@
 
 <nav class="nav">
   <div class="nav-left">
-    <a href={contact} target="_blank">{getString($lang, 'navbar-contact')}</a>
+    <a href={contact} target="_blank" rel="noopener">{getString($lang, 'navbar-contact')}</a>
     <a href="/about">{getString($lang, 'navbar-about')}</a>
   </div>
 
   <div class="nav-center">
     <a href="/" class="brand">
-      <img class="logo" src="images/logo.png" alt="E-kot logo" />
+      <img class="logo" src="images/logo.webp" alt="E-kot logo" />
     </a>
   </div>
 
