@@ -1,5 +1,4 @@
 @startuml
-
 skinparam backgroundColor #EAEAEA
 skinparam note {
     BackgroundColor #F0C808
@@ -12,9 +11,29 @@ skinparam state {
     BorderColor #4F6D7A
 }
 
-state "Mon pc est lent..." as root  
-state "Basile bouge toi les couilles" as basxtrem  
+state "Je suis sur Windows et mon PC est lent" as root
 
-root --> basxtrem
+state "Votre partition contenant Windows est-elle remplie (généralement, il s'agit du disque C), il y a t'il moins de 5 Go de disponible ?" as diskState
+
+state "Vérifiez les programmes qui se lancent au démarrage du pc." as startup 
+
+state "Vous pouvez nettoyer votre ordinateur en supprimant certains fichiers devenus obsolètes." as clean
+
+state "Là tu continues #TODO" as tocard
+
+state "Veuillez nettoyer votre disque afin de libérer de l'espace.\nVous pouvez prendre <contact>contact</contact> avec l'E-kot pour de plus amples informations." as diskSol <<Leaf>>
+state "Veuillez appuyer simultanément sur les touches \n<code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,\nensuite dans l'onglet Démarrage, vérifiez ce qui est coché\n et retirez tout ce dont vous n'avez pas besoin." as startupSol <<Leaf>>
+state "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/.'>lien<a>.\nUne fois installé, vous pouvez lancer l'analyse via le tableau de bord,\nle nettoyage se fait automatiquement" as cleanSol <<Leaf>>
+
+root --> diskState
+
+diskState -> diskSol: Oui
+diskState --> startup: Non
+
+startup -> startupSol: Plus de détails
+startup --> clean: Autre possibilité
+
+clean -> cleanSol: Plus de détails 
+clean --> tocard: Autre possibilité 
 
 @enduml
