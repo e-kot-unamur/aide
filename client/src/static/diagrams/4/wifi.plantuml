@@ -1,0 +1,54 @@
+@startuml
+skinparam backgroundColor #EAEAEA
+skinparam note {
+    BackgroundColor #F0C808
+    BorderColor #FE4A49
+}
+skinparam state {
+    BackgroundColor #fff
+    BackgroundColor<<Leaf>> #000000
+    FontColor<<Leaf>> #FFF
+    BorderColor #4F6D7A
+}
+
+state "Je veux me connecter au Wifi" as root
+
+state "Suis-je étudiant à l'UNamur ?" as studentType
+
+state "A quel wifi est-ce que je veux me connecter ?" as unamurStudent
+
+state "Je n'ai pas d'accès au wifi UNamur, je dois utiliser l'Eduroam" as otherStudent
+
+state "Quel système / appareil est-ce que j'utilise ? " as deviceType
+
+note left of deviceType : "Pour povoir se connecter au wifi, il faut posséder ces versions de système d'exploitation  \nou les versions ultérieures : Android 6, Windows 8 ou Mac OS 10.12\n Si tu ne disposes pas de ces versions, contacte-nous"
+
+state "Connexion Eduroam" as eduroamWifi
+state "Connexion wifi UNamur" as unamurWifi
+
+note bottom of unamurWifi : " Le nom d’utilisateur est l’eId suivi de “@unamur.be”.\nPar ex: adupont@unamur.be Le mot de passe est\n le même que sur les autres plateformes UNamur.\nSi le système vous demande de vérifier le certificat, \nassurez-vous que le nom du serveur est bien clearpass.unamur.be et validez."
+note bottom of eduroamWifi : "Le nom d'utilisateur est votre adresse mail d'étudiant.\n Votre mot de passe est le même que vous utiliser \npour vous connecter à la plateforme de votre école."
+
+state "Reglage des paramètres Wifi" as propsWifi
+
+note bottom of propsWifi: "Paramètres supplémentaires (si nécessaire): \n-Sécurité sans fil: WPA & WPA2 Enterprise\n-Méthode EAP / Authentification: Tunneled TLS (TTLS)\n-Type de phase 2 / innter auth: PAP\n-Certificat CA: non défini.\n-Vérifier le certificat: nom serveur:   clearpass.unamur.be" 
+
+state "Veuillez prendre contact avec nous via facebook ou par mail" as contactLeaf <<Leaf>>
+
+
+root --> studentType
+
+studentType--> unamurStudent : Oui
+studentType--> otherStudent : Non
+
+unamurStudent --> deviceType: Wifi UNamur
+unamurStudent --> eduroamWifi : Wifi Eduroam
+
+otherStudent --> eduroamWifi : Wifi Eduroam
+eduroamWifi --> contactLeaf : Ne fonctionne pas
+
+propsWifi --> unamurWifi
+deviceType--> propsWifi : Android (6+) / Linux
+deviceType--> unamurWifi : MAC OS (10.12+)\nIOS\nWINDOWS 8/10 
+unamurWifi--> contactLeaf : Ne fonctionne pas
+@enduml
