@@ -19,11 +19,36 @@ state "Vérifiez les programmes qui se lancent au démarrage du pc." as startup
 
 state "Vous pouvez nettoyer votre ordinateur en supprimant certains fichiers devenus obsolètes." as clean
 
-state "Là tu continues #TODO" as tocard
+state "Rendez votre navigation sur internet plus appropriée en modifiant les paramètres du navigateur." as browsing
+
+state "Quel navigateur web utilisez-vous principalement?" as browser
+
+state "Vérifiez les extensions de votre navigateur." as extG
+state "Votre page du nouvel onglet est-elle celle désirée?" as newPageG
+state "Votre page au lancement du navigateur es-elle celle désirée?" as startBrowserG
+
+state "Vérifiez les extensions de votre navigateur." as extF
+state "Votre page du nouvel onglet est-elle celle désirée?" as newPageF
+state "Votre page au lancement du navigateur est-elle celle désirée?" as startBrowserF
+state "Votre moteur de recherche est-il celui désiré?" as searchEngineF
+
+state "Vérifiez qu'il n'y a pas trop de contenu sur votre bureau\n, cela peut ralentir le démarrage. \nSi vous avez un SSD + HDD, veuillez mettre seulement le nécessaire sur le ssd \net le reste sur le HDD \npour que le démarage soit plus rapide." as other
 
 state "Veuillez nettoyer votre disque afin de libérer de l'espace.\nVous pouvez prendre <contact>contact</contact> avec l'E-kot pour de plus amples informations." as diskSol <<Leaf>>
 state "Veuillez appuyer simultanément sur les touches \n<code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,\nensuite dans l'onglet Démarrage, vérifiez ce qui est coché\n et retirez tout ce dont vous n'avez pas besoin." as startupSol <<Leaf>>
 state "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/.'>lien<a>.\nUne fois installé, vous pouvez lancer l'analyse via le tableau de bord,\nle nettoyage se fait automatiquement" as cleanSol <<Leaf>>
+
+state "Veuillez vérifier les extensions de votre navigateur \net retirez ce qui est inutile. \nPour cela, il faut cliquer en haut à droite sur les 3 ronds -> Plus d'outils -> Extensions." as extLeafG <<Leaf>>
+state "Veuillez aller dans les paramètres du navigateur, \nensuite dans 'Moteur de recherche', cliquez sur 'Gérer les moteurs de recherche' \net choisissez celui que vous voulez." as newPageLeafG <<Leaf>>
+state "Veuillez aller dans les paramètres du navigateur, \nensuite dans 'Au démarrage', choisissez soit \n'ouvrir la page nouvel onglet' ou choisissez la/les pages que vous souhaitez \ndans 'Ouvrir une page ou un ensemble de pages spécifiques'" as startBrowserLeafG <<Leaf>>
+
+state "Veuillez vérifier les extensions de votre navigateur \net retirez ce qui est inutile. \nPour cela, il faut cliquer en haut à droite sur les 3 barres horizontales -> Modules complémentaires -> Extensions." as extLeafF <<Leaf>>
+state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Accueil', cliquez à droite de 'Nouveaux onglets' \net choisissez la page de nouvel onglet que vous désirez." as newPageLeafF <<Leaf>>
+state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Accueil', cliquez à droite de 'Page d’accueil et nouvelles fenêtres' et choisissez ce que vous désirez." as startBrowserLeafF <<Leaf>>
+state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Recherche', choisissez le moteur de recherche qui vous intéresse \ndans 'Moteur de recherche par défaut'" as searchEngineLeafF <<Leaf>>
+
+note right of startupSol : Vous pourrez toujours lancer \nles programmes désactivés \nune fois l'ordinateur lancé !
+note right of cleanSol : Si vous avez avast et ou ccleaner d'installé, \nvous pouvez les désinstaller, \nWindows defender fait le nécessaire.
 
 root --> diskState
 
@@ -34,6 +59,25 @@ startup -> startupSol: Plus de détails
 startup --> clean: Autre possibilité
 
 clean -> cleanSol: Plus de détails 
-clean --> tocard: Autre possibilité 
+clean --> browsing: Autre possibilité 
+
+browsing -> browser: Plus de détails
+browsing --> other: Autre possibilité
+
+browser -> extG: Google Chrome
+extG --> extLeafG: Plus de détails
+extG ---> newPageG: Autre possibilité
+newPageG ---> newPageLeafG: Oui
+newPageG ---> startBrowserG: Non
+startBrowserG ----> startBrowserLeafG: Plus de détails
+
+browser --> extF : Firefox
+extF ---> extLeafF: Plus de détails
+extF ----> newPageF: Autre possibilité
+newPageF ----> newPageLeafF: Oui
+newPageF ----> startBrowserF: Non
+startBrowserF -----> startBrowserLeafF: Plus de détails
+startBrowserF -----> searchEngineF: Autre possibilité
+searchEngineF -----> searchEngineLeafF: Plus de détails
 
 @enduml
