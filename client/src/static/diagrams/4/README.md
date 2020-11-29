@@ -1,1 +1,1 @@
-![wifi](C:\Users\zokos\GItPorject\e-kot\interactive-diagram\client\src\static\diagrams\4\wifi.png)
+![wifi](wifi.png)
