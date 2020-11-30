@@ -1,0 +1,100 @@
+{
+    "0" : {
+        "text" : "Je veux me connecter au wifi",
+        "answers": [
+            {
+                "text": "Trouver de l'aide !",
+                "ref": 1
+            }
+        ]
+    },
+    "1" : {
+        "text" : "Suis-je étudiant à l'UNamur ?",
+        "answers": [
+            {
+                "text": "Oui",
+                "ref": 2
+            },
+            {
+                "text": "Non",
+                "ref": 1
+            }
+        ]
+    },
+    "2" : {
+        "text" : "A quel wifi est-ce que je veux me connecter ?",
+        "answers" : [
+            {
+                "text" : "Wifi UNamur",
+                "ref" : 3
+            },
+            {
+                "text" : "Wifi Eduroam",
+                "ref" : 4
+            }
+        ]
+    },
+    "3" : {
+        "text" : "Quel système / appareil est-ce que j'utilise ? <br />Pour pouvoir se connecter au wifi, il faut posséder ces versions de système d'exploitation  <br />ou les versions ultérieures : Android 6, Windows 8 ou Mac OS 10.12",
+        "answers" : [
+            {
+                "text" : "Mac OS (10.12+) / IOS / Windows 8/10 ",
+                "ref" : 7
+            },
+            {
+                "text" : "Android (6+) / Linux",
+                "ref" : 6
+            },
+            {
+                "text" : "Je possède un système d'exploitation obsolète",
+                "ref" : 5
+            }
+        ]
+    },
+    "4" : {
+        "text" : "Connexion Eduroam.<br />Le nom d'utilisateur est ton adresse mail d'étudiant.<br /> Le mot de passe est le même que tu utilises <br /> pour te connecter à la plateforme de ton école.",
+        "answers" : [
+            {
+                "text" : "Cela ne fonctionne pas",
+                "ref" : 5
+            },
+            {
+                "text" : "Cela fonctionne",
+                "ref" : 8
+            }
+        ]
+    },
+
+    "5" : {
+        "text" : "<contact>Veuillez prendre contact</contact> avec nousn nous essayerons de t'aider",
+        "answers" : []
+    },
+    
+    "6" : {
+        "text" : "Réglages des paramètres wifi",
+        "answers" : [
+            {
+                "text" : "Connexion wifi UNamur",
+                "ref" : 7
+            }
+        ]
+    },
+    "7" : {
+        "text" : "Connexion wifi UNamur. <br />Le nom d’utilisateur est l’eId suivi de “@unamur.be”.<br />Par ex: adupont@unamur.be <br />Le mot de passe est le même que sur les autres plateformes UNamur.<br />Si le système te demande de vérifier le certificat, <br />assure-toi que le nom du serveur soit bien clearpass.unamur.be et valide.",
+        "ansers" : [
+            {
+                "text" : "Cela fonctionne",
+                "ref" : 8
+            },
+            {
+                "text" : " Cela ne fonctionne pas",
+                "ref" : 5
+            }
+        ]
+    },
+    "8" : {
+        "text" : "Tu devrais avoir le wifi maintenant ! Si on t'a bien aidé, n'hésite pas à aller nous suivre sur nos réseaux sociaux",
+        "answers" : []
+    }
+
+}
