@@ -61,15 +61,15 @@ browsing -> browser: Plus de détails
 browsing --> other: Autre possibilité
 
 browser -> newPageG: Google Chrome
-newPageG ---> newPageLeafG: Plus de détails
-newPageG ---> startBrowserG: Autre possibilité
-startBrowserG ----> startBrowserLeafG: Plus de détails
+newPageG -> newPageLeafG: Plus de détails
+newPageG --> startBrowserG: Autre possibilité
+startBrowserG --> startBrowserLeafG: Plus de détails
 
 browser --> newPageF : Firefox
-newPageF ----> newPageLeafF: Oui
-newPageF ----> startBrowserF: Non
-startBrowserF -----> startBrowserLeafF: Plus de détails
-startBrowserF -----> searchEngineF: Autre possibilité
-searchEngineF -----> searchEngineLeafF: Plus de détails
+newPageF --> newPageLeafF: Oui
+newPageF --> startBrowserF: Non
+startBrowserF --> startBrowserLeafF: Plus de détails
+startBrowserF --> searchEngineF: Autre possibilité
+searchEngineF --> searchEngineLeafF: Plus de détails
 
 @enduml
