@@ -31,14 +31,28 @@ Les fichiers *json* doivent garder la même structure entre leurs traductions. A
         "answers": [
             {
                 "text": "Réponse à la question...",
-                "ref": 2 // référence vers l'id d'un autre noeud
-            },
-            ...
+                "ref": 2
+            }
         ]
     },
-    ...
+	"2": {
+        "text": "Fin de diagramme...",
+        "answers": []
+    }
 }
 ```
+
+### Balisage
+
+La question posé à chaque noeud d'un diagramme sera formatté comme étant de l'HTML. Vous pouvez donc utiliser des balises comme...
+
+- `<br />`
+- `<code>...<code/>`
+- `<a href="" [target="..." rel="noopener"]>...</a>`
+  - Note : `<contact>...</contact>`  est à votre disposition afin d'obtenir un lien direct vers l'adresse de contact (définie dans `client/src/lib/HtmlParser.js`).
+- ...
+
+> Evitez d'utiliser d'autre balise, le but initiale était de simplement inclure des liens vers la page facebook. 
 
 ### Tester son implémentation 
 

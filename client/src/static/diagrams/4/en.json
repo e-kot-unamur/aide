@@ -1,0 +1,97 @@
+{
+    "0": {
+        "text": "I want to connect to a college wireless network.",
+        "answers": [
+            {
+                "text": "Find help!",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Are you a student at University of Namur ?",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 2
+            },
+            {
+                "text": "No.",
+                "ref": 1
+            }
+        ]
+    },
+    "2": {
+        "text": "To which wireless network do you want to connect ?",
+        "answers": [
+            {
+                "text": "UNamur",
+                "ref": 3
+            },
+            {
+                "text": "Eduroam",
+                "ref": 4
+            }
+        ]
+    },
+    "3": {
+        "text": "On which operating system is running the device you want to connect ? <br />To be able to connect to this wireless network, you have to run on one of these operating systems : Android 6, Windows 8 or Mac OS 10.12 or later",
+        "answers": [
+            {
+                "text": "Mac OS (10.12+) / IOS / Windows 8/10.",
+                "ref": 7
+            },
+            {
+                "text": "Android (6+) / Linux.",
+                "ref": 6
+            },
+            {
+                "text": "I have an obsolete operating system.",
+                "ref": 5
+            }
+        ]
+    },
+    "4": {
+        "text": "Connecting to Eduroam.<br />Your username is the e-mail adress you use to connect to your university's platform. Your password is the one you use to connect to your university's platform",
+        "answers": [
+            {
+                "text": "It didn't work.",
+                "ref": 5
+            },
+            {
+                "text": "It worked.",
+                "ref": 8
+            }
+        ]
+    },
+    "5": {
+        "text": "<contact>You can contact us</contact>, we will try to help you",
+        "answers": []
+    },
+    "6": {
+        "text": "Settings of the wireless network parameters",
+        "answers": [
+            {
+                "text": "Connecting to UNamur",
+                "ref": 7
+            }
+        ]
+    },
+    "7": {
+        "text": "Connecting to UNamur.<br />Your username is your eID followed by \"@unamur.be\" (For instance: adupont@unamur.be). Your password is the one ou use to connect to UNamur's platform.<br /> If the system asks you to verify a certificate, make sure the server adress is \"clearpass.unamur.be\" and validate.",
+        "answers": [
+            {
+                "text": "It worked.",
+                "ref": 8
+            },
+            {
+                "text": "It didn't work.",
+                "ref": 5
+            }
+        ]
+    },
+    "8": {
+        "text": "You should now be connected ! If we have helped you, you can follow us on social medias",
+        "answers": []
+    }
+}
