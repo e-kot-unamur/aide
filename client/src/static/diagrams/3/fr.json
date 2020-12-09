@@ -1,6 +1,167 @@
 {
     "0": {
-        "text": "Is your computer slow ?",
+        "text": "Je suis sur Windows et mon PC est lent",
+        "answers": [
+            {
+                "text": "Trouver de l'aide !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Votre partition contenant Windows est-elle remplie (généralement, il s'agit du disque C), il y a t'il moins de 5 Go de disponible ?",
+        "answers": [
+            {
+                "text": "Oui.",
+                "ref": 2            
+            },
+            {
+                "text": "Non.",
+                "ref": 3
+            }
+        ]
+    },
+    "2": {
+        "text": "Veuillez nettoyer votre disque afin de libérer de l'espace. <br>Vous pouvez prendre <contact>contact</contact> avec l'E-kot pour de plus amples informations.",
+        "answers": []
+    },
+    "3": {
+        "text": "Vérifiez les programmes qui se lancent au démarrage du pc.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 4
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 5
+            }
+        ]
+    },
+    "4": {
+        "text": "Veuillez appuyer simultanément sur les touches <code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,<br>ensuite dans l'onglet Démarrage, vérifiez ce qui est coché et retirez tout ce dont vous n'avez pas besoin.",
+        "answers": []
+    },
+    "5": {
+        "text": "Vous pouvez nettoyer votre ordinateur en supprimant certains fichiers devenus obsolètes.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 6
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 7
+            }
+        ]
+    },
+    "6": {
+        "text": "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/'>lien<a>.<br>Une fois installé, vous pouvez lancer l'analyse via le tableau de bord, le nettoyage se fait automatiquement.",
+        "answers": []
+    },
+    "7": {
+        "text": "Rendez votre navigation sur internet plus appropriée en modifiant les paramètres du navigateur.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 8
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 9
+            }
+        ]
+    },
+    "8": {
+        "text": "Quel navigateur web utilisez-vous principalement?",
+        "answers": [
+            {
+                "text": "Google Chrome",
+                "ref": 10
+            },
+            {
+                "text": "Firefox",
+                "ref": 14
+            }
+        ]
+    },
+    "9": {
+        "text": "Vérifiez qu'il n'y a pas trop de contenu sur votre bureau, cela peut ralentir le démarrage. <br>Si vous avez un SSD + HDD, veuillez mettre seulement le nécessaire sur le ssd pour que le démarage soit plus rapide.",
+        "answers": []
+    },
+    "10": {
+        "text": "Je n'ai plus Google en page d'accueil.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 11
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 12
+            }
+        ]
+    },
+    "11": {
+        "text": "Pour remettre Google correctement, veuillez aller dans les paramètres du navigateur, ensuite dans 'Moteur de recherche', <br>cliquez sur 'Moteur de recherche utilisé dans la barre d'adresse' et choisissez Google.",
+        "answers": []
+    },
+    "12": {
+        "text": "J'ai des pages inhabituelles au lancement de mon navigateur.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Veuillez aller dans les paramètres du navigateur, ensuite dans 'Au démarrage',<br>choisissez soit 'ouvrir la page nouvel onglet' ou choisissez la/les pages que vous souhaitez dans 'Ouvrir une page ou un ensemble de pages spécifiques'",
+        "answers": []
+    },
+    "14": {
+        "text": "Votre page du nouvel onglet est-elle celle désirée?",
+        "answers": [
+            {
+                "text": "Non.",
+                "ref": 15
+            },
+            {
+                "text": "Oui.",
+                "ref": 16
+            }
+        ]
+    },
+    "15": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Accueil', <br>cliquez à droite de 'Nouveaux onglets' et choisissez la page de nouvel onglet que vous désirez.",
+        "answers": []
+    },
+    "16": {
+        "text": "Votre page au lancement du navigateur est-elle celle désirée?",
+        "answers": [
+            {
+                "text": "Non.",
+                "ref": 17
+            },
+            {
+                "text": "Oui.",
+                "ref": 18
+            }
+        ]
+    },
+    "17": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Accueil', cliquez à droite de 'Page d’accueil et nouvelles fenêtres' et choisissez ce que vous désirez.",
+        "answers": []
+    },
+    "18": {
+        "text": "Votre moteur de recherche est-il celui désiré?",
+        "answers": [{
+            "text": "Non.",
+            "ref": 17
+        }   ]
+    },
+    "19": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Recherche', choisissez le moteur de recherche qui vous intéresse dans 'Moteur de recherche par défaut'",
         "answers": []
     }
 }

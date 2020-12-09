@@ -1,6 +1,167 @@
 {
     "0": {
-        "text": "Votre ordinateur est lent ?",
+        "text": "I'm on Windows and my PC is slow",
+        "answers": [
+            {
+                "text": "Find help !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Is your Windows partition full (usually the C disk), is there less than 5 GB available?",
+        "answers": [
+            {
+                "text": "Yes.",
+                "ref": 2            
+            },
+            {
+                "text": "No.",
+                "ref": 3
+            }
+        ]
+    },
+    "2": {
+        "text": "Please clean your disk to free up space. <br> You can take <contact>contact</contact> with the E-kot for more information.",
+        "answers": []
+    },
+    "3": {
+        "text": "Check the programs that run when the PC starts up.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 4
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 5
+            }
+        ]
+    },
+    "4": {
+        "text": "Please press <code>ctrl + shift + escape</code> (or escape) simultaneously to open the Task Manager,<br> then in the Startup tab, check what is ticked and remove anything you don't need",
+        "answers": []
+    },
+    "5": {
+        "text": "You can clean your computer by deleting certain files that have become obsolete.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 6
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 7
+            }
+        ]
+    },
+    "6": {
+        "text": "You can install adwcleaner, available for free by this <a href='https://fr.malwarebytes.com/adwcleaner/'>link<a>.<br> Once installed, you can launch the analysis via the dashboard, the cleaning is done automatically",
+        "answers": []
+    },
+    "7": {
+        "text": "Make your internet browsing more appropriate by changing your browser settings.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 8
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 9
+            }
+        ]
+    },
+    "8": {
+        "text": "Which web browser do you mainly use?",
+        "answers": [
+            {
+                "text": "Google Chrome",
+                "ref": 10
+            },
+            {
+                "text": "Firefox",
+                "ref": 14
+            }
+        ]
+    },
+    "9": {
+        "text": "Check that there is not too much content on your desktop, this may slow down the start up.<br>If you have an SSD + HDD, please put only the necessary on the ssd for a faster boot",
+        "answers": []
+    },
+    "10": {
+        "text": "I no longer have Google as my homepage.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 11
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 12
+            }
+        ]
+    },
+    "11": {
+        "text": "To reset Google correctly, please go to the browser settings, then go to 'Search Engine', <br>click on 'Search engine used in the address bar' and choose Google",
+        "answers": []
+    },
+    "12": {
+        "text": "I have unusual pages when I launch my browser",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Please go to the browser settings, then in 'On startup',<br>choose either 'Open the New Tab Page' or choose the page(s) you want in 'Open a specific page or set of pages'",
+        "answers": []
+    },
+    "14": {
+        "text": "Is your new tab page the one you want?",
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 15
+            },
+            {
+                "text": "Yes.",
+                "ref": 16
+            }
+        ]
+    },
+    "15": {
+        "text": "Please go to your browser options, then 'Home', <br>click to the right of 'New Tabs' and choose the new tab page you want.",
+        "answers": []
+    },
+    "16": {
+        "text": "Is your page at the start of the browser the one you want?",
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 17
+            },
+            {
+                "text": "Yes.",
+                "ref": 18
+            }
+        ]
+    },
+    "17": {
+        "text": "Please go to browser options, then 'Home', click on the right hand side of 'Homepage and new windows' and choose what you want",
+        "answers": []
+    },
+    "18": {
+        "text": "VIs your search engine the one you want?",
+        "answers": [{
+            "text": "No.",
+            "ref": 17
+        }   ]
+    },
+    "19": {
+        "text": "Please go to the browser options, then in 'Search', choose the search engine you are interested in in 'Default Search Engine'",
         "answers": []
     }
 }

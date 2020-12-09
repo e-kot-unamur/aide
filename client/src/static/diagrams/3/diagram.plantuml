@@ -23,11 +23,9 @@ state "Rendez votre navigation sur internet plus appropriée en modifiant les pa
 
 state "Quel navigateur web utilisez-vous principalement?" as browser
 
-state "Vérifiez les extensions de votre navigateur." as extG
-state "Votre page du nouvel onglet est-elle celle désirée?" as newPageG
-state "Votre page au lancement du navigateur es-elle celle désirée?" as startBrowserG
+state "Je n'ai plus Google en page d'accueil." as newPageG
+state "J'ai des pages inhabituelles au lancement de mon navigateur." as startBrowserG
 
-state "Vérifiez les extensions de votre navigateur." as extF
 state "Votre page du nouvel onglet est-elle celle désirée?" as newPageF
 state "Votre page au lancement du navigateur est-elle celle désirée?" as startBrowserF
 state "Votre moteur de recherche est-il celui désiré?" as searchEngineF
@@ -38,11 +36,9 @@ state "Veuillez nettoyer votre disque afin de libérer de l'espace.\nVous pouvez
 state "Veuillez appuyer simultanément sur les touches \n<code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,\nensuite dans l'onglet Démarrage, vérifiez ce qui est coché\n et retirez tout ce dont vous n'avez pas besoin." as startupSol <<Leaf>>
 state "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/.'>lien<a>.\nUne fois installé, vous pouvez lancer l'analyse via le tableau de bord,\nle nettoyage se fait automatiquement" as cleanSol <<Leaf>>
 
-state "Veuillez vérifier les extensions de votre navigateur \net retirez ce qui est inutile. \nPour cela, il faut cliquer en haut à droite sur les 3 ronds -> Plus d'outils -> Extensions." as extLeafG <<Leaf>>
-state "Veuillez aller dans les paramètres du navigateur, \nensuite dans 'Moteur de recherche', cliquez sur 'Gérer les moteurs de recherche' \net choisissez celui que vous voulez." as newPageLeafG <<Leaf>>
+state "Pour remettre Google correctement, veuillez aller dans les paramètres du navigateur, \nensuite dans 'Moteur de recherche', cliquez sur \n'Moteur de recherche utilisé dans la barre d'adresse' \net choisissez Google." as newPageLeafG <<Leaf>>
 state "Veuillez aller dans les paramètres du navigateur, \nensuite dans 'Au démarrage', choisissez soit \n'ouvrir la page nouvel onglet' ou choisissez la/les pages que vous souhaitez \ndans 'Ouvrir une page ou un ensemble de pages spécifiques'" as startBrowserLeafG <<Leaf>>
 
-state "Veuillez vérifier les extensions de votre navigateur \net retirez ce qui est inutile. \nPour cela, il faut cliquer en haut à droite sur les 3 barres horizontales -> Modules complémentaires -> Extensions." as extLeafF <<Leaf>>
 state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Accueil', cliquez à droite de 'Nouveaux onglets' \net choisissez la page de nouvel onglet que vous désirez." as newPageLeafF <<Leaf>>
 state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Accueil', cliquez à droite de 'Page d’accueil et nouvelles fenêtres' et choisissez ce que vous désirez." as startBrowserLeafF <<Leaf>>
 state "Veuillez aller dans les options/paramètres du navigateur, \nensuite dans 'Recherche', choisissez le moteur de recherche qui vous intéresse \ndans 'Moteur de recherche par défaut'" as searchEngineLeafF <<Leaf>>
@@ -64,16 +60,12 @@ clean --> browsing: Autre possibilité
 browsing -> browser: Plus de détails
 browsing --> other: Autre possibilité
 
-browser -> extG: Google Chrome
-extG --> extLeafG: Plus de détails
-extG ---> newPageG: Autre possibilité
-newPageG ---> newPageLeafG: Oui
-newPageG ---> startBrowserG: Non
+browser -> newPageG: Google Chrome
+newPageG ---> newPageLeafG: Plus de détails
+newPageG ---> startBrowserG: Autre possibilité
 startBrowserG ----> startBrowserLeafG: Plus de détails
 
-browser --> extF : Firefox
-extF ---> extLeafF: Plus de détails
-extF ----> newPageF: Autre possibilité
+browser --> newPageF : Firefox
 newPageF ----> newPageLeafF: Oui
 newPageF ----> startBrowserF: Non
 startBrowserF -----> startBrowserLeafF: Plus de détails
