@@ -23,6 +23,16 @@
     refs.length ? (node = refs.pop()) : dispatch("back");
   }
 
+  // FIXME : Oh common !
+  function copyText(text) {
+    const temp = document.createElement("textarea");
+    document.body.appendChild(temp);
+    temp.value = text;
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+  }
+
   $: node, (selected = node > 0), dispatch("selection");
   $: errorCode = [id, ...refs, node].join("-");
 </script>
@@ -36,6 +46,20 @@
     cursor: pointer;
     opacity: 0.75;
   }
+
+  .error-code {
+    transition-duration: 0.8s;
+  }
+
+  .error-code:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .error-code:active {
+    transition-duration: 0s;
+    color: var(--color-success) !important;
+  }
 </style>
 
 <div class="card">
@@ -45,10 +69,11 @@
     <p class="text-justify">
       {@html htmlParser.parseContact(diagram[node].text)}
     </p>
-    <p class="text-grey">
-      {getString($lang, 'diagram-errorCode')}
-      :
-      {errorCode}.
+    <p
+      class="text-grey text-justify error-code"
+      on:click={(e) => copyText(e.target.childNodes[2].textContent)}>
+      {getString($lang, 'diagram-errorCode')} : {errorCode}
+      {getString($lang, 'diagram-copy')}.
     </p>
   {/if}
 
