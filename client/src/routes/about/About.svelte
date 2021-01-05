@@ -1,8 +1,9 @@
 <script>
   import lang, { getString } from "../../stores/lang.js";
+  import { fade } from 'svelte/transition';
 </script>
 
-<main>
+<main in:fade>
   <h1>{getString($lang, 'about-title1')}</h1>
   <hr />
   <h3>{getString($lang, 'about-title2')}</h3>

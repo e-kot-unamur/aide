@@ -2,6 +2,7 @@
   import translations from "../../static/diagrams/diagram.js";
   import lang from "../../stores/lang.js";
   import Diagram from "./Diagram.svelte";
+	import { fade } from 'svelte/transition';
 
   let selection;
 
@@ -18,7 +19,7 @@
   }
 </style>
 
-<main>
+<main in:fade>
   {#if selection >= 0}
     <Diagram
       id={selection}

@@ -19,9 +19,12 @@
   }
 </style>
 
-<nav class="nav">
+<nav class="nav" use:links>
   <div class="nav-left">
-    <a href={contact} target="_blank" rel="noopener">{getString($lang, 'navbar-contact')}</a>
+    <a
+      href={contact}
+      target="_blank"
+      rel="noopener">{getString($lang, 'navbar-contact')}</a>
     <a href="/about">{getString($lang, 'navbar-about')}</a>
   </div>
 
@@ -31,12 +34,13 @@
     </a>
   </div>
 
-  <div class="nav-right tabs" use:links>
+  <div class="nav-right tabs">
     {#each languages as language}
-        <!-- svelte-ignore a11y-missing-attribute -->
-        <a
-          on:click={() => lang.set(language)}
-          class={language === $lang ? 'active' : 'unactive'}>{language}</a>
+      <!-- svelte-ignore a11y-missing-attribute -->
+      <a
+        class={language === $lang ? 'active' : 'unactive'}
+        on:click={() => lang.set(language)}
+        replace>{language}</a>
     {/each}
   </div>
 </nav>
