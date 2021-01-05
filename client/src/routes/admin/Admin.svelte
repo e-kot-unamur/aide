@@ -2,11 +2,12 @@
   import translations from "../../static/diagrams/diagram.js";
   import lang, { getString } from "../../stores/lang.js";
   import Tree from "./Tree.svelte";
-	import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
 
-  let code = "";
+  let code;
   let diagram;
 
+  $: code = new URL(location.href).searchParams.get("code") ?? "";
   $: diagram = translations[$lang][code.trim().charAt(0)];
 </script>
 
