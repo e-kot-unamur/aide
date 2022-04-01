@@ -7,15 +7,11 @@ export default class HtmlParser {
     // TODO refactor the following
 
     static parseFacebook(text) {
-        return text
-            .replace("<facebook>", `<a href=${facebookLink} target="_blank" rel="noopener">`)
-            .replace("</facebook>", `</a>`)
+        return this.parse(text, 'facebook', facebookLink)
     }
 
     static parseInstagramTag(text) {
-        return text
-            .replace("<instagram>", `<a href=${instagramLink} target="_blank" rel="noopener">`)
-            .replace("</instagram>", `</a>`)
+        return this.parse(text, 'instagram', instagramLink)
     }
 
     /**
@@ -28,8 +24,13 @@ export default class HtmlParser {
      * @todo remove useless space from inner tag < ... >
      */
     static parseContact(text) {
+        return this.parse(text, 'contact', contact)
+    }
+
+    // Should be private 
+    static parse(text, tag, href) {
         return text
-            .replace('<contact>', `<a href="${contact}" target="_blank" rel="noopener">`)
-            .replace('</contact>', '</a>')
+            .replace(`<${tag}>`, `<a href=${href} target="_blank" rel="noopener">`)
+            .replace(`</${tag}>`, `</a>`)
     }
 }
