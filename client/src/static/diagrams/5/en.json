@@ -1,0 +1,65 @@
+{
+    "0": {
+        "text": "I was asked to change my UNamur password.",
+        "answers": [
+            {
+                "text": "Find help!",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "From April 26 to September 13, UNamur's IT department is launching a massive password change campaign that affects all students and staff members. Changing or re-encoding your password is mandatory.",
+        "answers": [
+            {
+                "text": "Is this phishing?",
+                "ref": 2
+            },
+            {
+                "text": "Is it urgent?",
+                "ref": 3
+            },
+            {
+                "text": "Can I reuse the same password?",
+                "ref": 4
+            },
+            {
+                "text": "Why do I have to do this?",
+                "ref": 5
+            }
+        ]
+    },
+    "2": {
+        "text": "No, the password change campaign is real. However, you will never receive an email or message containing a direct link. The only instruction you will receive is to go to the BVE and enter your password. If you have received a different instruction, a link, a suspicious message, or a message from a non-UNamur address, please contact us directly to report it.",
+        "answers": []
+    },
+    "3": {
+        "text": "No, it is not urgent. If you have received a message to the contrary, please contact us directly to let us know. However, the password change must be done before September 13. If it is not done by then, you will no longer have access to Teams. You will receive a reminder message before the deadline if you have not done so yet.",
+        "answers": []
+    },
+    "4": {
+        "text": "Yes, however, your password must respect certain constraints (minimum length, capitalization, number, etc.). You will be reminded of these when you enter your password.",
+        "answers": [
+            {
+                "text": "My previous password respects these constraints.",
+                "ref": 6
+            },
+            {
+                "text": "My previous password does not respect these constraints.",
+                "ref": 7
+            }
+        ]
+    },
+    "5": {
+        "text": "Everyone must change or re-enter their UNamur password, it is mandatory. Eventually, this will allow you to log into Microsoft Teams using your UNamur credentials, rather than different credentials for Teams only. This campaign is also part of an effort to strengthen the passwords of UNamur IT users for security purposes.",
+        "answers": []
+    },
+    "6": {
+        "text": "Perfect! Be careful, in this case you still have to re-enter your password on the platform, even if it is identical.",
+        "answers": []
+    },
+    "7": {
+        "text": "In this case we advise you either to change your password or to strengthen your current password. For maximum security, we can also advise you to use a password manager like KeepassXC or Bitwarden.",
+        "answers": []
+    }
+}

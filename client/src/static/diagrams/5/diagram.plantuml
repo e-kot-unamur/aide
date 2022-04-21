@@ -1,0 +1,87 @@
+@startuml
+
+state "On m'a demandé de changer\nmon mot de passe UNamur." as root
+
+note left of root {
+    À partir du X mai et jusqu'au Y septembre, le service
+    informatique de l'UNamur lance une vaste campagne de
+    changement de mot de passe qui concerne tous les
+    étudiants et membres du personnel. Changer ou
+    ré-encoder votre mot de passe est obligatoire.
+}
+
+state "Est-ce du phishing ?" as questionPhishing
+
+note bottom of questionPhishing {
+    Non, la campagne de changement de mot de passe est bien
+    réelle. Cependant, vous ne recevrez jamais de mail ou
+    message contenant directement un lien. La seule
+    consigne qui vous sera donnée est de vous rendre sur le
+    BVE pour entrer votre mot de passe. Si vous avez reçu
+    une consigne différente, un lien, un message douteux ou
+    provenant d'une adresse non-UNamur, prenez directement
+    contact avec nous pour nous le signaler.
+}
+
+state "Est-ce urgent ?" as questionUrgency
+
+note bottom of questionUrgency {
+    Non, ce n'est pas urgent. Si vous avez reçu un message
+    qui vous affirme le contraire, prenez directement
+    contact avec nous pour nous le signaler. Cependant, le
+    changement de mot de passe doit être effectué avant le
+    Y septembre. Si ce n'est pas fait à ce moment-là, vous
+    n'aurez plus accès à Teams. Vous recevrez, avant
+    l'échéance, un message de rappel si vous ne l'avez pas
+    encore fait.
+}
+
+state "Puis-je ré-utiliser le\nmême mot de passe ?" as questionIdentical
+
+note top of questionIdentical {
+    Oui. Cependant, votre mot de passe doit respecter
+    certaines contraintes (longueur minimum, majuscule,
+    chiffre, etc.). Ces dernières vous seront rappelées
+    lorsque vous entrerez votre mot de passe.
+}
+
+state "Mon ancien mot de passe\nrespecte ces contraintes." as questionIdenticalOk
+
+note bottom of questionIdenticalOk {
+    Parfait ! Attention, dans ce cas vous devez tout de
+    même ré-entrer votre mot de passe sur la plateforme,
+    même s'il est identique.
+}
+
+state "Mon ancien mot de passe ne\nrespecte pas ces contraintes." as questionIdenticalKo
+
+note bottom of questionIdenticalKo {
+    Dans ce cas nous vous conseillons soit de changer de
+    mot de passe, soit de renforcer votre mot de passe
+    actuel. Pour une sécurité maximale, nous pouvouns aussi
+    vous conseiller d'utiliser un gestionnaire de mots de
+    passe comme KeepassXC ou Bitwarden.
+}
+
+state "Pourquoi dois-je\nfaire cela ?" as questionWhy
+
+note bottom of questionWhy {
+    Tout le monde doit changer ou ré-entrer son mot de
+    passe UNamur, c'est obligatoire. À terme, cela
+    vous permettra de vous connecter à Microsoft Teams en
+    utilisant vos identifiants UNamur, plutôt que des
+    identifiants différents pour Teams uniquement. Cette
+    campagne rentre aussi dans une volonté de renforcer les
+    mots de passe des utilisateurs des services
+    informatiques de l'UNamur dans un but de sécurité.
+}
+
+[*] --> root
+root --> questionPhishing
+root --> questionUrgency
+root --> questionIdentical
+root --> questionWhy
+questionIdentical --> questionIdenticalOk
+questionIdentical --> questionIdenticalKo
+
+@enduml
