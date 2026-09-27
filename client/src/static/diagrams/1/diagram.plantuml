@@ -1,5 +1,4 @@
 @startuml
-
 skinparam backgroundColor #EAEAEA
 skinparam note {
     BackgroundColor #F0C808
@@ -12,45 +11,44 @@ skinparam state {
     BorderColor #4F6D7A
 }
 
-state "Je n'ai plus internet" as root  
-state "Faites vous parti d'un logement universitaire ?" as logementState
+state "Je veux me connecter au Wifi" as root
 
-state "Avez vous un accès à kotserv ?" as kotservState
+state "Suis-je étudiant à l'UNamur ?" as studentType
 
-state "Veuillez changer de cable ethernet" as ethernetState
-state "Veuillez changer de prise RJ45 par une autre du batiment" as rj45State
+state "A quel wifi est-ce que je veux me connecter ?" as unamurStudent
 
-state "Avez vous déjà enregistré correctement \nvotre ordinateur via la page de kotserv ?" as registeredState
-state "Veuillez vérifier votre quota sur la page [...]" as quotaState
+state "Je n'ai pas d'accès au wifi UNamur, je dois utiliser l'Eduroam" as otherStudent
 
+state "Quel système / appareil est-ce que j'utilise ? " as deviceType
+
+note left of deviceType : "Pour povoir se connecter au wifi, il faut posséder ces versions de système d'exploitation  \nou les versions ultérieures : Android 6, Windows 8 ou Mac OS 10.12\n Si tu ne disposes pas de ces versions, contacte-nous"
+
+state "Connexion Eduroam" as eduroamWifi
+state "Connexion wifi UNamur" as unamurWifi
+
+note bottom of unamurWifi : " Le nom d’utilisateur est l’eId suivi de “@unamur.be”.\nPar ex: adupont@unamur.be Le mot de passe est\n le même que sur les autres plateformes UNamur.\nSi le système vous demande de vérifier le certificat, \nassurez-vous que le nom du serveur est bien clearpass.unamur.be et validez."
+note bottom of eduroamWifi : "Le nom d'utilisateur est votre adresse mail d'étudiant.\n Votre mot de passe est le même que vous utiliser \npour vous connecter à la plateforme de votre école."
+
+state "Reglage des paramètres Wifi" as propsWifi
+
+note bottom of propsWifi: "Paramètres supplémentaires (si nécessaire): \n-Sécurité sans fil: WPA & WPA2 Enterprise\n-Méthode EAP / Authentification: Tunneled TLS (TTLS)\n-Type de phase 2 / innter auth: PAP\n-Certificat CA: non défini.\n-Vérifier le certificat: nom serveur:   clearpass.unamur.be" 
 
 state "Veuillez prendre contact avec nous via facebook ou par mail" as contactLeaf <<Leaf>>
-state "Veuillez suivre les instructions afin de \ncorrectement enregistrer votre ordinateur sur kotserv" as registerLeaf <<Leaf>>
-state "Veuillez attendre suffisament longtemps que \nvotre quota repasse en dessous de la limite autorisée" as quotaLeaf <<Leaf>>
-
-note left of kotservState : Veuilez couper votre WIFI \net assurez vous de brancher \ncorrectement votre cable ethernet
-note bottom of quotaLeaf : Il est ici demandé d'autres informations \nafin de comprendre la cause du dépassement \ndu quota de l'étudiant 
-note "Il est demandé à l'étudiant, \navant tout contact avec nous, \nde prendre note du numéro \n(donné en tout noeud de fin) \nservant à référencer le chemin \nparcouru dans le diagramme" as N1 
 
 
-root --> logementState
+root --> studentType
 
-logementState --> contactLeaf : Non 
-logementState --> kotservState : Oui 
+studentType--> unamurStudent : Oui
+studentType--> otherStudent : Non
 
-kotservState -> ethernetState : Non
-kotservState --> registeredState : Oui
+unamurStudent --> deviceType: Wifi UNamur
+unamurStudent --> eduroamWifi : Wifi Eduroam
 
-ethernetState -> kotservState : Fonctionne
-ethernetState -> rj45State : Ca ne fonctionne pas
+otherStudent --> eduroamWifi : Wifi Eduroam
+eduroamWifi --> contactLeaf : Ne fonctionne pas
 
-rj45State --> contactLeaf : Ca ne fonctionne pas 
-rj45State --> contactLeaf : Ca fonctionne  
-
-registeredState --> registerLeaf : Non
-registeredState --> quotaState : Oui
-
-quotaState ---> contactLeaf : Je n'ai pas atteint la limite de mon quota
-quotaState --> quotaLeaf : J'ai atteint la limite de mon quota
-
+propsWifi --> unamurWifi
+deviceType--> propsWifi : Android (6+) / Linux
+deviceType--> unamurWifi : MAC OS (10.12+)\nIOS\nWINDOWS 8/10 
+unamurWifi--> contactLeaf : Ne fonctionne pas
 @enduml

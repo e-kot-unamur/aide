@@ -1,65 +1,167 @@
 {
     "0": {
-        "text": "On m'a demandé de changer mon mot de passe UNamur.",
+        "text": "Je suis sur Windows et mon PC est lent",
         "answers": [
             {
-                "text": "Trouver de l'aide !",
+                "text": "Trouver de l'aide !",
                 "ref": 1
             }
         ]
     },
     "1": {
-        "text": "À partir du 26 avril et jusqu'au 13 septembre, le service informatique de l'UNamur lance une vaste campagne de changement de mot de passe qui concerne tous les étudiants et membres du personnel. Changer ou ré-encoder votre mot de passe est obligatoire.",
+        "text": "Votre partition contenant Windows est-elle remplie (généralement, il s'agit du disque C), il y a t'il moins de 5 Go de disponible ?",
         "answers": [
             {
-                "text": "Est-ce du phishing ?",
-                "ref": 2
+                "text": "Oui.",
+                "ref": 2            
             },
             {
-                "text": "Est-ce urgent ?",
+                "text": "Non.",
                 "ref": 3
-            },
-            {
-                "text": "Puis-je ré-utiliser le même mot de passe ?",
-                "ref": 4
-            },
-            {
-                "text": "Pourquoi dois-je faire cela ?",
-                "ref": 5
             }
         ]
     },
     "2": {
-        "text": "Non, la campagne de changement de mot de passe est bien réelle. Cependant, vous ne recevrez jamais de mail ou message contenant directement un lien, sauf si vous l'avez vous-même demandé. La seule consigne qui vous sera donnée est de vous rendre sur le BVE pour y trouver la marche à suivre. Si vous avez reçu une consigne différente, un lien, un message douteux ou provenant d'une adresse non-UNamur, prenez directement contact avec nous pour nous le signaler.",
+        "text": "Veuillez nettoyer votre disque afin de libérer de l'espace. <br>Vous pouvez prendre <contact>contact</contact> avec l'E-kot pour de plus amples informations.",
         "answers": []
     },
     "3": {
-        "text": "Non, ce n'est pas urgent. Si vous avez reçu un message qui vous affirme le contraire, prenez directement contact avec nous pour nous le signaler. Cependant, le changement de mot de passe doit être effectué avant le 13 septembre. Si ce n'est pas fait à ce moment-là, vous n'aurez plus accès à Teams. Vous recevrez, avant l'échéance, un message de rappel si vous ne l'avez pas encore fait.",
-        "answers": []
-    },
-    "4": {
-        "text": "Oui. Cependant, votre mot de passe doit respecter certaines contraintes (longueur minimum, majuscule, chiffre, etc.). Ces dernières vous seront rappelées lorsque vous entrerez votre mot de passe.",
+        "text": "Vérifiez les programmes qui se lancent au démarrage du pc.",
         "answers": [
             {
-                "text": "Mon ancien mot de passe respecte ces contraintes.",
+                "text": "Plus de détails.",
+                "ref": 4
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 5
+            }
+        ]
+    },
+    "4": {
+        "text": "Veuillez appuyer simultanément sur les touches <code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,<br>ensuite dans l'onglet Démarrage, vérifiez ce qui est coché et retirez tout ce dont vous n'avez pas besoin.",
+        "answers": []
+    },
+    "5": {
+        "text": "Vous pouvez nettoyer votre ordinateur en supprimant certains fichiers devenus obsolètes.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
                 "ref": 6
             },
             {
-                "text": "Mon ancien mot de passe ne respecte pas ces contraintes.",
+                "text": "Autre possibilité.",
                 "ref": 7
             }
         ]
     },
-    "5": {
-        "text": "Tout le monde doit changer ou ré-entrer son mot de passe UNamur, c'est obligatoire. À terme, cela vous permettra de vous connecter à Microsoft Teams en utilisant vos identifiants UNamur, plutôt que des identifiants différents pour Teams uniquement. Cette campagne rentre aussi dans une volonté de renforcer les mots de passe des utilisateurs des services informatiques de l'UNamur dans un but de sécurité.",
-        "answers": []
-    },
     "6": {
-        "text": "Parfait ! Attention, dans ce cas vous devez tout de même ré-entrer votre mot de passe sur la plateforme, même s'il est identique.",
+        "text": "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/'>lien<a>.<br>Une fois installé, vous pouvez lancer l'analyse via le tableau de bord, le nettoyage se fait automatiquement.",
         "answers": []
     },
     "7": {
-        "text": "Dans ce cas nous vous conseillons soit de changer de mot de passe, soit de renforcer votre mot de passe actuel. Pour une sécurité maximale, nous pouvouns aussi vous conseiller d'utiliser un gestionnaire de mots de passe comme KeepassXC ou Bitwarden.",
+        "text": "Rendez votre navigation sur internet plus appropriée en modifiant les paramètres du navigateur.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 8
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 9
+            }
+        ]
+    },
+    "8": {
+        "text": "Quel navigateur web utilisez-vous principalement?",
+        "answers": [
+            {
+                "text": "Google Chrome",
+                "ref": 10
+            },
+            {
+                "text": "Firefox",
+                "ref": 14
+            }
+        ]
+    },
+    "9": {
+        "text": "Vérifiez qu'il n'y a pas trop de contenu sur votre bureau, cela peut ralentir le démarrage. <br>Si vous avez un SSD + HDD, veuillez mettre seulement le nécessaire sur le ssd pour que le démarage soit plus rapide.",
+        "answers": []
+    },
+    "10": {
+        "text": "Je n'ai plus Google en page d'accueil.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 11
+            },
+            {
+                "text": "Autre possibilité.",
+                "ref": 12
+            }
+        ]
+    },
+    "11": {
+        "text": "Pour remettre Google correctement, veuillez aller dans les paramètres du navigateur, ensuite dans 'Moteur de recherche', <br>cliquez sur 'Moteur de recherche utilisé dans la barre d'adresse' et choisissez Google.",
+        "answers": []
+    },
+    "12": {
+        "text": "J'ai des pages inhabituelles au lancement de mon navigateur.",
+        "answers": [
+            {
+                "text": "Plus de détails.",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Veuillez aller dans les paramètres du navigateur, ensuite dans 'Au démarrage',<br>choisissez soit 'ouvrir la page nouvel onglet' ou choisissez la/les pages que vous souhaitez dans 'Ouvrir une page ou un ensemble de pages spécifiques'",
+        "answers": []
+    },
+    "14": {
+        "text": "Votre page du nouvel onglet est-elle celle désirée?",
+        "answers": [
+            {
+                "text": "Non.",
+                "ref": 15
+            },
+            {
+                "text": "Oui.",
+                "ref": 16
+            }
+        ]
+    },
+    "15": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Accueil', <br>cliquez à droite de 'Nouveaux onglets' et choisissez la page de nouvel onglet que vous désirez.",
+        "answers": []
+    },
+    "16": {
+        "text": "Votre page au lancement du navigateur est-elle celle désirée?",
+        "answers": [
+            {
+                "text": "Non.",
+                "ref": 17
+            },
+            {
+                "text": "Oui.",
+                "ref": 18
+            }
+        ]
+    },
+    "17": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Accueil', cliquez à droite de 'Page d’accueil et nouvelles fenêtres' et choisissez ce que vous désirez.",
+        "answers": []
+    },
+    "18": {
+        "text": "Votre moteur de recherche est-il celui désiré?",
+        "answers": [{
+            "text": "Non.",
+            "ref": 19
+        }   ]
+    },
+    "19": {
+        "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Recherche', choisissez le moteur de recherche qui vous intéresse dans 'Moteur de recherche par défaut'",
         "answers": []
     }
 }

@@ -1,65 +1,167 @@
 {
     "0": {
-        "text": "I was asked to change my UNamur password.",
+        "text": "I'm on Windows and my PC is slow",
         "answers": [
             {
-                "text": "Find help!",
+                "text": "Find help !",
                 "ref": 1
             }
         ]
     },
     "1": {
-        "text": "From April 26 to September 13, UNamur's IT department is launching a massive password change campaign that affects all students and staff members. Changing or re-encoding your password is mandatory.",
+        "text": "Is your Windows partition full (usually the C disk), is there less than 5 GB available?",
         "answers": [
             {
-                "text": "Is this phishing?",
-                "ref": 2
+                "text": "Yes.",
+                "ref": 2            
             },
             {
-                "text": "Is it urgent?",
+                "text": "No.",
                 "ref": 3
-            },
-            {
-                "text": "Can I reuse the same password?",
-                "ref": 4
-            },
-            {
-                "text": "Why do I have to do this?",
-                "ref": 5
             }
         ]
     },
     "2": {
-        "text": "No, the password change campaign is real. However, you will never receive an email or message containing a direct link unless you have requested it yourself. The only instruction you will be given is to go to the BVE to find out how to proceed. If you have received a different instruction, a link, a suspicious message, or a message from a non-UNamur address, please contact us directly to report it.",
+        "text": "Please clean your disk to free up space. <br> You can take <contact>contact</contact> with the E-kot for more information.",
         "answers": []
     },
     "3": {
-        "text": "No, it is not urgent. If you have received a message to the contrary, please contact us directly to let us know. However, the password change must be done before September 13. If it is not done by then, you will no longer have access to Teams. You will receive a reminder message before the deadline if you have not done so yet.",
-        "answers": []
-    },
-    "4": {
-        "text": "Yes, however, your password must respect certain constraints (minimum length, capitalization, number, etc.). You will be reminded of these when you enter your password.",
+        "text": "Check the programs that run when the PC starts up.",
         "answers": [
             {
-                "text": "My previous password respects these constraints.",
+                "text": "More details.",
+                "ref": 4
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 5
+            }
+        ]
+    },
+    "4": {
+        "text": "Please press <code>ctrl + shift + escape</code> (or escape) simultaneously to open the Task Manager,<br> then in the Startup tab, check what is ticked and remove anything you don't need",
+        "answers": []
+    },
+    "5": {
+        "text": "You can clean your computer by deleting certain files that have become obsolete.",
+        "answers": [
+            {
+                "text": "More details.",
                 "ref": 6
             },
             {
-                "text": "My previous password does not respect these constraints.",
+                "text": "Other possibility.",
                 "ref": 7
             }
         ]
     },
-    "5": {
-        "text": "Everyone must change or re-enter their UNamur password, it is mandatory. Eventually, this will allow you to log into Microsoft Teams using your UNamur credentials, rather than different credentials for Teams only. This campaign is also part of an effort to strengthen the passwords of UNamur IT users for security purposes.",
-        "answers": []
-    },
     "6": {
-        "text": "Perfect! Be careful, in this case you still have to re-enter your password on the platform, even if it is identical.",
+        "text": "You can install adwcleaner, available for free by this <a href='https://fr.malwarebytes.com/adwcleaner/'>link<a>.<br> Once installed, you can launch the analysis via the dashboard, the cleaning is done automatically",
         "answers": []
     },
     "7": {
-        "text": "In this case we advise you either to change your password or to strengthen your current password. For maximum security, we can also advise you to use a password manager like KeepassXC or Bitwarden.",
+        "text": "Make your internet browsing more appropriate by changing your browser settings.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 8
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 9
+            }
+        ]
+    },
+    "8": {
+        "text": "Which web browser do you mainly use?",
+        "answers": [
+            {
+                "text": "Google Chrome",
+                "ref": 10
+            },
+            {
+                "text": "Firefox",
+                "ref": 14
+            }
+        ]
+    },
+    "9": {
+        "text": "Check that there is not too much content on your desktop, this may slow down the start up.<br>If you have an SSD + HDD, please put only the necessary on the ssd for a faster boot",
+        "answers": []
+    },
+    "10": {
+        "text": "I no longer have Google as my homepage.",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 11
+            },
+            {
+                "text": "Other possibility.",
+                "ref": 12
+            }
+        ]
+    },
+    "11": {
+        "text": "To reset Google correctly, please go to the browser settings, then go to 'Search Engine', <br>click on 'Search engine used in the address bar' and choose Google",
+        "answers": []
+    },
+    "12": {
+        "text": "I have unusual pages when I launch my browser",
+        "answers": [
+            {
+                "text": "More details.",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Please go to the browser settings, then in 'On startup',<br>choose either 'Open the New Tab Page' or choose the page(s) you want in 'Open a specific page or set of pages'",
+        "answers": []
+    },
+    "14": {
+        "text": "Is your new tab page the one you want?",
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 15
+            },
+            {
+                "text": "Yes.",
+                "ref": 16
+            }
+        ]
+    },
+    "15": {
+        "text": "Please go to your browser options, then 'Home', <br>click to the right of 'New Tabs' and choose the new tab page you want.",
+        "answers": []
+    },
+    "16": {
+        "text": "Is your page at the start of the browser the one you want?",
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 17
+            },
+            {
+                "text": "Yes.",
+                "ref": 18
+            }
+        ]
+    },
+    "17": {
+        "text": "Please go to browser options, then 'Home', click on the right hand side of 'Homepage and new windows' and choose what you want",
+        "answers": []
+    },
+    "18": {
+        "text": "VIs your search engine the one you want?",
+        "answers": [{
+            "text": "No.",
+            "ref": 19
+        }   ]
+    },
+    "19": {
+        "text": "Please go to the browser options, then in 'Search', choose the search engine you are interested in in 'Default Search Engine'",
         "answers": []
     }
 }
