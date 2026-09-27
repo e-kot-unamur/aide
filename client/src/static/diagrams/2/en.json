@@ -77,8 +77,14 @@
         ]
     },
     "7": {
-        "text": "Please register your computer on kotserv. Be careful to enter the correct credentials, which means, your eID (not your e-mail adress !) and the corresponding password. Than, reboot your computer. On the restart, internet should work.. <br/>For more information, click <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>here</a>",
-        "answers": []
+        "text": "Please register your computer on kotserv. Be careful to enter the correct credentials, which means, your eID (not your e-mail adress !) and the corresponding password. Then, reboot your computer. On the restart, internet should work. <br/>For more information, click <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>here</a>",
+        "answers": [
+            {
+                "text": "It still doesn't work",
+                "ref": 12,
+                "help": true
+            }
+        ]
     },
     "8": {
         "text": "<contact>Contact E-kot</contact> for an intervention.",
@@ -110,28 +116,30 @@
         "answers": []
     },
     "13": {
-        "text": "Please, try with an other ethernet cable. If you don't have an other one, you can get one from <contact>E-kot</contact> for 3€.",
+        "text": "Please, try with another ethernet cable. If you don't have another one, you can get one from <contact>E-kot</contact> for 3€.",
         "answers": [
             {
-                "text": "I tried with an other cable, I can continue the registration of my computer on the university network.",
+                "text": "I changed the cable, continue",
                 "ref": 4
             },
             {
-                "text": "It still doesn't work.",
-                "ref": 14
+                "text": "It still doesn't work",
+                "ref": 14,
+                "help": true
             }
         ]
     },
     "14": {
-        "text": "Please, try with an other wall plug in your housing.",
+        "text": "Please, try with another wall plug in your housing.",
         "answers": [
             {
-                "text": "I tied with an other wall plug and it worked.",
+                "text": "It works with another plug",
                 "ref": 8
             },
             {
-                "text": "It still doesn't work.",
-                "ref": 12
+                "text": "It still doesn't work",
+                "ref": 12,
+                "help": true
             }
         ]
     }

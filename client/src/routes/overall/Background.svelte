@@ -35,6 +35,6 @@
 
 <div class="background">
   <img class="logo semi-transparent" src="images/logo.webp" alt="E-kot logo" />
-  <p class="bottom-right">v{version}, © tsepton</p>
+  <p class="bottom-right">v{version}, ©Ekot</p>
 </div>
 <p class="bottom-right"></p>

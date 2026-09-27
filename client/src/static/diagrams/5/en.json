@@ -13,7 +13,7 @@
         "answers": [
             {
                 "text": "Yes.",
-                "ref": 2            
+                "ref": 2
             },
             {
                 "text": "No.",
@@ -40,7 +40,13 @@
     },
     "4": {
         "text": "Please press <code>ctrl + shift + escape</code> (or escape) simultaneously to open the Task Manager,<br> then in the Startup tab, check what is ticked and remove anything you don't need",
-        "answers": []
+        "answers": [
+            {
+                "text": "My PC is still slow",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "5": {
         "text": "You can clean your computer by deleting certain files that have become obsolete.",
@@ -56,8 +62,14 @@
         ]
     },
     "6": {
-        "text": "You can install adwcleaner, available for free by this <a href='https://fr.malwarebytes.com/adwcleaner/'>link<a>.<br> Once installed, you can launch the analysis via the dashboard, the cleaning is done automatically",
-        "answers": []
+        "text": "You can install adwcleaner, available for free by this <a href='https://www.malwarebytes.com/adwcleaner' target='_blank' rel='noopener'>link</a>.<br> Once installed, you can launch the analysis via the dashboard, the cleaning is done automatically",
+        "answers": [
+            {
+                "text": "My PC is still slow",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "7": {
         "text": "Make your internet browsing more appropriate by changing your browser settings.",
@@ -87,7 +99,13 @@
     },
     "9": {
         "text": "Check that there is not too much content on your desktop, this may slow down the start up.<br>If you have an SSD + HDD, please put only the necessary on the ssd for a faster boot",
-        "answers": []
+        "answers": [
+            {
+                "text": "My PC is still slow",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "10": {
         "text": "I no longer have Google as my homepage.",
@@ -155,13 +173,23 @@
     },
     "18": {
         "text": "VIs your search engine the one you want?",
-        "answers": [{
-            "text": "No.",
-            "ref": 19
-        }   ]
+        "answers": [
+            {
+                "text": "No.",
+                "ref": 19
+            },
+            {
+                "text": "Yes.",
+                "ref": 20
+            }
+        ]
     },
     "19": {
         "text": "Please go to the browser options, then in 'Search', choose the search engine you are interested in in 'Default Search Engine'",
+        "answers": []
+    },
+    "20": {
+        "text": "If your PC is still slow despite these tips, <contact>contact the E-kot</contact> and give us the code below: we'll look at it together.",
         "answers": []
     }
 }
