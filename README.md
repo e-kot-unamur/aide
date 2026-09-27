@@ -56,6 +56,20 @@ $ npm run dev
 
 ##### Production :
 
+L'instance en ligne ([aide.e-kot.be](https://aide.e-kot.be/)) est hébergée via **CapRover** (PaaS auto-hébergé), configuré avec le fichier [`captain-definition`](captain-definition) à la racine, qui pointe vers le même `Dockerfile` que ci-dessous.
+
+**Déployer une mise à jour (méthode CLI, recommandée) :**
+
+``````bash
+$ npx caprover deploy --caproverUrl https://captain.e-kot.be --caproverApp aide --appToken <TOKEN> --branch main
+``````
+
+Le `<TOKEN>` se génère dans le dashboard CapRover : app `aide` → onglet *Déploiement* → *Méthode 1 : CLI Officielle* → *Activer le Token d'App*. Ne jamais commit ce token dans le repo (ni ailleurs en clair).
+
+> ⚠️ Un déploiement automatique via webhook Git existe aussi (onglet *Déploiement* → *Méthode 3* du dashboard CapRover), mais sa config (URL du dépôt, identifiants) doit être tenue à jour manuellement et peut se périmer silencieusement. Si un push sur `main` ne se répercute plus tout seul sur le site, vérifiez cette config avant de chercher ailleurs — sinon, la méthode CLI ci-dessus fonctionne dans tous les cas.
+
+**Déploiement Docker "manuel" (sans CapRover, sur n'importe quel serveur avec Docker) :**
+
 ``````bash
 $ docker build --tag aide-ekot:2.0 .
 $ docker run --publish <server-port>:80 --detach --name aide-ekot aide-ekot:2.0
