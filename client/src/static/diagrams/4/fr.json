@@ -1,6 +1,6 @@
 {
     "0": {
-        "text": "Je veux me connecter au wifi",
+        "text": "Comment trouver mon addresse MAC ?",
         "answers": [
             {
                 "text": "Trouver de l'aide !",
@@ -9,89 +9,95 @@
         ]
     },
     "1": {
-        "text": "Es-tu étudiant à l'UNamur ?",
+        "text": "Sur quel système d'exploitation êtes vous ?",
         "answers": [
             {
-                "text": "Oui",
+                "text": "MAC OS",
+                "ref": 10
+            },
+            {
+                "text": "Windows",
                 "ref": 2
             },
             {
-                "text": "Non",
-                "ref": 1
+                "text": "Linux",
+                "ref": 20
             }
         ]
     },
     "2": {
-        "text": "A quel wifi veux tu te connecter ?",
+        "text": "/*Ouvrez l'invite de commande*/.<br /> Faites la combinaison <i>Windows + R</i>, puis tapez <code>cmd</code> dans la fenêtre du terminal. <br/>Validez votre commande en appuyant sur la touche <i>Entrée</i>.",
         "answers": [
             {
-                "text": "Wifi UNamur",
+                "text": "Suivant",
                 "ref": 3
-            },
-            {
-                "text": "Wifi Eduroam",
-                "ref": 4
             }
         ]
     },
     "3": {
-        "text": "Quel système / appareil est-ce que tu utilises ? <br />Pour pouvoir se connecter au wifi, il faut posséder ces versions de système d'exploitation  ou les versions ultérieures : Android 6, Windows 8 ou Mac OS 10.12",
+        "text": "/*Exécutez ipconfig/*.<br /> Dans la fenêtre de l'invite de commande, tapez <code>ipconfig/all</code>, puis validez avec la touche <i>Entrée</i>. <br />Vous devriez voir s'afficher les informations de configuration de toutes vos connexions réseau. ",
         "answers": [
             {
-                "text": "Mac OS (10.12+) / IOS / Windows 8/10 ",
-                "ref": 7
-            },
-            {
-                "text": "Android (6+) / Linux",
-                "ref": 6
-            },
-            {
-                "text": "Je possède un système d'exploitation obsolète",
-                "ref": 5
+                "text": "Suivant",
+                "ref": 4
             }
         ]
     },
     "4": {
-        "text": "Connexion Eduroam.<br />Le nom d'utilisateur est ton adresse mail d'étudiant. Le mot de passe est le même que tu utilises pour te connecter à la plateforme de ton école.",
-        "answers": [
-            {
-                "text": "Cela ne fonctionne pas",
-                "ref": 5
-            },
-            {
-                "text": "Cela fonctionne",
-                "ref": 8
-            }
-        ]
-    },
-    "5": {
-        "text": "<contact>Tu peux prendre contact</contact> avec nous, nous essayerons de t'aider",
+        "text": "/*Recherchez la mention <i>Adresse physique</i>*/.<br /> C'est l'autre nom de l'adresse MAC. Si vous avez plusieurs périphériques réseau branchés (carte sans fil, carte Ethernet), vérifiez bien auquel de ces supports appartient l'adresse en question.<br/>À supposer que vous ayez les deux sur votre ordinateur, sachez que la connexion sans fil, parce qu'elle passe par une carte spécifique, a une adresse MAC différente de la connexion filaire (Ethernet).",
         "answers": []
     },
-    "6": {
-        "text": "Réglages des paramètres wifi",
+    "10": {
+        "text": "Cliquez sur la loupe, située en haut à droite de votre écran",
         "answers": [
             {
-                "text": "Connexion wifi UNamur",
-                "ref": 7
+                "text": "Suivant",
+                "ref": 11
             }
         ]
     },
-    "7": {
-        "text": "Connexion wifi UNamur.<br />Le nom d’utilisateur est l’eId suivi de “@unamur.be” (Par exemple: adupont@unamur.be). Le mot de passe est le même que sur les autres plateformes UNamur.<br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur soit bien clearpass.unamur.be et valide.",
+    "11": {
+        "text": "Saisissez <code>Terminal</code> et lancez l'application <i>Terminal</i>",
         "answers": [
             {
-                "text": "Cela fonctionne",
-                "ref": 8
-            },
-            {
-                "text": " Cela ne fonctionne pas",
-                "ref": 5
+                "text": "Suivant",
+                "ref": 12
             }
         ]
     },
-    "8": {
-        "text": "Tu devrais avoir le wifi maintenant ! Si on t'a bien aidé, n'hésite pas à aller nous suivre sur nos réseaux sociaux",
+    "12": {
+        "text": "Saisissez la commande suivante : <code>ifconfig</code> et appuyer sur la touche <i>Entrée</i>",
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 13
+            }
+        ]
+    },
+    "13": {
+        "text": "Votre adresse MAC se trouve à coté de l'entrée intitulée <code>inet</code>. Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante.",
+        "answers": []
+    },
+    "20": {
+        "text": "/*Ouvrez l'invite de commande.*/<br/> Selon la distribution que vous avez, celle-ci s'appellera <i>Terminal, Xterm, Shell</i> ou simplement <i>Invite de commande</i>.",
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 21
+            }
+        ]
+    },
+    "21": {
+        "text": "/*Affichez les informations des interfaces réseau IP.*/<br/> Sur la ligne de commande, tapez <code>ifconfig -a</code>, puis validez en appuyant sur la touche <i>Entrée</i>.<br/>Si l'accès vous est refusé, tapez <code>sudo ifconfig -a</code>, puis entrez votre mot de passe au moment voulu",
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 22
+            }
+        ]
+    },
+    "22": {
+        "text": "/*Repérez votre adresse MAC.*/<br/> Faites défiler l'écran jusqu'à trouver la connexion réseau active (le port Ethernet primaire est appelé <i>eth0</i>). Repérez l'entrée <i>HWaddr</i> : c'est tout bonnement votre adresse MAC",
         "answers": []
     }
 }

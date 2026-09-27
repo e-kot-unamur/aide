@@ -1,6 +1,6 @@
 {
     "0": {
-        "text": "Comment trouver mon addresse MAC ?",
+        "text": "Je n'ai plus internet...",
         "answers": [
             {
                 "text": "Trouver de l'aide !",
@@ -9,95 +9,130 @@
         ]
     },
     "1": {
-        "text": "Sur quel système d'exploitation êtes vous ?",
+        "text": "Faites-vous parti d'un logement universitaire ?",
         "answers": [
             {
-                "text": "MAC OS",
-                "ref": 10
-            },
-            {
-                "text": "Windows",
+                "text": "Non.",
                 "ref": 2
             },
             {
-                "text": "Linux",
-                "ref": 20
-            }
-        ]
-    },
-    "2": {
-        "text": "/*Ouvrez l'invite de commande*/.<br /> Faites la combinaison <i>Windows + R</i>, puis tapez <code>cmd</code> dans la fenêtre du terminal. <br/>Validez votre commande en appuyant sur la touche <i>Entrée</i>.",
-        "answers": [
-            {
-                "text": "Suivant",
+                "text": "Oui.",
                 "ref": 3
             }
         ]
     },
+    "2": {
+        "text": "L'E-kot peut peut être vous aider, n'hésitez pas à les <contact>contacter</contact> !",
+        "answers": []
+    },
     "3": {
-        "text": "/*Exécutez ipconfig/*.<br /> Dans la fenêtre de l'invite de commande, tapez <code>ipconfig/all</code>, puis validez avec la touche <i>Entrée</i>. <br />Vous devriez voir s'afficher les informations de configuration de toutes vos connexions réseau. ",
+        "text": "Veuillez commencer par couper votre WIFI sur votre ordinateur et assurez vous d'avoir correctement branché votre cable ethernet à votre ordinateur avant de continuer.",
+        "image": {
+            "caption": "Photo d'un cable ethernet :"
+        },
         "answers": [
             {
-                "text": "Suivant",
+                "text": "J'ai correctement branché mon cable ethernet.",
                 "ref": 4
             }
         ]
     },
     "4": {
-        "text": "/*Recherchez la mention <i>Adresse physique</i>*/.<br /> C'est l'autre nom de l'adresse MAC. Si vous avez plusieurs périphériques réseau branchés (carte sans fil, carte Ethernet), vérifiez bien auquel de ces supports appartient l'adresse en question.<br/>À supposer que vous ayez les deux sur votre ordinateur, sachez que la connexion sans fil, parce qu'elle passe par une carte spécifique, a une adresse MAC différente de la connexion filaire (Ethernet).",
-        "answers": []
-    },
-    "10": {
-        "text": "Cliquez sur la loupe, située en haut à droite de votre écran",
+        "text": "Avez-vous accès à la page <a href='http://kotserv.unamur.be' target='_blank'>kotserv.unamur.be</a> ?",
         "answers": [
             {
-                "text": "Suivant",
-                "ref": 11
-            }
-        ]
-    },
-    "11": {
-        "text": "Saisissez <code>Terminal</code> et lancez l'application <i>Terminal</i>",
-        "answers": [
+                "text": "Oui.",
+                "ref": 5
+            },
             {
-                "text": "Suivant",
-                "ref": 12
-            }
-        ]
-    },
-    "12": {
-        "text": "Saisissez la commande suivante : <code>ifconfig</code> et appuyer sur la touche <i>Entrée</i>",
-        "answers": [
-            {
-                "text": "Suivant",
+                "text": "Non.",
                 "ref": 13
             }
         ]
     },
+    "5": {
+        "text": "Avez-vous déjà enregistré votre ordinateur via cette page ?",
+        "answers": [
+            {
+                "text": "Oui.",
+                "ref": 6
+            },
+            {
+                "text": "Non.",
+                "ref": 7
+            }
+        ]
+    },
+    "6": {
+        "text": "Votre quota est-il supérieur à la limite ? Vous pouvez le vérifier via <a href='https://kotserv.unamur.be/users/users-index.php' target='_blank'>kotserv.unamur.be/users</a>",
+        "answers": [
+            {
+                "text": "Oui.",
+                "ref": 9
+            },
+            {
+                "text": "Non.",
+                "ref": 8
+            }
+        ]
+    },
+    "7": {
+        "text": "Veuillez enregistrer votre ordinateur sur la page de kotserv. Attention à rentrer des identifiants corrects, càd votre eID (et non votre adresse mail !) ainsi que le mot de passe correspondant. Ensuite, veillez à redémarrer votre ordinateur. Cela devrait maintenant fonctionner. <br/>Pour plus d'informations, cliquez <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>ici</a>",
+        "answers": []
+    },
+    "8": {
+        "text": "<contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
+        "answers": []
+    },
+    "9": {
+        "text": "Y a-t-il plusieurs appareils identifés alors que vous n'en utilisez qu'un seul ?",
+        "answers": [
+            {
+                "text": "Oui.",
+                "ref": 11
+            },
+            {
+                "text": "Non.",
+                "ref": 10
+            }
+        ]
+    },
+    "10": {
+        "text": "Vous avez probablement un problème de client torrent. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
+        "answers": []
+    },
+    "11": {
+        "text": "Vous avez probablement emprunté ou prêté votre eID. <contact>Prenez contact avec l'E-kot</contact> pour supprimer les appareils qui ne vous appartiennent pas.",
+        "answers": []
+    },
+    "12": {
+        "text": "Votre ordinateur est probablement mal configuré. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
+        "answers": []
+    },
     "13": {
-        "text": "Votre adresse MAC se trouve à coté de l'entrée intitulée <code>inet</code>. Il est possible que plusieurs adresses soient listées, dans ce cas prenez note de chaque adresses et de l’interface correspondante.",
-        "answers": []
-    },
-    "20": {
-        "text": "/*Ouvrez l'invite de commande.*/<br/> Selon la distribution que vous avez, celle-ci s'appellera <i>Terminal, Xterm, Shell</i> ou simplement <i>Invite de commande</i>.",
+        "text": "Veuillez essayer de changer de cable ethernet. Si vous n'en avez pas, <contact>l'E-kot</contact> en vends à 3€.",
         "answers": [
             {
-                "text": "Suivant",
-                "ref": 21
+                "text": "J'ai changé de cable, je peux continuer l'enregistrement de mon ordinateur sur le réseau universitaire.",
+                "ref": 4
+            },
+            {
+                "text": "Cela ne fonctionne toujours pas.",
+                "ref": 14
             }
         ]
     },
-    "21": {
-        "text": "/*Affichez les informations des interfaces réseau IP.*/<br/> Sur la ligne de commande, tapez <code>ifconfig -a</code>, puis validez en appuyant sur la touche <i>Entrée</i>.<br/>Si l'accès vous est refusé, tapez <code>sudo ifconfig -a</code>, puis entrez votre mot de passe au moment voulu",
+    "14": {
+        "text": "Veuillez essayer via une autre prise du logement universitaire.",
         "answers": [
             {
-                "text": "Suivant",
-                "ref": 22
+                "text": "J'ai changé de prise, et cela fonctionne.",
+                "ref": 8
+            },
+            {
+                "text": "Cela ne fonctionne toujours pas.",
+                "ref": 12
             }
         ]
-    },
-    "22": {
-        "text": "/*Repérez votre adresse MAC.*/<br/> Faites défiler l'écran jusqu'à trouver la connexion réseau active (le port Ethernet primaire est appelé <i>eth0</i>). Repérez l'entrée <i>HWaddr</i> : c'est tout bonnement votre adresse MAC",
-        "answers": []
     }
 }

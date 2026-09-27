@@ -1,138 +1,99 @@
 {
     "0": {
-        "text": "Je n'ai plus internet...",
+        "text": "Je veux me connecter au wifi",
         "answers": [
-            {
-                "text": "Trouver de l'aide !",
-                "ref": 1
-            }
+            { "text": "Trouver de l'aide !", "ref": 1 }
         ]
     },
     "1": {
-        "text": "Faites-vous parti d'un logement universitaire ?",
+        "text": "Es-tu étudiant à l'UNamur ?",
         "answers": [
-            {
-                "text": "Non.",
-                "ref": 2
-            },
-            {
-                "text": "Oui.",
-                "ref": 3
-            }
+            { "text": "Oui", "ref": 2 },
+            { "text": "Non", "ref": 15 }
         ]
     },
     "2": {
-        "text": "L'E-kot peut peut être vous aider, n'hésitez pas à les <contact>contacter</contact> !",
-        "answers": []
+        "text": "A quel wifi veux tu te connecter ?",
+        "answers": [
+            { "text": "Wifi UNamur", "ref": 3 },
+            { "text": "Wifi Eduroam", "ref": 4 }
+        ]
     },
     "3": {
-        "text": "Veuillez commencer par couper votre WIFI sur votre ordinateur et assurez vous d'avoir correctement branché votre cable ethernet à votre ordinateur avant de continuer.",
-        "image": {
-            "caption": "Photo d'un cable ethernet :"
-        },
+        "text": "Quel est ton système d'exploitation ?",
         "answers": [
-            {
-                "text": "J'ai correctement branché mon cable ethernet.",
-                "ref": 4
-            }
+            { "text": "Windows 10/11", "ref": 9 },
+            { "text": "Mac OS", "ref": 10 },
+            { "text": "GNU/Linux (Ubuntu LTS / Fedora)", "ref": 11 },
+            { "text": "iOS", "ref": 12 },
+            { "text": "Android", "ref": 13 },
+            { "text": "Autre / système obsolète", "ref": 5 }
         ]
     },
     "4": {
-        "text": "Avez-vous accès à la page <a href='http://kotserv.unamur.be' target='_blank'>kotserv.unamur.be</a> ?",
+        "text": "Le nom d'utilisateur est ton adresse mail d'étudiant. Le mot de passe est le même que tu utilises pour te connecter à la plateforme de ton école.",
         "answers": [
-            {
-                "text": "Oui.",
-                "ref": 5
-            },
-            {
-                "text": "Non.",
-                "ref": 13
-            }
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Cela fonctionne", "ref": 8 }
         ]
     },
     "5": {
-        "text": "Avez-vous déjà enregistré votre ordinateur via cette page ?",
-        "answers": [
-            {
-                "text": "Oui.",
-                "ref": 6
-            },
-            {
-                "text": "Non.",
-                "ref": 7
-            }
-        ]
-    },
-    "6": {
-        "text": "Votre quota est-il supérieur à la limite ? Vous pouvez le vérifier via <a href='https://kotserv.unamur.be/users/users-index.php' target='_blank'>kotserv.unamur.be/users</a>",
-        "answers": [
-            {
-                "text": "Oui.",
-                "ref": 9
-            },
-            {
-                "text": "Non.",
-                "ref": 8
-            }
-        ]
-    },
-    "7": {
-        "text": "Veuillez enregistrer votre ordinateur sur la page de kotserv. Attention à rentrer des identifiants corrects, càd votre eID (et non votre adresse mail !) ainsi que le mot de passe correspondant. Ensuite, veillez à redémarrer votre ordinateur. Cela devrait maintenant fonctionner. <br/>Pour plus d'informations, cliquez <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>ici</a>",
+        "text": "<contact>Tu peux prendre contact</contact> avec nous, nous essayerons de t'aider",
         "answers": []
     },
     "8": {
-        "text": "<contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
+        "text": "Tu devrais avoir le wifi maintenant ! Si on t'a bien aidé, n'hésite pas à aller nous suivre sur nos réseaux sociaux",
         "answers": []
     },
     "9": {
-        "text": "Y a-t-il plusieurs appareils identifés alors que vous n'en utilisez qu'un seul ?",
+        "text": "Aucune configuration particulière n'est nécessaire : choisis simplement le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles.<br /><br />Connecte-toi ensuite avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Tu devrais maintenant être connecté au réseau \"unamur\".",
         "answers": [
-            {
-                "text": "Oui.",
-                "ref": 11
-            },
-            {
-                "text": "Non.",
-                "ref": 10
-            }
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Je ne connais pas mon eID", "ref": 14 }
         ]
     },
     "10": {
-        "text": "Vous avez probablement un problème de client torrent. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
-        "answers": []
+        "text": "Aucune configuration particulière n'est nécessaire : choisis simplement le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles.<br /><br />Connecte-toi ensuite avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, choisis vérifier / valider / accepter, puis clique sur Continuer. Tu devrais alors être connecté au réseau \"unamur\".",
+        "answers": [
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Je ne connais pas mon eID", "ref": 14 }
+        ]
     },
     "11": {
-        "text": "Vous avez probablement emprunté ou prêté votre eID. <contact>Prenez contact avec l'E-kot</contact> pour supprimer les appareils qui ne vous appartiennent pas.",
-        "answers": []
+        "text": "La connexion au réseau \"unamur\" a été testée sous les environnements de bureau par défaut de Ubuntu LTS 14.04, Ubuntu LTS 16.04, Fedora 25 et Fedora 26.<br /><br />Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles. Une fenêtre te demandant les paramètres de connexion s'ouvre : sélectionne <code>WPA & WPA2 Enterprise</code> comme sécurité sans fil et <code>Tunneled TLS</code> comme méthode EAP / Authentication, avec une authentification de phase 2 (Inner Authentication) en <code>PAP</code>.<br /><br />Comme identité anonyme et comme nom d'utilisateur, indique ton eID suivi de \"@unamur.be\" (par exemple <code>jdupond@unamur.be</code>), puis ton mot de passe habituel.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Pour le certificat du CA, utilise <code>/etc/ssl/certs/DigiCert_High_Assurance_EV_Root_CA.pem</code> — s'il est absent sur ton système, <a href='https://www.digicert.com/CACerts/DigiCertHighAssuranceEVRootCA.crt' target='_blank' rel='noopener'>télécharge le certificat DigiCert High Assurance EV Root CA</a>.<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
+        "answers": [
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Je ne connais pas mon eID", "ref": 14 }
+        ]
     },
     "12": {
-        "text": "Votre ordinateur est probablement mal configuré. <contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
-        "answers": []
+        "text": "Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles, puis connecte-toi avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
+        "answers": [
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Je ne connais pas mon eID", "ref": 14 }
+        ]
     },
     "13": {
-        "text": "Veuillez essayer de changer de cable ethernet. Si vous n'en avez pas, <contact>l'E-kot</contact> en vends à 3€.",
+        "text": "Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles, puis configure la connexion avec les paramètres suivants.<br /><br />Pour la sécurité, choisis <code>802.1x EAP</code> avec la méthode <code>TTLS</code>, une authentification de phase 2 en <code>PAP</code>, et une version de TLS minimale (1.0, 1.1 ou 1.2 — ne sélectionne pas TLS 1.3). Pour le certificat CA, utilise les certificats du système, et indique <code>unamur.be</code> comme domaine.<br /><br />Comme identité et comme identité anonyme, indique ton eID suivi de \"@unamur.be\" (par exemple <code>adupont@unamur.be</code>), puis ton mot de passe habituel.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
         "answers": [
-            {
-                "text": "J'ai changé de cable, je peux continuer l'enregistrement de mon ordinateur sur le réseau universitaire.",
-                "ref": 4
-            },
-            {
-                "text": "Cela ne fonctionne toujours pas.",
-                "ref": 14
-            }
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 },
+            { "text": "Je ne connais pas mon eID", "ref": 14 }
         ]
     },
     "14": {
-        "text": "Veuillez essayer via une autre prise du logement universitaire.",
+        "text": "Ton eID est l'identifiant unique qui te permet de te connecter à tous les services de l'UNamur (par exemple <code>adupont</code> pour Alain Dupont). Si quelqu'un possède déjà cet identifiant, le tien sera légèrement différent.<br /><br />Tu peux le retrouver <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>ici</a>.<br /><br /><contact>Tu peux nous contacter</contact> si tu ne le retrouves pas.",
+        "answers": []
+    },
+        "15": {
+        "text": "Tu peux te connecter au réseau <code>eduroam</code>, disponible sur la plupart des campus universitaires. Utilise l'adresse mail et le mot de passe de ton propre établissement (par exemple <code>prenom.nom@tonuniversite.be</code>)",
         "answers": [
-            {
-                "text": "J'ai changé de prise, et cela fonctionne.",
-                "ref": 8
-            },
-            {
-                "text": "Cela ne fonctionne toujours pas.",
-                "ref": 12
-            }
+            { "text": "Cela fonctionne", "ref": 8 },
+            { "text": "Cela ne fonctionne pas", "ref": 5 }
         ]
     }
 }
