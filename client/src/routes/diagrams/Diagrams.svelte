@@ -9,10 +9,10 @@
     buildCode,
     searchDiagrams,
   } from "../../lib/diagramPath.js";
-  import { openCode, replaceCode, currentCode } from "../../lib/navigation.js";
+  import { openCode, replaceCode, currentCode, hash } from "../../lib/navigation.js";
   import { facebookLink } from "../../lib/HtmlParser.js";
 
-  // Given by svelte-routing; changes on every navigation (incl. browser back).
+  // Passed by some versions of svelte-routing; not used (see `hash`).
   export let location = null;
 
   let query = "";
@@ -20,18 +20,12 @@
   $: t = (key) => getString($lang, key);
   $: diagrams = translations[$lang];
   // The current step is stored in the URL hash (see lib/diagramPath.js).
-  // `location` is passed so that this is re-evaluated on every navigation.
-  $: hash = readHash(location);
-  $: current = parseCode(hash, diagrams);
+  $: current = parseCode($hash, diagrams);
   // Clean up invalid / outdated links (e.g. an old code after a diagram
   // changed): the URL is corrected to what is actually displayed.
   $: expected = current ? buildCode(current.id, current.path) : "";
-  $: if (hash !== undefined && currentCode() !== expected) replaceCode(expected);
+  $: if ($hash !== undefined && currentCode() !== expected) replaceCode(expected);
   $: results = searchDiagrams(diagrams, query);
-
-  function readHash(_location) {
-    return window.location.hash;
-  }
 
   function open(id, diagram) {
     openCode(buildCode(id, [startNode(diagram)]));
