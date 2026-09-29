@@ -12,7 +12,7 @@
         "text": "On which operatin system are you ?",
         "answers": [
             {
-                "text": "MAC OS",
+                "text": "macOS",
                 "ref": 10
             },
             {
@@ -26,7 +26,7 @@
         ]
     },
     "2": {
-        "text": "/*Open your command prompt*/.<br /> Press on <i>Windows + R</i>, write <code>cmd</code> in the window. <br/>Press <i>Enter</i> to validate.",
+        "text": "Open the command prompt: press <i>Windows + R</i>, type <code>cmd</code>, then press <i>Enter</i>.",
         "answers": [
             {
                 "text": "Next.",
@@ -35,7 +35,7 @@
         ]
     },
     "3": {
-        "text": "/*Execute ipconfig/*.<br /> In the command prompt, write <code>ipconfig/all</code>, then validate with <i>Enter</i>. <br />The configuration information of all your network connections should be displayed. ",
+        "text": "In the command prompt, type <code>ipconfig /all</code>, then press <i>Enter</i>.<br />The information of all your network connections is displayed.",
         "answers": [
             {
                 "text": "Next.",
@@ -44,8 +44,14 @@
         ]
     },
     "4": {
-        "text": "/*Search for <i>Physical address</i>*/.<br /> This is the other name for the MAC adress. If you have multiple network devices connected (wireless card, ethernet card), make sure to check which of these media the address in question belongs to.<br/>Assuming you have both on your computer, know that your wireless connection as a different MAC adress than your ethernet connection because it doesn't use the same card.",
-        "answers": []
+        "text": "Look for the line <i>Physical Address</i>: that's your MAC address (for example <code>A4-83-E7-12-34-56</code>).<br /><br />If your computer has several network cards (wifi and Ethernet), each one has its own MAC address: make sure you note the one of the right connection.",
+        "answers": [
+            {
+                "text": "I can't find my MAC address",
+                "ref": 30,
+                "help": true
+            }
+        ]
     },
     "10": {
         "text": "Click on the magnifier at the top right of your screen.",
@@ -75,11 +81,17 @@
         ]
     },
     "13": {
-        "text": "Your MAC adress is the one next to the entry titled <code>inet</code>. Multiple adresses could be listed there, in this case, write down on a paper each adress with its corressponding interface.",
-        "answers": []
+        "text": "Your MAC address is the value next to the entry <code>ether</code> (for example <code>a4:83:e7:12:34:56</code>). Several interfaces may be listed (<code>en0</code>, <code>en1</code>...): in that case, note each address with the name of its interface.",
+        "answers": [
+            {
+                "text": "I can't find my MAC address",
+                "ref": 30,
+                "help": true
+            }
+        ]
     },
     "20": {
-        "text": "/*Open the commande prompt.*/<br/> Depending on your operating system, it can be called <i>Terminal, Xterm, Shell</i> or simply <i>command prompt</i>.",
+        "text": "Open a terminal. Depending on your distribution, it is called <i>Terminal</i>, <i>Konsole</i>, <i>Xterm</i>...",
         "answers": [
             {
                 "text": "Next.",
@@ -88,7 +100,7 @@
         ]
     },
     "21": {
-        "text": "/*Display IP network interface information.*/<br/> On the command line, write <code>ifconfig -a</code>, then validate by pressing <i>Enter</i>.<br/>If access is denied, write <code>sudo ifconfig -a</code>, then enter your password when it is asked.",
+        "text": "Type <code>ip link</code>, then press <i>Enter</i>.<br />On older distributions, use <code>ifconfig -a</code> instead (or <code>sudo ifconfig -a</code> if access is denied).",
         "answers": [
             {
                 "text": "Next.",
@@ -97,7 +109,17 @@
         ]
     },
     "22": {
-        "text": "/*Find your MAC adress.*/<br/> Scroll until you find the active network connection (the primary ethernet port is called <i>eth0</i>). Find the entry <i>HWaddr</i> : that's your MAC adress.",
+        "text": "Find the connection you are interested in (for example <i>eth0</i> or <i>enp…</i> for Ethernet, <i>wlan0</i> or <i>wlp…</i> for wifi). Your MAC address is the value next to <code>link/ether</code> (or <code>ether</code> / <code>HWaddr</code> with ifconfig).",
+        "answers": [
+            {
+                "text": "I can't find my MAC address",
+                "ref": 30,
+                "help": true
+            }
+        ]
+    },
+    "30": {
+        "text": "No problem: <contact>contact the E-kot</contact> and give us the code below, we'll help you find it.",
         "answers": []
     }
 }

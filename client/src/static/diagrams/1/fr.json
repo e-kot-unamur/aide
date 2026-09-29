@@ -33,67 +33,60 @@
     "4": {
         "text": "Le nom d'utilisateur est ton adresse mail d'étudiant. Le mot de passe est le même que tu utilises pour te connecter à la plateforme de ton école.",
         "answers": [
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Cela fonctionne", "ref": 8 }
+            { "text": "Ça ne fonctionne pas", "ref": 5, "help": true }
         ]
     },
     "5": {
-        "text": "<contact>Tu peux prendre contact</contact> avec nous, nous essayerons de t'aider",
-        "answers": []
-    },
-    "8": {
-        "text": "Tu devrais avoir le wifi maintenant ! Si on t'a bien aidé, n'hésite pas à aller nous suivre sur nos réseaux sociaux",
+        "text": "Pas de panique, on va t'aider ! <contact>Contacte-nous</contact> en nous donnant le code ci-dessous : on verra directement où tu en es.",
         "answers": []
     },
     "9": {
         "text": "Aucune configuration particulière n'est nécessaire : choisis simplement le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles.<br /><br />Connecte-toi ensuite avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Tu devrais maintenant être connecté au réseau \"unamur\".",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Je ne connais pas mon eID", "ref": 14 }
+            { "text": "Ça ne fonctionne pas", "ref": 16, "help": true },
+            { "text": "Je ne connais pas mon eID", "ref": 14, "help": true }
         ]
     },
     "10": {
         "text": "Aucune configuration particulière n'est nécessaire : choisis simplement le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles.<br /><br />Connecte-toi ensuite avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, choisis vérifier / valider / accepter, puis clique sur Continuer. Tu devrais alors être connecté au réseau \"unamur\".",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Je ne connais pas mon eID", "ref": 14 }
+            { "text": "Ça ne fonctionne pas", "ref": 16, "help": true },
+            { "text": "Je ne connais pas mon eID", "ref": 14, "help": true }
         ]
     },
     "11": {
         "text": "La connexion au réseau \"unamur\" a été testée sous les environnements de bureau par défaut de Ubuntu LTS 14.04, Ubuntu LTS 16.04, Fedora 25 et Fedora 26.<br /><br />Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles. Une fenêtre te demandant les paramètres de connexion s'ouvre : sélectionne <code>WPA & WPA2 Enterprise</code> comme sécurité sans fil et <code>Tunneled TLS</code> comme méthode EAP / Authentication, avec une authentification de phase 2 (Inner Authentication) en <code>PAP</code>.<br /><br />Comme identité anonyme et comme nom d'utilisateur, indique ton eID suivi de \"@unamur.be\" (par exemple <code>jdupond@unamur.be</code>), puis ton mot de passe habituel.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Pour le certificat du CA, utilise <code>/etc/ssl/certs/DigiCert_High_Assurance_EV_Root_CA.pem</code> — s'il est absent sur ton système, <a href='https://www.digicert.com/CACerts/DigiCertHighAssuranceEVRootCA.crt' target='_blank' rel='noopener'>télécharge le certificat DigiCert High Assurance EV Root CA</a>.<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Je ne connais pas mon eID", "ref": 14 }
+            { "text": "Ça ne fonctionne pas", "ref": 16, "help": true },
+            { "text": "Je ne connais pas mon eID", "ref": 14, "help": true }
         ]
     },
     "12": {
         "text": "Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles, puis connecte-toi avec ton eID suivi de \"@unamur.be\" comme nom d'utilisateur (par exemple <code>adupont@unamur.be</code>) et le mot de passe habituel de ton eID.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Je ne connais pas mon eID", "ref": 14 }
+            { "text": "Ça ne fonctionne pas", "ref": 16, "help": true },
+            { "text": "Je ne connais pas mon eID", "ref": 14, "help": true }
         ]
     },
     "13": {
         "text": "Choisis le réseau <code>unamur</code> dans la liste des réseaux sans fil disponibles, puis configure la connexion avec les paramètres suivants.<br /><br />Pour la sécurité, choisis <code>802.1x EAP</code> avec la méthode <code>TTLS</code>, une authentification de phase 2 en <code>PAP</code>, et une version de TLS minimale (1.0, 1.1 ou 1.2 — ne sélectionne pas TLS 1.3). Pour le certificat CA, utilise les certificats du système, et indique <code>unamur.be</code> comme domaine.<br /><br />Comme identité et comme identité anonyme, indique ton eID suivi de \"@unamur.be\" (par exemple <code>adupont@unamur.be</code>), puis ton mot de passe habituel.<br />⚠ Attention, bien <code>@unamur.be</code> et non <code>@student.unamur.be</code> !<br /><br />Si le système te demande de vérifier le certificat, assure-toi que le nom du serveur est bien <code>clearpass.unamur.be</code> avant de valider.",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 },
-            { "text": "Je ne connais pas mon eID", "ref": 14 }
+            { "text": "Ça ne fonctionne pas", "ref": 16, "help": true },
+            { "text": "Je ne connais pas mon eID", "ref": 14, "help": true }
         ]
     },
     "14": {
-        "text": "Ton eID est l'identifiant unique qui te permet de te connecter à tous les services de l'UNamur (par exemple <code>adupont</code> pour Alain Dupont). Si quelqu'un possède déjà cet identifiant, le tien sera légèrement différent.<br /><br />Tu peux le retrouver <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>ici</a>.<br /><br /><contact>Tu peux nous contacter</contact> si tu ne le retrouves pas.",
+        "text": "Ton eID est l'identifiant unique qui te permet de te connecter à tous les services de l'UNamur (par exemple <code>adupont</code> pour Alain Dupont). Si quelqu'un possède déjà cet identifiant, le tien sera légèrement différent.<br /><br />Tu peux le retrouver <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>ici</a>.",
         "answers": []
     },
         "15": {
         "text": "Tu peux te connecter au réseau <code>eduroam</code>, disponible sur la plupart des campus universitaires. Utilise l'adresse mail et le mot de passe de ton propre établissement (par exemple <code>prenom.nom@tonuniversite.be</code>)",
         "answers": [
-            { "text": "Cela fonctionne", "ref": 8 },
-            { "text": "Cela ne fonctionne pas", "ref": 5 }
+            { "text": "Ça ne fonctionne pas", "ref": 5, "help": true }
         ]
+    },
+    "16": {
+        "text": "Vérifie d'abord ces quelques points, ils règlent la plupart des problèmes :<br /><br />1. Ton nom d'utilisateur est bien ton eID suivi de <code>@unamur.be</code> (et non <code>@student.unamur.be</code>), sans espace.<br />2. Ton mot de passe est correct : vérifie-le en te connectant à <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>ton compte UNamur</a>.<br />3. Dans les réglages wifi de ton appareil, « oublie » le réseau <code>unamur</code> puis reconnecte-toi : d'anciens identifiants restent parfois enregistrés.<br />4. La date et l'heure de ton appareil sont correctes, sinon le certificat du réseau peut être refusé.<br /><br />Toujours bloqué ? <contact>Contacte-nous</contact> en nous donnant le code ci-dessous.",
+        "answers": []
     }
 }

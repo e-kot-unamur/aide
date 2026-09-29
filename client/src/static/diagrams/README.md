@@ -42,6 +42,18 @@ Les fichiers *json* doivent garder la même structure entre leurs traductions. A
 }
 ```
 
+### Réponses « d'aide »
+
+Une réponse peut porter le champ optionnel `"help": true`. Elle n'est alors pas affichée comme un choix classique, mais dans un encadré discret « Un souci ? » sous le texte. C'est à utiliser pour les issues de secours (« Ça ne fonctionne pas », « Je ne connais pas mon eID »...), pas pour les vraies réponses à la question.
+
+```json
+"answers": [
+    { "text": "Ça ne fonctionne pas", "ref": 16, "help": true }
+]
+```
+
+Un noeud sans réponse (`"answers": []`) est une fin de parcours : le site y affiche le code d'erreur à communiquer à l'E-kot, ainsi que les boutons « J'ai un autre problème » et « Recommencer ».
+
 ### Balisage
 
 La question posé à chaque noeud d'un diagramme sera formatté comme étant de l'HTML. Vous pouvez donc utiliser des balises comme...

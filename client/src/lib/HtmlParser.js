@@ -15,22 +15,23 @@ export default class HtmlParser {
     }
 
     /**
-     * replace <contact> from the json diagram to a 
+     * replace <contact> from the json diagram to a
      * <a> tag referencing messenger's contact page
-     * 
+     *
      * @param  {String} text The string to be parsed
-     * @return {String}      The formated string 
-     * 
-     * @todo remove useless space from inner tag < ... >
+     * @return {String}      The formated string
      */
     static parseContact(text) {
         return this.parse(text, 'contact', contact)
     }
 
-    // Should be private 
+    // Should be private
+    // Replaces every occurrence of the tag (not only the first one).
     static parse(text, tag, href) {
         return text
-            .replace(`<${tag}>`, `<a href=${href} target="_blank" rel="noopener">`)
-            .replace(`</${tag}>`, `</a>`)
+            .split(`<${tag}>`).join(`<a href="${href}" target="_blank" rel="noopener">`)
+            .split(`</${tag}>`).join(`</a>`)
     }
 }
+
+export { contact, facebookLink }

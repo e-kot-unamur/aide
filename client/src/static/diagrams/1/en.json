@@ -33,67 +33,60 @@
     "4": {
         "text": "Connecting to Eduroam.<br />Your username is your student e-mail address. Your password is the same one you use to log into your school's platform.",
         "answers": [
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "It worked.", "ref": 8 }
+            { "text": "It doesn't work", "ref": 5, "help": true }
         ]
     },
     "5": {
-        "text": "<contact>You can contact us</contact>, we will try to help you",
-        "answers": []
-    },
-    "8": {
-        "text": "You should now be connected to the wifi! If we helped you, feel free to follow us on social media",
+        "text": "Don't worry, we'll help you! <contact>Contact us</contact> and give us the code below: we'll see right away where you are.",
         "answers": []
     },
     "9": {
         "text": "No specific configuration is needed: just select the <code>unamur</code> network from the list of available wireless networks.<br /><br />Then log in with your eID followed by \"@unamur.be\" as your username (for example <code>adupont@unamur.be</code>) and your usual eID password.<br />⚠ Careful, it must be <code>@unamur.be</code> and not <code>@student.unamur.be</code> !<br /><br />You should now be connected to the \"unamur\" network.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "I don't know my eID", "ref": 14 }
+            { "text": "It doesn't work", "ref": 16, "help": true },
+            { "text": "I don't know my eID", "ref": 14, "help": true }
         ]
     },
     "10": {
         "text": "No specific configuration is needed: just select the <code>unamur</code> network from the list of available wireless networks.<br /><br />Then log in with your eID followed by \"@unamur.be\" as your username (for example <code>adupont@unamur.be</code>) and your usual eID password.<br />⚠ Careful, it must be <code>@unamur.be</code> and not <code>@student.unamur.be</code> !<br /><br />If the system asks you to verify the certificate, choose verify / validate / accept, then click Continue. You should then be connected to the \"unamur\" network.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "I don't know my eID", "ref": 14 }
+            { "text": "It doesn't work", "ref": 16, "help": true },
+            { "text": "I don't know my eID", "ref": 14, "help": true }
         ]
     },
     "11": {
         "text": "Connecting to the \"unamur\" network has been tested on the default desktop environments of Ubuntu LTS 14.04, Ubuntu LTS 16.04, Fedora 25 and Fedora 26.<br /><br />Select the <code>unamur</code> network from the list of available wireless networks. A window asking for the connection settings will open: choose <code>WPA & WPA2 Enterprise</code> as the wireless security and <code>Tunneled TLS</code> as the EAP method / authentication, with phase 2 authentication (Inner Authentication) set to <code>PAP</code>.<br /><br />As both the anonymous identity and the username, enter your eID followed by \"@unamur.be\" (for example <code>jdupond@unamur.be</code>), then your usual password.<br />⚠ Careful, it must be <code>@unamur.be</code> and not <code>@student.unamur.be</code> !<br /><br />For the CA certificate, use <code>/etc/ssl/certs/DigiCert_High_Assurance_EV_Root_CA.pem</code> — if it isn't present on your system, <a href='https://www.digicert.com/CACerts/DigiCertHighAssuranceEVRootCA.crt' target='_blank' rel='noopener'>download the DigiCert High Assurance EV Root CA certificate</a>.<br /><br />If the system asks you to verify the certificate, make sure the server name is indeed <code>clearpass.unamur.be</code> before validating.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "I don't know my eID", "ref": 14 }
+            { "text": "It doesn't work", "ref": 16, "help": true },
+            { "text": "I don't know my eID", "ref": 14, "help": true }
         ]
     },
     "12": {
         "text": "Select the <code>unamur</code> network from the list of available wireless networks, then log in with your eID followed by \"@unamur.be\" as your username (for example <code>adupont@unamur.be</code>) and your usual eID password.<br />⚠ Careful, it must be <code>@unamur.be</code> and not <code>@student.unamur.be</code> !<br /><br />If the system asks you to verify the certificate, make sure the server name is indeed <code>clearpass.unamur.be</code> before validating.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "I don't know my eID", "ref": 14 }
+            { "text": "It doesn't work", "ref": 16, "help": true },
+            { "text": "I don't know my eID", "ref": 14, "help": true }
         ]
     },
     "13": {
         "text": "Select the <code>unamur</code> network from the list of available wireless networks, then configure the connection with the following settings.<br /><br />For security, choose <code>802.1x EAP</code> with the <code>TTLS</code> method, phase 2 authentication set to <code>PAP</code>, and a minimum TLS version (1.0, 1.1 or 1.2 — do not select TLS 1.3). For the CA certificate, use the system certificates, and enter <code>unamur.be</code> as the domain.<br /><br />As both identity and anonymous identity, enter your eID followed by \"@unamur.be\" (for example <code>adupont@unamur.be</code>), then your usual password.<br />⚠ Careful, it must be <code>@unamur.be</code> and not <code>@student.unamur.be</code> !<br /><br />If the system asks you to verify the certificate, make sure the server name is indeed <code>clearpass.unamur.be</code> before validating.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 },
-            { "text": "I don't know my eID", "ref": 14 }
+            { "text": "It doesn't work", "ref": 16, "help": true },
+            { "text": "I don't know my eID", "ref": 14, "help": true }
         ]
     },
     "14": {
-        "text": "Your eID is the unique identifier that lets you log in to all of the University of Namur's services (for example <code>adupont</code> for Alain Dupont). If someone already has that identifier, yours will be slightly different.<br /><br />You can find it on <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>your UNamur account</a>.<br /><contact>You can contact us</contact> if you can't find it.",
+        "text": "Your eID is the unique identifier that lets you log in to all of the University of Namur's services (for example <code>adupont</code> for Alain Dupont). If someone already has that identifier, yours will be slightly different.<br /><br />You can find it on <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>your UNamur account</a>.",
         "answers": []
     },
     "15": {
         "text": "You can connect to the <code>eduroam</code> network, available on most university campuses. Use the e-mail address and password of your own institution (for example <code>firstname.lastname@youruniversity.be</code>) — not your UNamur credentials.",
         "answers": [
-            { "text": "It worked.", "ref": 8 },
-            { "text": "It didn't work.", "ref": 5 }
+            { "text": "It doesn't work", "ref": 5, "help": true }
         ]
+    },
+    "16": {
+        "text": "Check these few points first, they solve most problems:<br /><br />1. Your username is your eID followed by <code>@unamur.be</code> (not <code>@student.unamur.be</code>), with no spaces.<br />2. Your password is correct: check it by logging in to <a href='https://auth.unamur.be/realms/unamur/account' target='_blank' rel='noopener'>your UNamur account</a>.<br />3. In your device's wifi settings, \"forget\" the <code>unamur</code> network, then connect again: old credentials are sometimes kept.<br />4. Your device's date and time are correct, otherwise the network certificate may be rejected.<br /><br />Still stuck? <contact>Contact us</contact> and give us the code below.",
+        "answers": []
     }
 }

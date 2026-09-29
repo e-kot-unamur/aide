@@ -78,7 +78,13 @@
     },
     "7": {
         "text": "Veuillez enregistrer votre ordinateur sur la page de kotserv. Attention à rentrer des identifiants corrects, càd votre eID (et non votre adresse mail !) ainsi que le mot de passe correspondant. Ensuite, veillez à redémarrer votre ordinateur. Cela devrait maintenant fonctionner. <br/>Pour plus d'informations, cliquez <a href='https://www.youtube.com/watch?v=PbrR-bMncT0' target='_blank'>ici</a>",
-        "answers": []
+        "answers": [
+            {
+                "text": "Ça ne fonctionne toujours pas",
+                "ref": 12,
+                "help": true
+            }
+        ]
     },
     "8": {
         "text": "<contact>Prenez contact avec l'E-kot</contact> pour une intervention.",
@@ -113,12 +119,13 @@
         "text": "Veuillez essayer de changer de cable ethernet. Si vous n'en avez pas, <contact>l'E-kot</contact> en vends à 3€.",
         "answers": [
             {
-                "text": "J'ai changé de cable, je peux continuer l'enregistrement de mon ordinateur sur le réseau universitaire.",
+                "text": "J'ai changé de câble, continuer",
                 "ref": 4
             },
             {
-                "text": "Cela ne fonctionne toujours pas.",
-                "ref": 14
+                "text": "Ça ne fonctionne toujours pas",
+                "ref": 14,
+                "help": true
             }
         ]
     },
@@ -126,12 +133,13 @@
         "text": "Veuillez essayer via une autre prise du logement universitaire.",
         "answers": [
             {
-                "text": "J'ai changé de prise, et cela fonctionne.",
+                "text": "Ça fonctionne avec une autre prise",
                 "ref": 8
             },
             {
-                "text": "Cela ne fonctionne toujours pas.",
-                "ref": 12
+                "text": "Ça ne fonctionne toujours pas",
+                "ref": 12,
+                "help": true
             }
         ]
     }

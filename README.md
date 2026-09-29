@@ -40,6 +40,8 @@ Modifiez les *json* afin de créer le diagramme en français et en anglais, <br 
 
 Pour plus de précisions sur la structure du fichier *.json*, voir sa [documentation relative](client/src/static/diagrams/README.md).
 
+> L'ordre des diagrammes dans `diagram.js` définit leur numéro (0, 1, 2...). Ce numéro est le premier chiffre du **code d'erreur** donné aux étudiants (ex. `0-1-2-3-13`) et de l'**URL** de chaque étape (ex. `aide.e-kot.be/#0-1-2-3-13`, ce qui permet le bouton « retour » du navigateur et le partage d'un lien vers une étape précise). Changer l'ordre ou les *id* de noeuds rend donc invalides les anciens codes et liens : à faire en connaissance de cause. La page `/admin?code=...` permet de retrouver le parcours d'un code.
+
 -------
 
 ### Commencer à coder...

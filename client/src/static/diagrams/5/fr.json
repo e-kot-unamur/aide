@@ -13,7 +13,7 @@
         "answers": [
             {
                 "text": "Oui.",
-                "ref": 2            
+                "ref": 2
             },
             {
                 "text": "Non.",
@@ -40,7 +40,13 @@
     },
     "4": {
         "text": "Veuillez appuyer simultanément sur les touches <code>ctrl + shift + escape</code> (ou échap) pour ouvrir le Gestionnaire des tâches,<br>ensuite dans l'onglet Démarrage, vérifiez ce qui est coché et retirez tout ce dont vous n'avez pas besoin.",
-        "answers": []
+        "answers": [
+            {
+                "text": "Mon PC est toujours lent",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "5": {
         "text": "Vous pouvez nettoyer votre ordinateur en supprimant certains fichiers devenus obsolètes.",
@@ -56,8 +62,14 @@
         ]
     },
     "6": {
-        "text": "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/'>lien<a>.<br>Une fois installé, vous pouvez lancer l'analyse via le tableau de bord, le nettoyage se fait automatiquement.",
-        "answers": []
+        "text": "Vous pouvez installer adwcleaner, disponible gratuitement via ce <a href='https://fr.malwarebytes.com/adwcleaner/' target='_blank' rel='noopener'>lien</a>.<br>Une fois installé, vous pouvez lancer l'analyse via le tableau de bord, le nettoyage se fait automatiquement.",
+        "answers": [
+            {
+                "text": "Mon PC est toujours lent",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "7": {
         "text": "Rendez votre navigation sur internet plus appropriée en modifiant les paramètres du navigateur.",
@@ -87,7 +99,13 @@
     },
     "9": {
         "text": "Vérifiez qu'il n'y a pas trop de contenu sur votre bureau, cela peut ralentir le démarrage. <br>Si vous avez un SSD + HDD, veuillez mettre seulement le nécessaire sur le ssd pour que le démarage soit plus rapide.",
-        "answers": []
+        "answers": [
+            {
+                "text": "Mon PC est toujours lent",
+                "ref": 20,
+                "help": true
+            }
+        ]
     },
     "10": {
         "text": "Je n'ai plus Google en page d'accueil.",
@@ -155,13 +173,23 @@
     },
     "18": {
         "text": "Votre moteur de recherche est-il celui désiré?",
-        "answers": [{
-            "text": "Non.",
-            "ref": 19
-        }   ]
+        "answers": [
+            {
+                "text": "Non.",
+                "ref": 19
+            },
+            {
+                "text": "Oui.",
+                "ref": 20
+            }
+        ]
     },
     "19": {
         "text": "Veuillez aller dans les options/paramètres du navigateur, ensuite dans 'Recherche', choisissez le moteur de recherche qui vous intéresse dans 'Moteur de recherche par défaut'",
+        "answers": []
+    },
+    "20": {
+        "text": "Si votre PC reste lent malgré ces conseils, <contact>contactez l'E-kot</contact> en nous donnant le code ci-dessous : nous regarderons ça ensemble.",
         "answers": []
     }
 }
