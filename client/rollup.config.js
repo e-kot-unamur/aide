@@ -3,7 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import json from '@rollup/plugin-json';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
+import css from 'rollup-plugin-css-only';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -30,6 +31,11 @@ function serve() {
 
 export default {
     input: 'src/main.js',
+    onwarn(warning, warn) {
+        // Svelte's own internals have harmless circular imports.
+        if (warning.code === 'CIRCULAR_DEPENDENCY' && /node_modules[\\/]svelte/.test(warning.message)) return;
+        warn(warning);
+    },
     output: {
         sourcemap: true,
         format: 'iife',
@@ -42,15 +48,15 @@ export default {
         }),
 
         svelte({
-            hydratable: true,
-            // enable run-time checks when not in production
-            dev: !production,
-            // we'll extract any component CSS out into
-            // a separate file - better for performance
-            css: css => {
-                css.write('bundle.css');
+            compilerOptions: {
+                // enable run-time checks when not in production
+                dev: !production
             }
         }),
+
+        // we'll extract any component CSS out into
+        // a separate file - better for performance
+        css({ output: 'bundle.css' }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
@@ -59,7 +65,8 @@ export default {
         // https://github.com/rollup/plugins/tree/master/packages/commonjs
         resolve({
             browser: true,
-            dedupe: ['svelte']
+            dedupe: ['svelte'],
+            exportConditions: ['svelte']
         }),
         commonjs(),
 

@@ -1,10 +1,10 @@
+import { mount } from 'svelte';
 import App from './App.svelte';
 
-const app = new App({
+const app = mount(App, {
     target: document.body,
-    hydrate: true,
     props: {
-        version: '2.3'
+        version: '2.4'
     }
 });
 
