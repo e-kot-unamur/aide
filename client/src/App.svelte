@@ -78,9 +78,11 @@
 <Navbar />
 <div class="container">
   <Router {url}>
-    <Route path="/" component={Diagrams} />
-    <Route path="/about" component={About} />
-    <Route path="/admin" component={Admin} />
-    <Route path="" component={Fallback} />
+    <!-- Pages are given as children (not `component={...}`): this is the
+         form that works with Svelte 5. -->
+    <Route path="/"><Diagrams /></Route>
+    <Route path="/about"><About /></Route>
+    <Route path="/admin"><Admin /></Route>
+    <Route path=""><Fallback /></Route>
   </Router>
 </div>

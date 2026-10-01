@@ -12,9 +12,6 @@
   import { openCode, replaceCode, currentCode, hash } from "../../lib/navigation.js";
   import { facebookLink } from "../../lib/HtmlParser.js";
 
-  // Passed by some versions of svelte-routing; not used (see `hash`).
-  export let location = null;
-
   let query = "";
 
   $: t = (key) => getString($lang, key);
