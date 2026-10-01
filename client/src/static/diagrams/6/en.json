@@ -1,0 +1,100 @@
+{
+    "0": {
+        "text": "I need to set up two-factor authentication (MFA)",
+        "answers": [
+            {
+                "text": "Find help!",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "On your smartphone, install the <i>Microsoft Authenticator</i> app (<a href='https://apps.apple.com/app/microsoft-authenticator/id983156458' target='_blank' rel='noopener'>App Store</a> or <a href='https://play.google.com/store/apps/details?id=com.azure.authenticator' target='_blank' rel='noopener'>Google Play</a>).<br />Careful: other apps have an almost identical icon.",
+        "answers": [
+            {
+                "text": "Next",
+                "ref": 2
+            }
+        ]
+    },
+    "2": {
+        "text": "On a computer, go to <a href='https://aka.ms/mfasetup' target='_blank' rel='noopener'>aka.ms/mfasetup</a> and log in with your UNamur e-mail address and your password.<br />Then click \"Add sign-in method\".",
+        "image": {
+            "src": "/images/diagrams/mfa-1.webp",
+            "alt": "\"Add sign-in method\" button in \"Security info\""
+        },
+        "answers": [
+            {
+                "text": "Next",
+                "ref": 3
+            },
+            {
+                "text": "It doesn't work",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "3": {
+        "text": "Microsoft Authenticator is suggested by default: click \"Next\".",
+        "image": {
+            "src": "/images/diagrams/mfa-2.webp",
+            "alt": "\"Start by getting the app\" screen with the \"Next\" button"
+        },
+        "answers": [
+            {
+                "text": "Next",
+                "ref": 4
+            },
+            {
+                "text": "It doesn't work",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "4": {
+        "text": "Click \"Next\" again: a QR code will be displayed.",
+        "image": {
+            "src": "/images/diagrams/mfa-3.webp",
+            "alt": "\"Set up your account\" screen with the \"Next\" button"
+        },
+        "answers": [
+            {
+                "text": "Next",
+                "ref": 5
+            },
+            {
+                "text": "It doesn't work",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "5": {
+        "text": "In the Authenticator app: tap \"+\", choose \"Work or school account\", then scan the QR code. Then click \"Next\" on the computer.<br /><br />Doing everything on your smartphone? Click \"Can't scan image?\" and enter the secret key in the app.",
+        "image": {
+            "src": "/images/diagrams/mfa-4.webp",
+            "alt": "\"Scan the QR code\" screen (QR code blurred) with the \"Can't scan image?\" button"
+        },
+        "answers": [
+            {
+                "text": "Next",
+                "ref": 6
+            },
+            {
+                "text": "It doesn't work",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "6": {
+        "text": "All set! Each time you log in, a code is shown on screen: type it into the notification you receive on your smartphone.",
+        "answers": []
+    },
+    "7": {
+        "text": "<contact>Contact us</contact> and give us the code below: we'll help you finish the setup.",
+        "answers": []
+    }
+}

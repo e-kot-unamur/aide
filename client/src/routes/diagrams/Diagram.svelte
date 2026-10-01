@@ -178,6 +178,8 @@
   }
 
   .crumb[aria-current] {
+    max-width: none;
+    white-space: normal;
     color: var(--font-color);
     font-weight: 600;
   }
@@ -192,6 +194,20 @@
 
   .question:focus {
     outline: none;
+  }
+
+  /* ---- optional screenshot ---- */
+  .step-image {
+    display: block;
+    margin-top: 1.6rem;
+  }
+
+  .step-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--color-lightGrey);
+    border-radius: 8px;
   }
 
   /* ---- answers ---- */
@@ -383,6 +399,12 @@
     <div class="question" tabindex="-1" bind:this={question} in:fade={{ duration: 150 }}>
       {@html htmlParser.parseContact(step.text)}
     </div>
+    <!-- Optional screenshot: "image": { "src": "/images/...", "alt": "..." } -->
+    {#if step.image && step.image.src}
+      <a class="step-image" href={step.image.src} target="_blank" rel="noopener">
+        <img src={step.image.src} alt={step.image.alt || ''} />
+      </a>
+    {/if}
   {/key}
 
   {#if !isEnd}

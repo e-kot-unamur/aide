@@ -1,0 +1,100 @@
+{
+    "0": {
+        "text": "Je dois configurer la double authentification (MFA)",
+        "answers": [
+            {
+                "text": "Trouver de l'aide !",
+                "ref": 1
+            }
+        ]
+    },
+    "1": {
+        "text": "Sur ton smartphone, installe l'application <i>Microsoft Authenticator</i> (<a href='https://apps.apple.com/app/microsoft-authenticator/id983156458' target='_blank' rel='noopener'>App Store</a> ou <a href='https://play.google.com/store/apps/details?id=com.azure.authenticator' target='_blank' rel='noopener'>Google Play</a>).<br />Attention : d'autres applis ont une icône presque identique.",
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 2
+            }
+        ]
+    },
+    "2": {
+        "text": "Sur un ordinateur, va sur <a href='https://aka.ms/mfasetup' target='_blank' rel='noopener'>aka.ms/mfasetup</a> et connecte-toi avec ton adresse mail UNamur et ton mot de passe.<br />Clique ensuite sur « Ajouter une méthode de connexion ».",
+        "image": {
+            "src": "/images/diagrams/mfa-1.webp",
+            "alt": "Bouton « Ajouter une méthode de connexion » dans « Informations de sécurité »"
+        },
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 3
+            },
+            {
+                "text": "Ça ne fonctionne pas",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "3": {
+        "text": "Microsoft Authenticator est proposé par défaut : clique sur « Suivant ».",
+        "image": {
+            "src": "/images/diagrams/mfa-2.webp",
+            "alt": "Écran « Commencer par obtenir l'application » avec le bouton « Suivant »"
+        },
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 4
+            },
+            {
+                "text": "Ça ne fonctionne pas",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "4": {
+        "text": "Clique à nouveau sur « Suivant » : un QR-code va s'afficher.",
+        "image": {
+            "src": "/images/diagrams/mfa-3.webp",
+            "alt": "Écran « Configurer votre compte » avec le bouton « Suivant »"
+        },
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 5
+            },
+            {
+                "text": "Ça ne fonctionne pas",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "5": {
+        "text": "Dans l'application Authenticator : appuie sur « + », choisis « Compte professionnel ou scolaire », puis scanne le QR-code. Clique ensuite sur « Suivant » sur l'ordinateur.<br /><br />Tu fais tout sur ton smartphone ? Clique sur « Impossible de numériser l'image ? » et entre la clé secrète dans l'application.",
+        "image": {
+            "src": "/images/diagrams/mfa-4.webp",
+            "alt": "Écran « Scanner le code QR » (QR-code flouté) avec le bouton « Impossible de numériser l'image ? »"
+        },
+        "answers": [
+            {
+                "text": "Suivant",
+                "ref": 6
+            },
+            {
+                "text": "Ça ne fonctionne pas",
+                "ref": 7,
+                "help": true
+            }
+        ]
+    },
+    "6": {
+        "text": "C'est configuré ! À chaque connexion, un code s'affiche à l'écran : recopie-le dans la notification reçue sur ton smartphone.",
+        "answers": []
+    },
+    "7": {
+        "text": "<contact>Contacte-nous</contact> en nous donnant le code ci-dessous : on t'aidera à finaliser la configuration.",
+        "answers": []
+    }
+}

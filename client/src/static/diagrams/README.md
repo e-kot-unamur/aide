@@ -54,6 +54,20 @@ Une réponse peut porter le champ optionnel `"help": true`. Elle n'est alors pas
 
 Un noeud sans réponse (`"answers": []`) est une fin de parcours : le site y affiche le code d'erreur à communiquer à l'E-kot, ainsi que les boutons « J'ai un autre problème » et « Recommencer ».
 
+### Captures d'écran
+
+Un noeud peut afficher une image sous son texte avec le champ optionnel `image`. Les fichiers vont dans `client/public/images/diagrams/` (format `.webp` conseillé pour le poids). Le texte `alt` décrit l'image pour les lecteurs d'écran ; un clic sur l'image l'ouvre en grand.
+
+```json
+"2": {
+    "text": "Clique sur « Ajouter une méthode de connexion ».",
+    "image": { "src": "/images/diagrams/mfa-1.webp", "alt": "Bouton « Ajouter une méthode de connexion »" },
+    "answers": [ { "text": "Suivant", "ref": 3 } ]
+}
+```
+
+> Pense à flouter les données personnelles et les QR-codes sur les captures.
+
 ### Balisage
 
 La question posé à chaque noeud d'un diagramme sera formatté comme étant de l'HTML. Vous pouvez donc utiliser des balises comme...
