@@ -8,10 +8,12 @@ import frWifi from "./1/fr.json"
 import enWifi from "./1/en.json"
 import frPasswordUpdate from "./3/fr.json"
 import enPasswordUpdate from "./3/en.json"
+import frMfa from "./6/fr.json"
+import enMfa from "./6/en.json"
 
 const diagrams = {
-    "fr": [frWifi, frInternet, frPasswordUpdate, frMac, frPcLent],
-    "en": [enWifi, enInternet, enPasswordUpdate, enMac, enPcLent],
+    "fr": [frWifi, frMfa, frInternet, frPasswordUpdate, frMac, frPcLent],
+    "en": [enWifi, enMfa, enInternet, enPasswordUpdate, enMac, enPcLent],
 }
 
 export default diagrams
